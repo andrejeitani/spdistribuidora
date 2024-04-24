@@ -8,6 +8,11 @@ try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
     arquivo = st.file_uploader('Faça o Upload do Arquivo de Sugestão de Compra')
     df = pd.read_excel(arquivo)
+
+    # Faz a leitura do arquivo que contem Origem e Pack
+    intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
+    pack = pd.read_excel(intelbras)
+    
     df = df.drop(index=[0,1,2])
     df = df.rename(columns={
         'Período da Consulta 90 dias':'Codigo',
@@ -50,10 +55,6 @@ try:
 
     # Classica as colunas pela sua ordem alfabetica
     df = df.sort_values(by='Marca' , ascending=True)
-
-    # Faz a leitura do arquivo que contem Origem e Pack
-    intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
-    pack = pd.read_excel(intelbras)
 
     # Define o tipo de variavel da coluna, para que a chave seja do mesmo tipo em ambos os dataframes
     pack['Codigo'] = pack['Codigo'].astype(str)
