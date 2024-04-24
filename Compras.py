@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import wget
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
@@ -52,7 +53,9 @@ try:
     df = df.sort_values(by='Marca' , ascending=True)
 
     # Faz a leitura do arquivo que contem Origem e Pack
-    pack = pd.read_html('https://github.com/andrejeitani/compras/blob/main/pack.xlsx')
+    link = "https://github.com/andrejeitani/compras/blob/main/pack.xlsx"
+    wget.download(link, "PACKS")
+    pack = pd.read_excel(link)
 
     # Define o tipo de variavel da coluna, para que a chave seja do mesmo tipo em ambos os dataframes
     pack['Codigo'] = pack['Codigo'].astype(str)
