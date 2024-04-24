@@ -52,7 +52,7 @@ try:
     df = df.sort_values(by='Marca' , ascending=True)
 
     # Faz a leitura do arquivo que contem Origem e Pack
-    pack = pd.read_excel(r'/home/andre-jeitani/anaconda3/Apps/Projeto_SP/pages/pack.xlsx')
+    pack = pd.read_excel(r'https://github.com/andrejeitani/compras/blob/main/pack.xlsx')
 
     # Define o tipo de variavel da coluna, para que a chave seja do mesmo tipo em ambos os dataframes
     pack['Codigo'] = pack['Codigo'].astype(str)
