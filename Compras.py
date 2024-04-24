@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import wget
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
@@ -54,7 +53,6 @@ try:
 
     # Faz a leitura do arquivo que contem Origem e Pack
     link = "https://github.com/andrejeitani/compras/blob/main/pack.xlsx"
-    wget.download(link, "PACKS")
     pack = pd.read_excel(link)
 
     # Define o tipo de variavel da coluna, para que a chave seja do mesmo tipo em ambos os dataframes
