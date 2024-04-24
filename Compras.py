@@ -6,7 +6,7 @@ st.set_page_config(layout='wide')
 
 try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
-    arquivo = st.file_uploader('Faça o Upload do Arquifo')
+    arquivo = st.file_uploader('Faça o Upload do Arquivo de Sugestão de Compra')
     df = pd.read_excel(arquivo)
     df = df.drop(index=[0,1,2])
     df = df.rename(columns={
@@ -52,8 +52,8 @@ try:
     df = df.sort_values(by='Marca' , ascending=True)
 
     # Faz a leitura do arquivo que contem Origem e Pack
-    link = "https://github.com/andrejeitani/compras/blob/main/pack.xlsx"
-    pack = pd.read_excel(link)
+    intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
+    pack = pd.read_excel(intelbras)
 
     # Define o tipo de variavel da coluna, para que a chave seja do mesmo tipo em ambos os dataframes
     pack['Codigo'] = pack['Codigo'].astype(str)
