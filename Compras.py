@@ -7,10 +7,10 @@ st.set_page_config(layout='wide')
 
 #Realiza o upload do arquivo e realiza os devidos tratamentos
 arquivo = st.file_uploader('Faça o Upload do Arquivo de Sugestão de Compra')
-df = pd.read_excel(arquivo)
+intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
 
 # Faz a leitura do arquivo que contem Origem e Pack
-intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
+df = pd.read_excel(arquivo)
 pack = pd.read_excel(intelbras)
 
 df = df.drop(index=[0,1,2])
