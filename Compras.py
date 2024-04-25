@@ -10,8 +10,8 @@ arquivo = st.file_uploader('Faça o Upload do Arquivo de Sugestão de Compra')
 intelbras = st.file_uploader('Faça o Upload do Arquivo de Pack')
 
 # Faz a leitura do arquivo que contem Origem e Pack
-df = pd.read_excel(arquivo)
-pack = pd.read_excel(intelbras)
+df = pd.read_excel(arquivo , engine='calamine')
+pack = pd.read_excel(intelbras, engine='calamine')
 
 df = df.drop(index=[0,1,2])
 df = df.rename(columns={
