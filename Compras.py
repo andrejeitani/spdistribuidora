@@ -1,9 +1,5 @@
 import pandas as pd
 import streamlit as st
-import locale
-
-#Definindo as configurações para Padrão brasileiro
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
@@ -85,7 +81,7 @@ try:
         st.write('Produtos para comprar: ',str(a) ,
             ' - ' ,
             'Total de intelbras a comprar: R$',
-        locale.format("%.2f", filtered_df['Total'].sum() , grouping=True))
+            filtered_df['Total'].sum() , grouping=True))
 
     if __name__ == '__main__':
         main()
