@@ -1,14 +1,10 @@
 import pandas as pd
 import streamlit as st
-#import locale
-
-#Definindo as configurações para Padrão brasileiro
-#locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
 
-try:
+
     #Realiza o upload do arquivo e realiza os devidos tratamentos
     arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
     df = pd.read_excel(arquivo)
@@ -89,5 +85,3 @@ try:
 
     if __name__ == '__main__':
         main()
-except:
-    st.write('Por favor faça o upload do arquivo em excel com extensão xlsx, obrigado')
