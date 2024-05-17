@@ -64,27 +64,27 @@ try:
     df = df.merge(pack , left_on='Codigo' , right_on='Codigo' , how='outer')
     df = df.drop_duplicates() #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-# Realiza o filtro do arquivo , para produtos com definição de compra maior que 1
-df = df[df['Comprar'] > 0]
-df['Total'] = (df['PV'] * df['Comprar']).round(2)
-
-# Função de filtro 
-def main():
-# Campo de texto para inserir o critério de filtro
-    filtro = st.text_input('Digite uma marca para filtrar:')
-
-    # Aplicar o filtro e mostrar o resultado
-    filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
-    st.write('Planilha de Compras')
-    st.dataframe(filtered_df , use_container_width=True)
-
-    a = len(filtered_df)
-    st.write('Produtos para comprar: ',str(a) ,
-        ' - ' ,
-        'Total de intelbras a comprar: R$',
-             filtered_df['Total'].sum() , grouping=True)
-
-if __name__ == '__main__':
-    main()
+    # Realiza o filtro do arquivo , para produtos com definição de compra maior que 1
+    df = df[df['Comprar'] > 0]
+    df['Total'] = (df['PV'] * df['Comprar']).round(2)
+    
+    # Função de filtro 
+    def main():
+    # Campo de texto para inserir o critério de filtro
+        filtro = st.text_input('Digite uma marca para filtrar:')
+    
+        # Aplicar o filtro e mostrar o resultado
+        filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
+        st.write('Planilha de Compras')
+        st.dataframe(filtered_df , use_container_width=True)
+    
+        a = len(filtered_df)
+        st.write('Produtos para comprar: ',str(a) ,
+            ' - ' ,
+            'Total de intelbras a comprar: R$',
+                 filtered_df['Total'].sum() , grouping=True)
+    
+    if __name__ == '__main__':
+        main()
 except:
     st.write('SP Distribuidora')
