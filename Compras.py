@@ -4,9 +4,6 @@ import streamlit as st
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
 
-#Definindo as configurações para Padrão brasileiro
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-
 #Realiza o upload do arquivo e realiza os devidos tratamentos
 arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
 df = pd.read_excel(arquivo, engine='openpyxl')
