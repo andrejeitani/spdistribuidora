@@ -67,7 +67,7 @@ try:
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
 
-        st.write("Total Orçado R$",total_real , grouping=True)
+        st.write("Total Orçado R$",str(total_real) , grouping=True)
         st.write("Clientes atendidos:",str(len(clientes)))
         st.divider()
 
