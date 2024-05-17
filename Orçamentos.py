@@ -1,10 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import locale
-
-#Definindo as configurações para Padrão brasileiro
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 #Define o layout da pagina como expandido
 st.set_page_config(layout='wide')
@@ -71,7 +67,7 @@ try:
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
 
-        st.write("Total Orçado R$", locale.format("%.2f", total_real , grouping=True))
+        st.write("Total Orçado R$",total_real , grouping=True))
         st.write("Clientes atendidos:",str(len(clientes)))
         st.divider()
 
@@ -88,7 +84,7 @@ try:
     total_qtd = df['Quantidade'].sum()
 
     #Informe de Quantitativos
-    st.write("Total Orçado R$", locale.format("%.2f", total_real , grouping=True))
+    st.write("Total Orçado R$" ,total_real , grouping=True))
     st.write("Clientes atendidos:",str(len(clientes)))
     st.divider()
 
