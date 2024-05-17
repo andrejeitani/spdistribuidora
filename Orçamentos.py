@@ -64,7 +64,8 @@ try:
         df_filtro = df[df['Cliente'].str.contains(filtro_cliente, case=False) & df['Produto'].str.contains(filtro_produto, case=False)]
         st.dataframe(df_filtro, use_container_width=True)
 
-        total_real.round(2) = df_filtro['Valor Total'].sum()
+        total_real = df_filtro['Valor Total'].sum()
+        total_real = total_real.round(2)
         total_qtd = df_filtro['Quantidade'].sum()
 
         st.write("Total Orçado R$",total_real , grouping=True)
