@@ -112,5 +112,12 @@ try:
     st.bar_chart(data=chart_marcas , y='Valor Total' , use_container_width=True , color='#368900')
     st.divider()
 
+    # Grafico de Orçamentos por Vendedor
+    df4 = df.groupby(df['Vendedor']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+    st.write('Orçamento por Vendedor')
+    chart_vendedores = df4.sort_values(by='Valor Total', ascending=False)
+    st.bar_chart(data=chart_vendedores , y='Valor Total' , use_container_width=True , color='#368900')
+    st.divider()
+
 except:
     st.write('SP Distribuidora')
