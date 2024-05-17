@@ -1,9 +1,12 @@
 import pandas as pd
 import streamlit as st
+import locale
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide')
 
+#Definindo as configurações para Padrão brasileiro
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 #Realiza o upload do arquivo e realiza os devidos tratamentos
 arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
