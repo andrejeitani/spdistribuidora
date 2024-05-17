@@ -84,7 +84,7 @@ try:
     total_qtd = df['Quantidade'].sum()
 
     #Informe de Quantitativos
-    st.write("Total Orçado R$" ,total_real , grouping=True))
+    st.write("Total Orçado R$" ,total_real , grouping=True)
     st.write("Clientes atendidos:",str(len(clientes)))
     st.divider()
 
