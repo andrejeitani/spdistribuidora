@@ -66,8 +66,6 @@ try:
 
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
-        total_status = df_filtro.groupby(df_filtro['Status']) #********#
-        tx_conversao = (total_status['Status'] == 'Fechado' / total_status['Status'] == 'Pendente') #********#
 
     st.write(df)
     
@@ -81,7 +79,6 @@ try:
     #Informe de Quantitativos
     st.write("Total Orçado R$" ,total_real , grouping=True)
     st.write("Clientes atendidos:",str(len(clientes)))
-    st.write("Taxa de conversão: ", tx_conversao) #********#
     st.divider()
 
     #Define colunas de filtro
