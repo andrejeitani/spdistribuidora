@@ -68,7 +68,8 @@ try:
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
 
-    st.write(df)
+    #st.write(df)
+    st.dataframe(df , use_container_width=True)
     
     #Conta a quantidade de clientes atendidos
     clientes = df['Cliente'].unique() 
