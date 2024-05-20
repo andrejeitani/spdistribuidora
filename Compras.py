@@ -83,7 +83,7 @@ try:
             ' - ' ,
             'Total de intelbras a comprar: R$',
                  #filtered_df['Total'].sum().round(2) , grouping=True)
-                 b)
+                 format(b,':.2f')
                 
     if __name__ == '__main__':
         main()
