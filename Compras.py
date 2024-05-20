@@ -82,7 +82,7 @@ try:
         st.write('Produtos para comprar: ',str(a) ,
             ' - ' ,
             'Total de intelbras a comprar: R$',
-            filtered_df['Total'].sum().round(2) , grouping=True)
+            filtered_df['Total'].sum().round(2))
                 
     if __name__ == '__main__':
         main()
