@@ -66,7 +66,6 @@ try:
 
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
-        total_status = df_filtro.groupby(df_filtro['Status'].sum('Valor Total')) #<<<<<<<<<<<<<<<<<<<<<<<<<<#
         tx_conversao = (df_filtro[(df_filtro['Status'] == 'Fechado' / df_filtro['Status'] == 'Pendente')*100]) #<<<<<<<<<<<<<<<<<<<<<<<<<#
                                                                  
 
