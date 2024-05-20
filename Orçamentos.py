@@ -69,6 +69,7 @@ try:
 
         st.write("Total Orçado R$",total_real , grouping=True)
         st.write("Clientes atendidos:",str(len(clientes)))
+        st.write("A Taxa de conversão é de: ")
         st.divider()
 
     #if __name__ == '__main__':
@@ -82,6 +83,7 @@ try:
     #Define variaveis
     total_real = df['Valor Total'].sum()
     total_qtd = df['Quantidade'].sum()
+    
 
     #Informe de Quantitativos
     st.write("Total Orçado R$" ,total_real , grouping=True)
