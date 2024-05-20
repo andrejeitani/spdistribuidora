@@ -4,7 +4,7 @@ import streamlit as st
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
                    page_title='SP Distribuidora - Compras',
-                   menu_items={'Reporte um erro': mailto:andrejeitani@gmail.com}
+                   menu_items={'Reporte um erro': mailto:'andrejeitani@gmail.com'}
                   )
 
 try:
