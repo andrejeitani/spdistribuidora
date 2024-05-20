@@ -88,6 +88,7 @@ try:
     #Informe de Quantitativos
     st.write("Total Orçado R$" ,total_real , grouping=True)
     st.write("Clientes atendidos:",str(len(clientes)))
+    st.write("A Taxa de conversão é de: ")
     st.divider()
 
     #Define colunas de filtro
