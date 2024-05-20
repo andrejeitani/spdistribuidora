@@ -78,7 +78,7 @@ try:
     total_qtd = df['Quantidade'].sum()
 
     #Informe de Quantitativos
-    st.write("Total Orçado R$" ,total_real.round(2) , grouping=True)
+    st.write(f'Total Orçado R$ ,{total_real.round(2)})
     st.write("Clientes atendidos:",str(len(clientes)))
     st.divider()
 
@@ -118,7 +118,6 @@ try:
     tx_conversao = df.groupby(df['Status']).sum('Valor Total')
     chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
     st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')
-    st.divider()
         
     # calculo de taxa de conversão
     pendente = tx_conversao['Valor Total'].reset_index()
