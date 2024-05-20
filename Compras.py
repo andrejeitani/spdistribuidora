@@ -2,7 +2,10 @@ import pandas as pd
 import streamlit as st
 
 #Define o Layout da Pagina para WideScreen
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide', 
+                   page_title='SP Distribuidora - Compras',
+                   menu_items={'Reporte um erro': mailto:andrejeitani@gmail.com}
+                  )
 
 try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
