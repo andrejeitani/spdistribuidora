@@ -8,7 +8,7 @@ try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
     arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
     df = pd.read_excel(arquivo, engine='openpyxl')
-    pack = st.file_uploader('Faça o Upload do Arquivo de Pack')
+    pack = st.file_uploader('Faça o Upload da tabela da Intelbras')
     pack = pd.read_excel(pack)
     df = df.drop(index=[0,1,2])
     df = df.rename(columns={
