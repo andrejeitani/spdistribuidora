@@ -126,7 +126,7 @@ try:
     Fe = pendente.loc[Filtro_fechados, 'Valor Total'].sum()
     Pe = pendente.loc[Filtro_pendentes, 'Valor Total'].sum()
     taxa = ((Fe / (Fe + Pe))*100).round(2)
-    st.write(f'Taxa de conversão de: {taxa} %')
+    st.write(f'Taxa de conversão de Orçamentos: {taxa} %')
     st.divider()
 
 except:
