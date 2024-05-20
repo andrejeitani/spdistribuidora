@@ -113,7 +113,7 @@ try:
     st.divider()
     
     #Grafico de Taxa de Conversão
-    st.write('Gráfico de Conversão)
+    st.write('Gráfico de Conversão')
     tx_conversao = df.groupby(df['Status']).sum('Valor Total')
     chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
     st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')
