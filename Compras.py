@@ -79,11 +79,12 @@ try:
         st.dataframe(filtered_df , use_container_width=True)
     
         a = len(filtered_df)
+        b = filtered_df['Total'].sum().round(2) 
         st.write('Produtos para comprar: ',str(a) ,
             ' - ' ,
-            'Total de intelbras a comprar: R$',
-            filtered_df['Total'].sum().round(2))
-                
+            f'Total de intelbras a comprar: R${b}'
+            #filtered_df['Total'].sum().round(2))
+                )
     if __name__ == '__main__':
         main()
 except:
