@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 
 #Define o layout da pagina como expandido
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide', 
+                   page_title='SP Distribuidora - Orçamentos')
 
 try:
     #Faz a leitura do arquivo e carrega na memoria
