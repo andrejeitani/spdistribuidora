@@ -106,28 +106,28 @@ try:
     st.bar_chart(data=chart_marcas , y='Valor Total' , use_container_width=True , color='#368900')
     st.divider()
 
-    # Grafico de Orçamentos por Vendedor
-    df4 = df.groupby(df['Vendedor']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
-    st.write('Orçamento por Vendedor')
-    chart_vendedores = df4.sort_values(by='Valor Total', ascending=False)
-    st.bar_chart(data=chart_vendedores , y='Valor Total' , use_container_width=True , color='#368900')
-    st.divider()
-    
-    #Grafico de Taxa de Conversão
-    st.write('Gráfico de Conversão')
-    tx_conversao = df.groupby(df['Status']).sum('Valor Total')
-    chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
-    st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')
+    col5 , col6 = st.columns(2)
+    with col5:
+        # Grafico de Orçamentos por Vendedor
+        df4 = df.groupby(df['Vendedor']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        st.write('Orçamento por Vendedor')
+        chart_vendedores = df4.sort_values(by='Valor Total', ascending=False)
+        st.bar_chart(data=chart_vendedores , y='Valor Total' , use_container_width=True , color='#368900')
+    with col6:
+        #Grafico de Taxa de Conversão
+        st.write('Gráfico de Conversão')
+        tx_conversao = df.groupby(df['Status']).sum('Valor Total')
+        chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
+        st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')  
         
-    # calculo de taxa de conversão
-    pendente = tx_conversao['Valor Total'].reset_index()
-    Filtro_fechados = pendente['Status'] == 'Fechado'
-    Filtro_pendentes = pendente['Status'] == 'Pendente'
-    Fe = pendente.loc[Filtro_fechados, 'Valor Total'].sum()
-    Pe = pendente.loc[Filtro_pendentes, 'Valor Total'].sum()
-    taxa = ((Fe / (Fe + Pe))*100).round(2)
-    st.write(f'Taxa de conversão de Orçamentos: {taxa} %')
+        # calculo de taxa de conversão
+        pendente = tx_conversao['Valor Total'].reset_index()
+        Filtro_fechados = pendente['Status'] == 'Fechado'
+        Filtro_pendentes = pendente['Status'] == 'Pendente'
+        Fe = pendente.loc[Filtro_fechados, 'Valor Total'].sum()
+        Pe = pendente.loc[Filtro_pendentes, 'Valor Total'].sum()
+        taxa = ((Fe / (Fe + Pe))*100).round(2)
+        st.write(f'Taxa de conversão de: {taxa} %')
     st.divider()
-
 except:
     st.write('SP Distribuidora')
