@@ -66,7 +66,7 @@ try:
 
         total_real = df_filtro['Valor Total'].sum()
         total_qtd = df_filtro['Quantidade'].sum()
-        tx_conversao = (df_filtro[(df_filtro['Status'] == 'Fechado' / df_filtro['Status'] == 'Pendente')*100]) #<<<<<<<<<<<<<<<<<<<<<<<<<#
+        tx_conversao = (df_filtro[df_filtro['Status'] == 'Fechado' / df_filtro['Status'] == 'Pendente']) #<<<<<<<<<<<<<<<<<<<<<<<<<#
                                                                  
 
         #st.write("Total Orçado R$",total_real , grouping=True)
