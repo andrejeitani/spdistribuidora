@@ -110,7 +110,7 @@ try:
     with col5:
         # Grafico de Orçamentos por Vendedor
         df4 = df.groupby(df['Vendedor']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
-        st.write('Orçamento por Vendedor')
+        st.write('Total de Orçamentos por Vendedor')
         chart_vendedores = df4.sort_values(by='Valor Total', ascending=False)
         st.bar_chart(data=chart_vendedores , y='Valor Total' , use_container_width=True , color='#368900')
     with col6:
