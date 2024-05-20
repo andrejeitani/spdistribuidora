@@ -119,6 +119,16 @@ try:
     chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
     st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')
     st.divider()
+        
+    # calculo de taxa de conversão
+    pendente = tx_conversao['Valor Total'].reset_index()
+    Filtro_fechados = pendente['Status'] == 'Fechado'
+    Filtro_pendentes = pendente['Status'] == 'Pendente'
+    Fe = pendente.loc[Filtro_fechados, 'Valor Total'].sum()
+    Pe = pendente.loc[Filtro_pendentes, 'Valor Total'].sum()
+    taxa = ((Fe / (Fe + Pe))*100).round(2)
+    st.write(f'Taxa de conversão de: {taxa} %')
+    st.divider()
 
 except:
     st.write('SP Distribuidora')
