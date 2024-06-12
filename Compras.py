@@ -66,7 +66,7 @@ try:
     df = df.drop_duplicates() #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     # Realiza o filtro do arquivo , para produtos com definição de compra maior que 1
-    df = df[df['Sugestao 40 Dias'] > 0]
+    df = df[df['Sugestao 40 Dias'] > 1]
     df['Total'] = (df['PV'] * df['Sugestao 40 Dias']).round(2)
 
     # Função de filtro 
