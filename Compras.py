@@ -69,6 +69,10 @@ try:
     df = df[df['Sugestao 40 Dias'] > 0]
     df['Total'] = (df['PV'] * df['Sugestao 40 Dias']).round(2)
 
+    # Cria a Coluna comprar, ja com o ajuste da multiplicidade dos pack's
+    df['Comprar'] = ((df['Sugestao 40 Dias'] / df['Qtd. Multipla']).round(0) * df['Qtd. Multipla'])
+    
+
     # Função de filtro 
     def main():
     # Campo de texto para inserir o critério de filtro
