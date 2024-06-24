@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 
 #Define o layout da pagina como expandido
@@ -128,6 +127,15 @@ try:
         Pe = pendente.loc[Filtro_pendentes, 'Valor Total'].sum()
         taxa = ((Fe / (Fe + Pe))*100).round(2)
         st.write(f'Taxa de conversão de: {taxa} %')
+    st.divider()
+
+    # Vendas Por semana
+    st.write('Orçamentos por dia da semana')
+    df['Data'] = pd.to_datetime(df['Data']).dt.dayofweek
+    df['Data'] = df['Data'].replace({0:'Segunda' , 1:'Terça' , 2:'Quarta' , 3:'Quinta' , 4:'Sexta' , 5:'Sabado' , 6:'Domingo'})
+    vendas_semanal = df.groupby(df['Data']).sum('Valor Total')
+    vendas_semanal = vendas_semanal.sort_values(by=['Valor Total'], ascending=True)
+    st.bar_chart(vendas_semanal , y='Valor Total' , use_container_width=True , color='#368900')
     st.divider()
 except:
     st.write('SP Distribuidora')
