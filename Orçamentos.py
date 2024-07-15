@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 #Define o layout da pagina como expandido
 st.set_page_config(layout='wide', 
                    page_title='SP Distribuidora - Orçamentos')
+primaryColor = "#0213F3"
+backgroundColor = "black"
 
 try:
     #Faz a leitura do arquivo e carrega na memoria
@@ -77,7 +80,7 @@ try:
     total_qtd = df['Quantidade'].sum()
 
     #Informe de Quantitativos
-    st.write(f'Total Orçado R$ {total_real.round(2)}')
+    st.write(f'Total Orçado R$ {total_real.round(2):,}')
     st.write("Clientes atendidos:",str(len(clientes)))
     st.divider()
 
@@ -100,24 +103,32 @@ try:
     st.divider()
 
     # Grafico de Quantitativo de Marcas
-    st.write('Demanda por Marcas')
-    chart_marcas = df2.sort_values(by='Valor Total', ascending=False)
-    st.bar_chart(data=chart_marcas , y='Valor Total' , use_container_width=True , color='#368900')
+    def grafico_marca(tabela):
+        tabela = tabela.groupby(['Marca','Status']).sum('Valor Total')
+        tabela = tabela.reset_index()
+        fig = px.histogram(tabela , x = 'Marca' , y = 'Valor Total' , color = 'Status' , title='Demanda Por Marcas')
+        st.plotly_chart(fig)
+    grafico_marca(df)
     st.divider()
 
     col5 , col6 = st.columns(2)
     with col5:
-        # Grafico de Orçamentos por Vendedor
-        df4 = df.groupby(df['Vendedor']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
-        st.write('Total de Orçamentos por Vendedor')
-        chart_vendedores = df4.sort_values(by='Valor Total', ascending=False)
-        st.bar_chart(data=chart_vendedores , y='Valor Total' , use_container_width=True , color='#368900')
+        def grafico_vendedor(tabela):
+            tabela = tabela.groupby(['Vendedor' , 'Status']).sum('Valor Total')
+            tabela = tabela.reset_index()
+            fig = px.histogram(tabela , x = 'Vendedor' , y = 'Valor Total' , color = 'Status' , title='Vendas Por Vendedor')
+            st.plotly_chart(fig)
+        grafico_vendedor(df)
+
+
     with col6:
-        #Grafico de Taxa de Conversão
-        st.write('Gráfico de Conversão')
         tx_conversao = df.groupby(df['Status']).sum('Valor Total')
-        chart_conversao = tx_conversao.sort_values(by='Valor Total', ascending=False)
-        st.bar_chart(data=chart_conversao , y='Valor Total' , use_container_width=True , color='#368900')  
+        def grafico_conversao(tabela):
+            tabela = tabela.groupby(['Status']).sum('Valor Total')
+            tabela = tabela.reset_index()
+            fig = px.histogram(tabela , x = 'Status' , y = 'Valor Total' , color = 'Status' , title='Taxa de Conversão')
+            st.plotly_chart(fig)
+        grafico_conversao(df)  
         
         # calculo de taxa de conversão
         pendente = tx_conversao['Valor Total'].reset_index()
@@ -130,12 +141,13 @@ try:
     st.divider()
 
     # Vendas Por semana
-    st.write('Orçamentos por dia da semana')
-    df['Data'] = pd.to_datetime(df['Data']).dt.dayofweek
-    df['Data'] = df['Data'].replace({0:'Segunda' , 1:'Terça' , 2:'Quarta' , 3:'Quinta' , 4:'Sexta' , 5:'Sabado' , 6:'Domingo'})
-    vendas_semanal = df.groupby(df['Data']).sum('Valor Total')
-    vendas_semanal = vendas_semanal.sort_values(by=['Valor Total'], ascending=True)
-    st.bar_chart(vendas_semanal , y='Valor Total' , use_container_width=True , color='#368900')
+    def grafico_data(tabela):
+        tabela = tabela.groupby(['Data','Status']).sum('Valor Total')
+        tabela = tabela.reset_index()
+        fig = px.bar(tabela , x = 'Data' , y = 'Valor Total' , color = 'Status' , title='Vendas por dia')
+        st.plotly_chart(fig)
+    grafico_data(df)
     st.divider()
+
 except:
     st.write('SP Distribuidora')
