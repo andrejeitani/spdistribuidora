@@ -127,7 +127,7 @@ try:
             tabela = tabela.groupby(['Status']).sum('Valor Total')
             tabela = tabela.reset_index()
             tabela = tabela.sort_values('Valor Total' , ascending=False)
-            fig = px.histogram(tabela , x = 'Status' , y = 'Valor Total' , color = 'Status' , title='Taxa de Conversão' , text_auto=True)
+            fig = px.histogram(tabela , x = 'Status' , y = 'Valor Total' , color = 'Status' , title='Taxa de Conversão' , text_auto='.2f')
             st.plotly_chart(fig)
         grafico_conversao(df)  
         
