@@ -106,6 +106,7 @@ try:
     def grafico_marca(tabela):
         tabela = tabela.groupby(['Marca','Status']).sum('Valor Total')
         tabela = tabela.reset_index()
+        tabela = tabela.sort_values('Valor Total' , ascending=False)
         fig = px.histogram(tabela , x = 'Marca' , y = 'Valor Total' , color = 'Status' , title='Demanda Por Marcas')
         st.plotly_chart(fig)
     grafico_marca(df)
@@ -115,17 +116,17 @@ try:
     with col5:
         def grafico_vendedor(tabela):
             tabela = tabela.groupby(['Vendedor' , 'Status']).sum('Valor Total')
+            tabela = tabela.sort_values('Valor Total' , ascending=False)
             tabela = tabela.reset_index()
             fig = px.histogram(tabela , x = 'Vendedor' , y = 'Valor Total' , color = 'Status' , title='Vendas Por Vendedor')
             st.plotly_chart(fig)
         grafico_vendedor(df)
-
-
     with col6:
         tx_conversao = df.groupby(df['Status']).sum('Valor Total')
         def grafico_conversao(tabela):
             tabela = tabela.groupby(['Status']).sum('Valor Total')
             tabela = tabela.reset_index()
+            tabela = tabela.sort_values('Valor Total' , ascending=False)
             fig = px.histogram(tabela , x = 'Status' , y = 'Valor Total' , color = 'Status' , title='Taxa de Conversão' , text_auto=True)
             st.plotly_chart(fig)
         grafico_conversao(df)  
