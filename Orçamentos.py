@@ -58,26 +58,20 @@ try:
         ]
     
     # Define a Função de filtro do dataframe por cliente e produto
-    def main():
+    def filtro_produto_cliente():
         col_cliente , col_produto = st.columns(2)
         with col_cliente:
             filtro_cliente = st.text_input('Digite o Nome do Cliente:')
         with col_produto:
             filtro_produto = st.text_input('Digite o Nome do Produto:')
+        global df_filtro , total_real
         df_filtro = df[df['Cliente'].str.contains(filtro_cliente, case=False) & df['Produto'].str.contains(filtro_produto, case=False)]
         st.dataframe(df_filtro, use_container_width=True)
-
         total_real = df_filtro['Valor Total'].sum()
-        total_qtd = df_filtro['Quantidade'].sum()
-
-    st.dataframe(df , use_container_width=True)
+    filtro_produto_cliente()
     
     #Conta a quantidade de clientes atendidos
-    clientes = df['Cliente'].unique() 
-
-    #Define variaveis
-    total_real = df['Valor Total'].sum()
-    total_qtd = df['Quantidade'].sum()
+    clientes = df_filtro['Cliente'].unique() 
 
     #Informe de Quantitativos
     st.write(f'Total Orçado R$ {total_real.round(2):,}')
