@@ -82,17 +82,17 @@ try:
     col3 , col4 = st.columns(2)
     with col3:
         st.write('Agrupado por Marca')
-        df2 = df.groupby(df['Marca']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df2 = df_filtro.groupby(df['Marca']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         st.dataframe(df2 , use_container_width=True)
     with col4:
         st.write('Agrupado por Produto')
-        df3 = df.groupby(df['Produto']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df3 = df_filtro.groupby(df['Produto']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         st.dataframe(df3 , use_container_width=True)
     st.divider()
 
     # Dados agrupados por cliente
     st.write('Agrupado por Cliente')
-    df3 = df.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+    df3 = df_filtro.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
     st.dataframe(df3 , use_container_width=True)
     st.divider()
 
@@ -103,7 +103,7 @@ try:
         tabela = tabela.sort_values('Valor Total' , ascending=False)
         fig = px.histogram(tabela , x = 'Marca' , y = 'Valor Total' , color = 'Status' , title='Demanda Por Marcas')
         st.plotly_chart(fig)
-    grafico_marca(df)
+    grafico_marca(df_filtro)
     st.divider()
 
     col5 , col6 = st.columns(2)
@@ -114,7 +114,7 @@ try:
             tabela = tabela.reset_index()
             fig = px.histogram(tabela , x = 'Vendedor' , y = 'Valor Total' , color = 'Status' , title='Orçamentos Por Vendedor')
             st.plotly_chart(fig)
-        grafico_vendedor(df)
+        grafico_vendedor(df_filtro)
     with col6:
         tx_conversao = df.groupby(df['Status']).sum('Valor Total')
         def grafico_conversao(tabela):
@@ -123,7 +123,7 @@ try:
             tabela = tabela.sort_values('Valor Total' , ascending=False)
             fig = px.histogram(tabela , x = 'Status' , y = 'Valor Total' , color = 'Status' , title='Taxa de Conversão' , text_auto='.2f')
             st.plotly_chart(fig)
-        grafico_conversao(df)  
+        grafico_conversao(df_filtro)  
         
         # calculo de taxa de conversão
         pendente = tx_conversao['Valor Total'].reset_index()
@@ -141,7 +141,7 @@ try:
         tabela = tabela.reset_index()
         fig = px.bar(tabela , x = 'Data' , y = 'Valor Total' , color = 'Status' , title='Orçamentos por dia')
         st.plotly_chart(fig)
-    grafico_data(df)
+    grafico_data(df_filtro)
     st.divider()
 
 except:
