@@ -116,7 +116,7 @@ try:
             st.plotly_chart(fig)
         grafico_vendedor(df_filtro)
     with col6:
-        tx_conversao = df.groupby(df['Status']).sum('Valor Total')
+        tx_conversao = df_filtro.groupby(df['Status']).sum('Valor Total')
         def grafico_conversao(tabela):
             tabela = tabela.groupby(['Status']).sum('Valor Total')
             tabela = tabela.reset_index()
