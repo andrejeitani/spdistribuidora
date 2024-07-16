@@ -118,7 +118,7 @@ try:
             tabela = tabela.groupby(['Vendedor' , 'Status']).sum('Valor Total')
             tabela = tabela.sort_values('Valor Total' , ascending=False)
             tabela = tabela.reset_index()
-            fig = px.histogram(tabela , x = 'Vendedor' , y = 'Valor Total' , color = 'Status' , title='Vendas Por Vendedor')
+            fig = px.histogram(tabela , x = 'Vendedor' , y = 'Valor Total' , color = 'Status' , title='Orçamentos Por Vendedor')
             st.plotly_chart(fig)
         grafico_vendedor(df)
     with col6:
@@ -145,7 +145,7 @@ try:
     def grafico_data(tabela):
         tabela = tabela.groupby(['Data','Status']).sum('Valor Total')
         tabela = tabela.reset_index()
-        fig = px.bar(tabela , x = 'Data' , y = 'Valor Total' , color = 'Status' , title='Vendas por dia')
+        fig = px.bar(tabela , x = 'Data' , y = 'Valor Total' , color = 'Status' , title='Orçamentos por dia')
         st.plotly_chart(fig)
     grafico_data(df)
     st.divider()
