@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
@@ -83,7 +82,7 @@ try:
         st.write('Planilha de Compras')
         st.dataframe(filtered_df , use_container_width=True)
 
-        a = len(filtered_df)
+        a = len(filtered_df['Produto'])
         b = filtered_df['Total'].sum().round(2) 
         st.write('Produtos para comprar: ',str(a) ,
             ' - ' ,
