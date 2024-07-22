@@ -4,9 +4,7 @@ import plotly.express as px
 
 #Define o layout da pagina como expandido
 st.set_page_config(layout='wide', 
-                   page_title='SP Distribuidora - Orçamentos')
-primaryColor = "#0213F3"
-backgroundColor = "black"
+                   page_title='SP Distribuidora - Orçamentos' )
 
 try:
     #Faz a leitura do arquivo e carrega na memoria
@@ -38,7 +36,7 @@ try:
     #Segmenta em Pendente e Fechado
     status_ = df['Status'].unique()
 
-    #Define os Input's de entrada 
+    #Define os Filtros de entrada (Data , Vendedor e Status)
     col1 , col2 , col3 = st.columns(3)
 
     with col1:
@@ -78,19 +76,19 @@ try:
     st.write("Clientes atendidos:",str(len(clientes)))
     st.divider()
 
-    #Define colunas de filtro
+    #Imprimi os grid's Agrupados por Marca e Agrupados por Produto
     col3 , col4 = st.columns(2)
     with col3:
         st.write('Agrupado por Marca')
-        df2 = df_filtro.groupby(df['Marca']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df2 = df_filtro.groupby('Marca').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         st.dataframe(df2 , use_container_width=True)
     with col4:
         st.write('Agrupado por Produto')
-        df3 = df_filtro.groupby(df['Produto']).sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df3 = df_filtro.groupby('Produto').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         st.dataframe(df3 , use_container_width=True)
     st.divider()
 
-    # Dados agrupados por cliente
+    # Imprimi o grid com dados agrupados por cliente
     st.write('Agrupado por Cliente')
     df3 = df_filtro.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
     st.dataframe(df3 , use_container_width=True)
@@ -106,6 +104,7 @@ try:
     grafico_marca(df_filtro)
     st.divider()
 
+    # Grafico de orçamentos por Vendedor
     col5 , col6 = st.columns(2)
     with col5:
         def grafico_vendedor(tabela):
@@ -116,7 +115,8 @@ try:
             st.plotly_chart(fig)
         grafico_vendedor(df_filtro)
     with col6:
-        tx_conversao = df_filtro.groupby(df['Status']).sum('Valor Total')
+    # Grafico de orçamentos por Situação Fechado / Pendente    
+        tx_conversao = df_filtro.groupby('Status').sum('Valor Total')
         def grafico_conversao(tabela):
             tabela = tabela.groupby(['Status']).sum('Valor Total')
             tabela = tabela.reset_index()
@@ -135,7 +135,7 @@ try:
         st.write(f'Taxa de conversão de: {taxa} %')
     st.divider()
 
-    # Vendas Por semana
+    # Grafico de orçamentos por dia do mês
     def grafico_data(tabela):
         tabela = tabela.groupby(['Data','Status']).sum('Valor Total')
         tabela = tabela.reset_index()
