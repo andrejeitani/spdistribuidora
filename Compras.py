@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import plotly.express as px
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
@@ -49,9 +50,6 @@ try:
     df['Comprado'] = df['Comprado'].fillna(0)
     df['Programado'] = df['Programado'].fillna(0)
 
-    # Cria a Coluna com o devido calculo de compras
-    #df['Comprar'] = (df['Sugestao 40 dias'] - df['Comprado'])
-
     # Classica as colunas pela sua ordem alfabetica
     df = df.sort_values(by='Marca' , ascending=True)
 
@@ -63,22 +61,24 @@ try:
 
     # Realiza a junção entre os 2 dataframes e Exclui os codigos em duplicidade
     df = df.merge(pack , left_on='Codigo' , right_on='Codigo' , how='outer')
-    df = df.drop_duplicates() #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    df = df.drop_duplicates() 
 
     # Realiza o filtro do arquivo , para produtos com definição de compra maior que 1
     df = df[df['Sugestao 40 Dias'] > 0]
-    df['Total'] = (df['PV'] * df['Sugestao 40 Dias']).round(2)
 
     # Cria a Coluna comprar, ja com o ajuste da multiplicidade dos pack's
     df['Comprar'] = ((df['Sugestao 40 Dias'] / df['Qtd. Multipla']).round(0) * df['Qtd. Multipla'])
-    
+
+    # Define a coluna Total, sendo a quantidade ajustada do COMPRAR multiplicando o PV
+    df['Total'] = (df['PV'] * df['Comprar']).round(2)
 
     # Função de filtro 
-    def main():
+    def filtro():
     # Campo de texto para inserir o critério de filtro
         filtro = st.text_input('Digite uma marca para filtrar:')
 
         # Aplicar o filtro e mostrar o resultado
+        global filtered_df
         filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
         st.write('Planilha de Compras')
         st.dataframe(filtered_df , use_container_width=True)
@@ -89,7 +89,6 @@ try:
             ' - ' ,
             f'Total de intelbras a comprar: R$ {b:,}'
                 )
-    if __name__ == '__main__':
-        main()
+    filtro()
 except:
     st.write('SP Distribuidora')
