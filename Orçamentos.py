@@ -81,16 +81,19 @@ try:
     with col3:
         st.write('Agrupado por Marca')
         df2 = df_filtro.groupby('Marca').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df2['%'] = (( df2['Valor Total'] / df2['Valor Total'].sum() ) * 100 ).round(2)
         st.dataframe(df2 , use_container_width=True)
     with col4:
         st.write('Agrupado por Produto')
         df3 = df_filtro.groupby('Produto').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+        df3['%'] = ( df3['Valor Total'] / df3['Valor Total'].sum() *100 ).round(2)
         st.dataframe(df3 , use_container_width=True)
     st.divider()
 
     # Imprimi o grid com dados agrupados por cliente
     st.write('Agrupado por Cliente')
     df3 = df_filtro.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
+    df3['%'] = ((df3['Valor Total'] / df3['Valor Total'].sum()) * 100 ).round(2)  
     st.dataframe(df3 , use_container_width=True)
     st.divider()
 
@@ -116,7 +119,7 @@ try:
         grafico_vendedor(df_filtro)
     with col6:
     # Grafico de orçamentos por Situação Fechado / Pendente    
-        tx_conversao = df_filtro.groupby('Status').sum('Valor Total')
+        tx_conversao = df_filtro.groupby(df['Status']).sum('Valor Total')
         def grafico_conversao(tabela):
             tabela = tabela.groupby(['Status']).sum('Valor Total')
             tabela = tabela.reset_index()
