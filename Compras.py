@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import plotly.express as px
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
@@ -16,22 +17,23 @@ try:
     'Período da Consulta 90 dias':'Codigo',
     'Unnamed: 1':'Produto',
     'Unnamed: 2':'Marca',
-    'Unnamed: 3':'Vendas',
-    'Unnamed: 4':'Excluir 0',
-    'Unnamed: 5':'Remessa',
-    'Unnamed: 6':'Vendas&Remessas',
-    'Unnamed: 7':'Excluir 1',
-    'Unnamed: 8':'Media Mensal',
-    'Unnamed: 9':'Estoque SJC',
-    'Unnamed: 10':'Cobertura em Dias',
-    'Unnamed: 11':'Excluir 2',
-    'Unnamed: 12':'Comprado',
-    'Unnamed: 13':'Excluir 3',
-    'Unnamed: 14':'Programado',
-    'Unnamed: 15':'Status',
-    'Unnamed: 16':'Sugestao 40 Dias',
-    'Unnamed: 17':'Excluir 4',
-    'Unnamed: 18':'Excluir 5',
+    'Unnamed: 3':'Curva',
+    'Unnamed: 4':'Vendas',
+    'Unnamed: 5':'Excluir 0',
+    'Unnamed: 6':'Remessa',
+    'Unnamed: 7':'Vendas&Remessas',
+    'Unnamed: 8':'Excluir 1',
+    'Unnamed: 9':'Media Mensal',
+    'Unnamed: 10':'Estoque SJC',
+    'Unnamed: 11':'Cobertura em Dias',
+    'Unnamed: 12':'Excluir 2',
+    'Unnamed: 13':'Comprado',
+    'Unnamed: 14':'Excluir 3',
+    'Unnamed: 15':'Programado',
+    'Unnamed: 16':'Status',
+    'Unnamed: 17':'Sugestao 40 Dias',
+    'Unnamed: 18':'Excluir 4',
+    'Unnamed: 19':'Excluir 5',
     })
 
     # Excluir as colunas em branco
