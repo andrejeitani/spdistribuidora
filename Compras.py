@@ -14,30 +14,30 @@ try:
     pack = pd.read_excel(pack)
     df = df.drop(index=[0,1])
     df = df.rename(columns={
-    'Período da Consulta 90 dias':'Codigo',
-    'Unnamed: 1':'Produto',
-    'Unnamed: 2':'Marca',
-    'Unnamed: 3':'Curva',
-    'Unnamed: 4':'Vendas',
-    'Unnamed: 5':'Excluir 0',
-    'Unnamed: 6':'Remessa',
-    'Unnamed: 7':'Vendas&Remessas',
-    'Unnamed: 8':'Excluir 1',
-    'Unnamed: 9':'Media Mensal',
-    'Unnamed: 10':'Estoque SJC',
-    'Unnamed: 11':'Cobertura em Dias',
-    'Unnamed: 12':'Excluir 2',
-    'Unnamed: 13':'Comprado',
-    'Unnamed: 14':'Excluir 3',
-    'Unnamed: 15':'Programado',
-    'Unnamed: 16':'Status',
-    'Unnamed: 17':'Sugestao 40 Dias',
-    'Unnamed: 18':'Excluir 4',
-    'Unnamed: 19':'Excluir 5',
+        'Período da Consulta 90 dias':'Codigo',
+        'Unnamed: 1':'Produto',
+        'Unnamed: 2':'Marca',
+        'Unnamed: 3':'Curva',
+        'Unnamed: 4':'Vendas',
+        'Unnamed: 5':'Excluir 1',
+        'Unnamed: 6':'Remessa',
+        'Unnamed: 7':'Vendas&Remessas',
+        'Unnamed: 8':'Excluir 2',
+        'Unnamed: 9':'Media Mensal',
+        'Unnamed: 10':'Estoque',
+        'Unnamed: 11':'Cobertura em Dias',
+        'Unnamed: 12':'Excluir 3',
+        'Unnamed: 13':'Comprado',
+        'Unnamed: 14':'Excluir 4',
+        'Unnamed: 15':'Programado',
+        'Unnamed: 16':'Status',
+        'Unnamed: 17':'Sugestao 40 Dias',
+        'Unnamed: 18':'Excluir 5',
+        'Unnamed: 19':'Pack',
     })
 
     # Excluir as colunas em branco
-    df = df.drop(columns=['Excluir 0','Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
+    df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
 
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
@@ -90,6 +90,26 @@ try:
             ' - ' ,
             f'Total de intelbras a comprar: R$ {b:,}'
                 )
-    filtro()
+    filtro() 
+
+    # Define os dataframes por agregação
+    origem = df.groupby('Origem').sum('Total')
+    origem['%'] = ((origem['Total'] / origem['Total'].sum()) * 100).round(2)
+    origem = origem.sort_values('%' , ascending=False)
+    marca = df.groupby('Marca').sum('Total')
+    marca['%'] = ((marca['Total'] / marca['Total'].sum()) * 100).round(2)
+    marca = marca.sort_values('%' , ascending=False)
+    curva = df.groupby('Curva').sum('Total')
+    curva['%'] = ((curva['Total'] / curva['Total'].sum()) * 100).round(2)
+    curva = curva.sort_values('%' , ascending=False)
+    
+    # Imprimi os dataframes por agregação
+    st.write('Agrupado por Origem/Fabrica')
+    st.dataframe(origem , use_container_width=True)
+    st.write('Agrupado por Curva')
+    st.dataframe(curva , use_container_width=True)
+    st.write('Agrupado por Marca')
+    st.dataframe(marca , use_container_width=True)
+
 except:
     st.write('SP Distribuidora')
