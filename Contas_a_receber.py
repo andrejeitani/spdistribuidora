@@ -74,8 +74,7 @@ try:
     tabela_final = pd.concat([sicoob,santander])         
     tabela_final = tabela_final.sort_values(by='Cliente' , ascending=True)
     tabela_final['Valor'] = tabela_final['Valor'].replace('.',',')
-
-    # Cria o filtro de Clientes e/ou notas fiscais  
+           
     def filtro_cliente():
         coluna1,coluna2 = st.columns(2)
         with coluna1:
@@ -87,8 +86,12 @@ try:
         tabela_filtrada2 = tabela_filtrada[tabela_filtrada['Seu Numero'].str.contains(filtro_nf, case=False)]
         st.title('Total em Aberto')
         st.dataframe(tabela_filtrada2 , use_container_width=True)
+        total_em_aberto = tabela_filtrada2['Valor'].sum()
+        devedores = len(tabela_filtrada2['Cliente'].unique())
+        st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
     filtro_cliente() 
   
+   
     # Imprimi o total agrupado por Cliente
     st.title('Total Em Aberto Por Cliente')
     total_agregado_por_cliente = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Banco'])
@@ -96,8 +99,7 @@ try:
     total_agregado_por_cliente['%'] = (total_agregado_por_cliente['Valor'] / total_agregado_por_cliente['Valor'].sum() * 100)
     total_agregado_por_cliente = total_agregado_por_cliente.sort_values(by='%' , ascending=False)
     st.dataframe(total_agregado_por_cliente, use_container_width=True)
-
-    # Conta e mostra a quantidade de devedores do dia
+    
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
 
@@ -110,7 +112,6 @@ try:
     total_agregado_por_banco_sem_perc = total_agregado_por_banco['Valor']
     st.dataframe(total_agregado_por_banco_sem_perc , use_container_width=True )
     
-    # Cria o Grafico de porcentagem de banco
     total_agregado_por_banco = total_agregado_por_banco.reset_index()
     grafico = px.pie(total_agregado_por_banco, values='%',
                      labels='Banco', 
