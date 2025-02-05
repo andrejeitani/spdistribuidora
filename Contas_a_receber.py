@@ -79,9 +79,9 @@ try:
     def filtro_cliente():
         coluna1,coluna2 = st.columns(2)
         with coluna1:
-            filtro_nome = st.text_input('Digite uma Cliente para filtrar:')
+            filtro_nome = st.text_input('Digite um Cliente para filtrar:')
         with coluna2:
-            filtro_nf = st.text_input('Digite o umero da nota fiscal para filtrar:') 
+            filtro_nf = st.text_input('Digite o número da nota fiscal para filtrar:') 
         global tabela_filtrada , tabela_filtrada2
         tabela_filtrada = tabela_final[tabela_final['Cliente'].str.contains(filtro_nome, case=False)]
         tabela_filtrada2 = tabela_filtrada[tabela_filtrada['Seu Numero'].str.contains(filtro_nf, case=False)]
