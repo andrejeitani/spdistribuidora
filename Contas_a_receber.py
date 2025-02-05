@@ -8,9 +8,9 @@ st.set_page_config(layout='wide',
 
 try:    
     #Realiza o upload do arquivo e realiza os devidos tratamentos
-    arquivo_sicoob = st.file_uploader('Faça o Upload do Arquivo do Sicoob Excel (XLSX)')
+    arquivo_sicoob = st.file_uploader('Faça o Upload do Arquivo do Sicoob Excel')
     sicoob = pd.read_excel(arquivo_sicoob)
-    arquivo_santander = st.file_uploader('Faça o Upload do Arquivo do Santander em Excel (XLSX)')
+    arquivo_santander = st.file_uploader('Faça o Upload do Arquivo do Santander em Excel')
     santander = pd.read_excel(arquivo_santander)
 
     # Realiza a tratativa do Arquivo do Sicoob em CSV
