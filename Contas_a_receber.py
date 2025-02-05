@@ -88,7 +88,7 @@ try:
         st.dataframe(tabela_filtrada2 , use_container_width=True)
         total_em_aberto = tabela_filtrada2['Valor'].sum()
         devedores = len(tabela_filtrada2['Cliente'].unique())
-        st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
+        st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:2,} na data de hoje!')
     filtro_cliente() 
   
    
