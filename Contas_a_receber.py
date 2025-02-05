@@ -87,7 +87,6 @@ try:
         st.title('Total em Aberto')
         st.dataframe(tabela_filtrada2 , use_container_width=True)
         total_em_aberto = tabela_filtrada2['Valor'].sum()
-        total_em_aberto = total_em_aberto.round(2)
         devedores = len(tabela_filtrada2['Cliente'].unique())
         st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
     filtro_cliente() 
