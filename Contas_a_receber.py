@@ -56,7 +56,6 @@ sicoob = sicoob.drop(index=Excluir_index)
 sicoob['Banco'] = 'Sicoob'
 
 # Realiza a Tratativa do Arquivo do Santander em Excel (XLSX)
-santander = pd.read_excel('santander.xlsx')
 santander = santander.dropna()
 santander = santander.drop(index=5)
 santander = santander.rename(columns={'Cod. Beneficiário':'Seu Numero',
