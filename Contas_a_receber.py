@@ -81,7 +81,7 @@ try:
     total_agregado_por_cliente = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Banco'])
     total_agregado_por_cliente = total_agregado_por_cliente.groupby(by='Cliente').sum()
     total_agregado_por_cliente['%'] = (total_agregado_por_cliente['Valor'] / total_agregado_por_cliente['Valor'].sum() * 100)
-    total_agregado_por_cliente = total_agregado_por_cliente.sort_values(by='Cliente' , ascending=False)
+    total_agregado_por_cliente = total_agregado_por_cliente.sort_values(by='Cliente' , ascending=True)
     st.dataframe(total_agregado_por_cliente, use_container_width=True)
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
