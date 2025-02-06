@@ -16,35 +16,12 @@ try:
 
     # Realiza a tratativa do Arquivo do Sicoob em Excel
     sicoob = sicoob.rename(columns={
-        'Unnamed: 0':'Excluir1',
-        'Unnamed: 1':'Cliente',
-        'Unnamed: 2':'Excluir2',
-        'Unnamed: 3':'Excluir3',
-        'Unnamed: 4':'Excluir4',
-        'Unnamed: 5':'Excluir5',
-        'Unnamed: 6':'Excluir6',
-        'Unnamed: 7':'Excluir7',
-        'Unnamed: 8':'Nosso Numero',
-        'Unnamed: 9':'Excluir9',
-        'Unnamed: 10':'Excluir10',
-        'Unnamed: 11':'Excluir11',
-        'Unnamed: 12':'Seu Numero',
-        'Unnamed: 13':'Excluir13',
-        'Unnamed: 14':'Excluir14',
-        'Unnamed: 15':'Excluir15',
-        'Unnamed: 16':'Excluir16',
-        'Unnamed: 17':'Excluir17',
-        'Unnamed: 18':'Excluir18',
-        'Unnamed: 19':'Excluir19',
-        'Unnamed: 20':'Vencimento',
-        'Unnamed: 21':'Excluir21',
-        'Unnamed: 22':'Excluir22',
-        'Unnamed: 23':'Excluir23',
-        'Unnamed: 24':'Excluir24',
-        'Unnamed: 25':'Excluir25',
-        'Unnamed: 26':'Valor',
-        'Unnamed: 27':'Excluir27',
-        
+        'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
+        'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Excluir7','Unnamed: 8':'Nosso Numero','Unnamed: 9':'Excluir9',
+        'Unnamed: 10':'Excluir10','Unnamed: 11':'Excluir11','Unnamed: 12':'Seu Numero','Unnamed: 13':'Excluir13','Unnamed: 14':'Excluir14',
+        'Unnamed: 15':'Excluir15','Unnamed: 16':'Excluir16','Unnamed: 17':'Excluir17','Unnamed: 18':'Excluir18','Unnamed: 19':'Excluir19',
+        'Unnamed: 20':'Vencimento','Unnamed: 21':'Excluir21','Unnamed: 22':'Excluir22','Unnamed: 23':'Excluir23','Unnamed: 24':'Excluir24',
+        'Unnamed: 25':'Excluir25','Unnamed: 26':'Valor', 'Unnamed: 27':'Excluir27'        
     })
     sicoob = sicoob.drop(columns=[
         'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir7','Excluir9','Excluir10','Excluir11',
