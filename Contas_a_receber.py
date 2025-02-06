@@ -66,7 +66,7 @@ try:
         global tabela_filtrada , tabela_filtrada2
         tabela_filtrada = tabela_final[tabela_final['Cliente'].str.contains(filtro_nome, case=False)]
         tabela_filtrada2 = tabela_filtrada[tabela_filtrada['Seu Numero'].str.contains(filtro_nf, case=False)]
-        st.title('Total em Aberto')
+        st.title('Total de Boletos em Aberto')
         tabela_filtrada2['Vencimento'] = pd.to_datetime(tabela_filtrada2['Vencimento']).dt.date
         st.dataframe(tabela_filtrada2 , use_container_width=True , hide_index=True)
         total_em_aberto = tabela_filtrada2['Valor'].sum()
