@@ -1,12 +1,13 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import datetime
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
                    page_title='SP Distribuidora - Contas a Receber em Aberto')
 
-try:    
+try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
     arquivo_sicoob = st.file_uploader('Faça o Upload do Arquivo do Sicoob Excel')
     sicoob = pd.read_excel(arquivo_sicoob)
@@ -74,7 +75,7 @@ try:
     tabela_final = pd.concat([sicoob,santander])         
     tabela_final = tabela_final.sort_values(by='Cliente' , ascending=True)
     tabela_final['Valor'] = tabela_final['Valor'].replace('.',',')
-           
+            
     def filtro_cliente():
         coluna1,coluna2 = st.columns(2)
         with coluna1:
@@ -85,13 +86,14 @@ try:
         tabela_filtrada = tabela_final[tabela_final['Cliente'].str.contains(filtro_nome, case=False)]
         tabela_filtrada2 = tabela_filtrada[tabela_filtrada['Seu Numero'].str.contains(filtro_nf, case=False)]
         st.title('Total em Aberto')
+        tabela_filtrada2['Vencimento'] = pd.to_datetime(tabela_filtrada2['Vencimento']).dt.date
         st.dataframe(tabela_filtrada2 , use_container_width=True)
         total_em_aberto = tabela_filtrada2['Valor'].sum()
         devedores = len(tabela_filtrada2['Cliente'].unique())
         st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
     filtro_cliente() 
-  
-   
+
+
     # Imprimi o total agrupado por Cliente
     st.title('Total Em Aberto Por Cliente')
     total_agregado_por_cliente = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Banco'])
@@ -99,7 +101,7 @@ try:
     total_agregado_por_cliente['%'] = (total_agregado_por_cliente['Valor'] / total_agregado_por_cliente['Valor'].sum() * 100)
     total_agregado_por_cliente = total_agregado_por_cliente.sort_values(by='%' , ascending=False)
     st.dataframe(total_agregado_por_cliente, use_container_width=True)
-    
+
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
 
@@ -111,13 +113,13 @@ try:
     total_agregado_por_banco['%'] = total_agregado_por_banco['%'].round(2)
     total_agregado_por_banco_sem_perc = total_agregado_por_banco['Valor']
     st.dataframe(total_agregado_por_banco_sem_perc , use_container_width=True )
-    
+
     total_agregado_por_banco = total_agregado_por_banco.reset_index()
     grafico = px.pie(total_agregado_por_banco, values='%',
-                     labels='Banco', 
-                     title='Montante por Banco', 
-                     names='Banco',
-                     color='Banco')
+                        labels='Banco', 
+                        title='Montante por Banco', 
+                        names='Banco',
+                        color='Banco')
     st.plotly_chart(grafico)
     
 except:
