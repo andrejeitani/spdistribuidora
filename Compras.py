@@ -83,7 +83,7 @@ try:
         global filtered_df
         filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
         st.write('Planilha de Compras')
-        st.dataframe(filtered_df , use_container_width=True)
+        st.dataframe(filtered_df , use_container_width=True , hide_index=True)
 
         a = len(filtered_df['Produto'])
         b = filtered_df['Total'].sum().round(2) 
@@ -106,11 +106,11 @@ try:
     
     # Imprimi os dataframes por agregação
     st.write('Agrupado por Origem/Fabrica')
-    st.dataframe(origem , use_container_width=True)
+    st.dataframe(origem , use_container_width=True , hide_index=True)
     st.write('Agrupado por Curva')
-    st.dataframe(curva , use_container_width=True)
+    st.dataframe(curva , use_container_width=True , hide_index=True)
     st.write('Agrupado por Marca')
-    st.dataframe(marca , use_container_width=True)
+    st.dataframe(marca , use_container_width=True , hide_index=True)
 
 except:
     st.write('SP Distribuidora')
