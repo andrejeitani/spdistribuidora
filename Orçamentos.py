@@ -64,7 +64,7 @@ try:
             filtro_produto = st.text_input('Digite o Nome do Produto:')
         global df_filtro , total_real
         df_filtro = df[df['Cliente'].str.contains(filtro_cliente, case=False) & df['Produto'].str.contains(filtro_produto, case=False)]
-        st.dataframe(df_filtro, use_container_width=True)
+        st.dataframe(df_filtro, use_container_width=True , hide_index=True)
         total_real = df_filtro['Valor Total'].sum()
     filtro_produto_cliente()
     
@@ -82,19 +82,19 @@ try:
         st.write('Agrupado por Marca')
         df2 = df_filtro.groupby('Marca').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         df2['%'] = (( df2['Valor Total'] / df2['Valor Total'].sum() ) * 100 ).round(2)
-        st.dataframe(df2 , use_container_width=True)
+        st.dataframe(df2 , use_container_width=True , hide_index=True)
     with col4:
         st.write('Agrupado por Produto')
         df3 = df_filtro.groupby('Produto').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
         df3['%'] = ( df3['Valor Total'] / df3['Valor Total'].sum() *100 ).round(2)
-        st.dataframe(df3 , use_container_width=True)
+        st.dataframe(df3 , use_container_width=True , hide_index=True)
     st.divider()
 
     # Imprimi o grid com dados agrupados por cliente
     st.write('Agrupado por Cliente')
     df3 = df_filtro.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
     df3['%'] = ((df3['Valor Total'] / df3['Valor Total'].sum()) * 100 ).round(2)  
-    st.dataframe(df3 , use_container_width=True)
+    st.dataframe(df3 , use_container_width=True , hide_index=True)
     st.divider()
 
     # Grafico de Quantitativo de Marcas
