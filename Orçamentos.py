@@ -96,6 +96,7 @@ try:
     st.write('Agrupado por Cliente')
     df3 = df_filtro.groupby('Cliente').sum('Valor Total').sort_values(by='Valor Total', ascending=False)
     df3['%'] = ((df3['Valor Total'] / df3['Valor Total'].sum()) * 100 ).round(2)  
+    df3 = df3.reset_index()
     st.dataframe(df3 , use_container_width=True , hide_index=True)
     st.divider()
 
