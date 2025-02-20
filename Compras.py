@@ -36,7 +36,7 @@ try:
         'Unnamed: 19':'Pack',
     })
 
-    # Excluir as colunas em branco e retira a marca Intelbras FL
+    # Excluir as colunas em branco e retira a marca Intelbras FL e PRJ
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] 
     df = df[df['Marca'] != 'INTELBRAS PRJ']
