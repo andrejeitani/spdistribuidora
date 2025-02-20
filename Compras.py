@@ -98,12 +98,15 @@ try:
     origem = df.groupby('Origem').sum('Total')
     origem['%'] = ((origem['Total'] / origem['Total'].sum()) * 100).round(2)
     origem = origem.sort_values('%' , ascending=False)
+    origem = origem.reset_index()
     marca = df.groupby('Marca').sum('Total')
     marca['%'] = ((marca['Total'] / marca['Total'].sum()) * 100).round(2)
     marca = marca.sort_values('%' , ascending=False)
+    marca = marca.reset_index()
     curva = df.groupby('Curva').sum('Total')
     curva['%'] = ((curva['Total'] / curva['Total'].sum()) * 100).round(2)
     curva = curva.sort_values('%' , ascending=False)
+    curva = curva.reset_index()
     
     # Imprimi os dataframes por agregação
     st.write('Agrupado por Origem/Fabrica')
