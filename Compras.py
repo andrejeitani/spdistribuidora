@@ -44,7 +44,8 @@ try:
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'GAREN/REP']
     df = df[df['Marca'] != 'LINEAR']
-    df = df[df['Produto'] != 'LICENCA']
+    Filtro_descricao = df[df['Produto'].str.contains('LICENCA')]
+    df = df[df['Produto'] != Filtro_descricao]
 
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
