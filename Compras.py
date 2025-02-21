@@ -49,7 +49,7 @@ try:
     df = df.reset_index()
     codigos = [4400338,4543509,4543516,4565298,4565299,4565329,4565330,4780051]
     lista = df['Codigo'].str.contains(codigos)
-    df = df[df['Codigo'] != lista]
+    df = df[df['Codigo'] != codigos]
 
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
