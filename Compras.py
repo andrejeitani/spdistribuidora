@@ -48,7 +48,7 @@ try:
     df = df[df['Produto'] != Filtro_descricao]
     df = df.reset_index()
     lista_de_codigos = ['4400338','4543509','4543516','4565298','4565299','4565329','4565330','4780051']
-    #df = df[df['Codigo'] != lista_de_codigos]
+    df = df[df['Codigo'] != lista_de_codigos]
 
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
