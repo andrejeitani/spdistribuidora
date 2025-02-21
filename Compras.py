@@ -46,7 +46,7 @@ try:
     df = df[df['Marca'] != 'LINEAR']
     Filtro_descricao = df['Produto'].str.contains('LICENCA')
     df = df[df['Produto'] != Filtro_descricao]
-    df = df.reset_index()
+    #df = df.reset_index()
     #codigos = [4400338,4543509,4543516,4565298,4565299,4565329,4565330,4780051]
     #lista = df['Codigo'].str.contains(codigos)
     #df = df[df['Codigo'] != codigos]
