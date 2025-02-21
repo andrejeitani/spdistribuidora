@@ -36,10 +36,14 @@ try:
         'Unnamed: 19':'Pack',
     })
 
-    # Excluir as colunas em branco e retira a marca Intelbras FL e PRJ
+    # Excluir as colunas em branco e retira a marcas em desuso.
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] 
     df = df[df['Marca'] != 'INTELBRAS PRJ']
+    df = df[df['Marca'] != 'CONTROL ID']
+    df = df[df['Marca'] != 'GAREN/FL']
+    df = df[df['Marca'] != 'GAREN/REP']
+    df = df[df['Marca'] != 'LINEAR']
 
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
