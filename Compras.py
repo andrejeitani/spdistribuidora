@@ -44,7 +44,7 @@ try:
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'GAREN/REP']
     df = df[df['Marca'] != 'LINEAR']
-    Filtro_descricao = df[df['Produto'].str.contains('LICENCA')]
+    Filtro_descricao = df['Produto'].str.contains('LICENCA')
     df = df[df['Produto'] != Filtro_descricao]
 
     # Define o tipo de variavel em cada coluna
