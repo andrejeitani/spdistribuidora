@@ -56,6 +56,7 @@ try:
     df = df[df['Codigo'] != '4565329']
     df = df[df['Codigo'] != '4565330']
   
+  
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
     df['Comprado'] = df['Comprado'].astype(float)
@@ -98,7 +99,7 @@ try:
         # Aplicar o filtro e mostrar o resultado
         global filtered_df
         filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
-        st.write('Planilha de Compras')
+        st.title('Planilha de Compras')
         st.dataframe(filtered_df , use_container_width=True , hide_index=True)
 
         a = len(filtered_df['Produto'])
@@ -108,27 +109,32 @@ try:
             f'Total de intelbras a comprar: R$ {b:,}'
                 )
     filtro() 
+    
+    st.divider()
 
     # Define os dataframes por agregação
     origem = df.groupby('Origem').sum('Total')
     origem['%'] = ((origem['Total'] / origem['Total'].sum()) * 100).round(2)
     origem = origem.sort_values('%' , ascending=False)
+    origem = origem.drop(columns=['Comprado','Programado','Sugestao 40 Dias','PV','Qtd. Multipla','Comprar'])
     origem = origem.reset_index()
     marca = df.groupby('Marca').sum('Total')
     marca['%'] = ((marca['Total'] / marca['Total'].sum()) * 100).round(2)
     marca = marca.sort_values('%' , ascending=False)
+    marca = marca.drop(columns=['Comprado','Programado','Sugestao 40 Dias','PV','Qtd. Multipla','Comprar'])
     marca = marca.reset_index()
     curva = df.groupby('Curva').sum('Total')
     curva['%'] = ((curva['Total'] / curva['Total'].sum()) * 100).round(2)
     curva = curva.sort_values('%' , ascending=False)
+    curva = curva.drop(columns=['Comprado','Programado','Sugestao 40 Dias','PV','Qtd. Multipla','Comprar'])
     curva = curva.reset_index()
     
     # Imprimi os dataframes por agregação
-    st.write('Agrupado por Origem/Fabrica')
+    st.subheader('Agrupado por Origem/Fabrica')
     st.dataframe(origem , use_container_width=True , hide_index=True)
-    st.write('Agrupado por Curva')
+    st.subheader('Agrupado por Curva')
     st.dataframe(curva , use_container_width=True , hide_index=True)
-    st.write('Agrupado por Marca')
+    st.subheader('Agrupado por Marca')
     st.dataframe(marca , use_container_width=True , hide_index=True)
 
 except:
