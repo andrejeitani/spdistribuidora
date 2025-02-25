@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
@@ -46,6 +45,16 @@ try:
     df = df[df['Marca'] != 'LINEAR']
     Filtro_descricao = df['Produto'].str.contains('LICENCA')
     df = df[df['Produto'] != Filtro_descricao]
+    df = df[df['Codigo'] != '4560026']
+    df = df[df['Codigo'] != '4560027']
+    df = df[df['Codigo'] != '4560028']
+    df = df[df['Codigo'] != '4560040']
+    df = df[df['Codigo'] != '4560045']  
+    df = df[df['Codigo'] != '4560046']
+    df = df[df['Codigo'] != '4565298']
+    df = df[df['Codigo'] != '4565299']
+    df = df[df['Codigo'] != '4565329']
+    df = df[df['Codigo'] != '4565330']
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
