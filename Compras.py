@@ -39,6 +39,9 @@ try:
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] 
     df = df[df['Marca'] != 'INTELBRAS PRJ']
+    df = df[df['Marca'] != 'INTELBRAS SDP']
+    df = df[df['Marca'] != 'INTELBRAS SDRON']
+    df = df[df['Marca'] != 'INTELBRAS SOFT']
     df = df[df['Marca'] != 'CONTROL ID']
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'GAREN/REP']
