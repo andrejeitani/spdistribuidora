@@ -62,6 +62,10 @@ try:
     df = df[df['Codigo'] != '4581155']
     df = df[df['Codigo'] != '4581156']
     df = df[df['Codigo'] != '4780051']
+    df = df[df['Codigo'] != '4320007']
+    df = df[df['Codigo'] != '4351000']
+    df = df[df['Codigo'] != '4680256']
+    df = df[df['Codigo'] != '4680257']
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
