@@ -37,38 +37,38 @@ try:
 
     # Excluir as colunas em branco e retira a marcas em desuso.
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
-    df = df[df['Marca'] != 'INTELBRAS FL'] 
-    df = df[df['Marca'] != 'INTELBRAS PRJ']
-    df = df[df['Marca'] != 'INTELBRAS SDP']
-    df = df[df['Marca'] != 'INTELBRAS SDRON']
-    df = df[df['Marca'] != 'INTELBRAS SOFT']
+    df = df[df['Marca'] != 'INTELBRAS FL'] # FORA DE LINHA
+    df = df[df['Marca'] != 'INTELBRAS PRJ'] # PROJETOS
+    df = df[df['Marca'] != 'INTELBRAS SDP'] # DISPLAY PROFISSIONAL
+    df = df[df['Marca'] != 'INTELBRAS SDRON'] # DRONES
+    df = df[df['Marca'] != 'INTELBRAS SOFT'] # SOFTWARE
     df = df[df['Marca'] != 'CONTROL ID']
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'LINEAR']
     Filtro_descricao = df['Produto'].str.contains('LICENCA')
     df = df[df['Produto'] != Filtro_descricao]
-    df = df[df['Codigo'] != '4560026']
-    df = df[df['Codigo'] != '4560027']
-    df = df[df['Codigo'] != '4560028']
-    df = df[df['Codigo'] != '4560040']
-    df = df[df['Codigo'] != '4560045']  
-    df = df[df['Codigo'] != '4560046']
-    df = df[df['Codigo'] != '4565298']
-    df = df[df['Codigo'] != '4565299']
-    df = df[df['Codigo'] != '4565329']
-    df = df[df['Codigo'] != '4565330']
-    df = df[df['Codigo'] != '4543509']
-    df = df[df['Codigo'] != '4543516']
-    df = df[df['Codigo'] != '4581155']
-    df = df[df['Codigo'] != '4581156']
-    df = df[df['Codigo'] != '4780051']
-    df = df[df['Codigo'] != '4320007']
-    df = df[df['Codigo'] != '4351000']
-    df = df[df['Codigo'] != '4680256']
-    df = df[df['Codigo'] != '4680257']
-    df = df[df['Codigo'] != '4390176']
-    df = df[df['Codigo'] != '4390179']
-    df = df[df['Codigo'] != '4400338']
+    df = df[df['Codigo'] != '4560026'] # VHD 1220 D G7
+    df = df[df['Codigo'] != '4560027'] # VHD 3220 D G7
+    df = df[df['Codigo'] != '4560028'] # VHD 1220 D BLACK G2
+    df = df[df['Codigo'] != '4560040'] # VHD 1230 B G7
+    df = df[df['Codigo'] != '4560045'] # VHD 1220 B FULL COLOR G7  
+    df = df[df['Codigo'] != '4560046'] # VHD 1220 D FULL COLOR G7
+    df = df[df['Codigo'] != '4565298'] # VHL 1120 D
+    df = df[df['Codigo'] != '4565299'] # VHL 1120 B
+    df = df[df['Codigo'] != '4565329'] # VHC 1120 D
+    df = df[df['Codigo'] != '4565330'] # VHC 1120 B
+    df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
+    df = df[df['Codigo'] != '4543516'] # AMT 8000
+    df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
+    df = df[df['Codigo'] != '4581156'] # MHDX 1104-C C/ SSD
+    df = df[df['Codigo'] != '4780051'] # ONU 110 B
+    df = df[df['Codigo'] != '4320007'] # IMPACTA 220
+    df = df[df['Codigo'] != '4351000'] # CONECTA MAIS
+    df = df[df['Codigo'] != '4680256'] # SS 5531 MF W 
+    df = df[df['Codigo'] != '4680257'] # SS 5541 MF W
+    df = df[df['Codigo'] != '4390176'] # AMT 2018 EG
+    df = df[df['Codigo'] != '4390179'] # AMT 2018 E
+    df = df[df['Codigo'] != '4400338'] # LICENÇA RAMAL UNNITI
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
