@@ -45,8 +45,6 @@ try:
     df = df[df['Marca'] != 'CONTROL ID']
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'LINEAR']
-    Filtro_descricao = df['Produto'].str.contains('LICENCA')
-    df = df[df['Produto'] != Filtro_descricao]
     df = df[df['Codigo'] != '4560026'] # VHD 1220 D G7
     df = df[df['Codigo'] != '4560027'] # VHD 3220 D G7
     df = df[df['Codigo'] != '4560028'] # VHD 1220 D BLACK G2
