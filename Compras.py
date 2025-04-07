@@ -68,7 +68,7 @@ try:
     df = df[df['Codigo'] != '4390179'] # AMT 2018 E
     df = df[df['Codigo'] != '4400338'] # LICENÇA RAMAL UNNITI
     df = df[df['Codigo'] != '4679011'] # FX 2000 PRETA
-    df = df[df['Codigo'] != '4679015'] # FX 2000 REVERSIVEL
+    df = df[df['Codigo'] != '4679015'] # FX 2000 INOX
     df = df[df['Codigo'] != '4679010'] # FX 2000 CINZA
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
   
