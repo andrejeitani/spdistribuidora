@@ -75,6 +75,7 @@ try:
     df = df[df['Codigo'] != '4750103'] # APC 5A-20
     df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
+    df = df[df['Codigo'] != '4681027'] # LE 170
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
