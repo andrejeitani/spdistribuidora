@@ -80,6 +80,7 @@ try:
     df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
+    df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
