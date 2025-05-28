@@ -81,6 +81,7 @@ try:
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
+    df = df[df['Codigo'] != '4842905'] # MODULO FOTOVOLTAICO EMS 160
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
