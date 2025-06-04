@@ -74,6 +74,8 @@ try:
     df = df[df['Codigo'] != '4679011'] # FX 2000 PRETA
     df = df[df['Codigo'] != '4679015'] # FX 2000 INOX
     df = df[df['Codigo'] != '4679010'] # FX 2000 CINZA
+    df = df[df['Codigo'] != '4679000'] # FX 2000 
+    df = df[df['Codigo'] != '4679001'] # FX 2000 
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
     df = df[df['Codigo'] != '4760089'] # S1010F-P
     df = df[df['Codigo'] != '4750103'] # APC 5A-20
