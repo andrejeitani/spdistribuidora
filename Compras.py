@@ -42,6 +42,7 @@ try:
     df = df[df['Marca'] != 'INTELBRAS SDP'] # DISPLAY PROFISSIONAL
     df = df[df['Marca'] != 'INTELBRAS SDRON'] # DRONES
     df = df[df['Marca'] != 'INTELBRAS SOFT'] # SOFTWARE
+    df = df[df['Marca'] != 'INTELBRAS SOF'] # SOLAR OFF GRID
     df = df[df['Marca'] != 'CONTROL ID']
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'LINEAR']
