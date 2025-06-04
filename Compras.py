@@ -93,6 +93,7 @@ try:
     df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
     df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
     df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
+    df = df[df['Codigo'] != '4631200'] # BLA 1200
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
