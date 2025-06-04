@@ -81,7 +81,18 @@ try:
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
-    df = df[df['Codigo'] != '4842905'] # MODULO FOTOVOLTAICO EMS 160
+    df = df[df['Codigo'] != '4842905'] # MODULO FOTOVOLTAICO EMS 170
+    df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
+    df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
+    df = df[df['Codigo'] != '4830007'] # CABO DE REDE CAT6
+    df = df[df['Codigo'] != '4830030'] # CABO DE REDE CAT5
+    df = df[df['Codigo'] != '4830050'] # CABO MULTICAMERAS
+    df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
+    df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
+    df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
+    df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
+    df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
+    df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
