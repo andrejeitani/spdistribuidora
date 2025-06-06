@@ -74,6 +74,13 @@ try:
         total_em_aberto = round(total_em_aberto , 2)
         devedores = len(tabela_filtrada2['Cliente'].unique())
         st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
+        
+        # Cria o botão para Download do dataframe em Excel        
+        if st.button('Baixar Planilha Geral em Excel' , type='primary'):
+            data = datetime.datetime.today()
+            arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+            tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
+            st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
     filtro_cliente() 
 
     # Agrupa a tabela por clientes e traz a quantidade de clientes inadimplentes
@@ -86,6 +93,14 @@ try:
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
     
+    # Cria o botão para Download do dataframe em Excel 
+    if st.button('Baixar Planilha Agrupado em Excel' , type='primary'):
+        data = datetime.datetime.today()
+        agrupado_cliente = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+        total_agregado_por_cliente = total_agregado_por_cliente.reset_index()
+        total_agregado_por_cliente.to_excel(f'c://Boletos Agrupados do Dia - {agrupado_cliente}.xlsx', sheet_name='Boletos em Aberto', index=False)
+        st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Agrupado do Dia - {agrupado_cliente}.xlsx')
+
     # Agrupa a tabela por Banco e traz o total em aberto
     st.title('Total Em Aberto Por Banco')
     total_agregado_por_banco = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Cliente'])
