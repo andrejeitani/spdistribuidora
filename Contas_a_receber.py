@@ -106,7 +106,7 @@ try:
     total_agregado_por_banco = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Cliente'])
     total_agregado_por_banco = total_agregado_por_banco.groupby('Banco').sum()
     total_agregado_por_banco['%'] = (total_agregado_por_banco['Valor'] / total_agregado_por_banco['Valor'].sum() ) * 100
-    total_agregado_por_banco['%'] = total_agregado_por_banco['%'].round(2)
+    total_agregado_por_banco['%'] = total_agregado_por_banco['%']
     total_agregado_por_banco_sem_perc = total_agregado_por_banco['Valor']
     st.dataframe(total_agregado_por_banco_sem_perc , use_container_width=True )
 
