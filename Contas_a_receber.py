@@ -81,7 +81,7 @@ def filtro_cliente():
     #    arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
     #    tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
     #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
-    st.download_button('Baixar Planilha Geral em Excel' , tabela_filtrada2 , file_name='Tabela.xlsx' , on_click='rerun'):
+    st.download_button('Baixar Planilha Geral em Excel' , tabela_filtrada2 , file_name='Tabela.csv' , on_click='rerun'):
         data = datetime.datetime.today()
         #arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
         #tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
