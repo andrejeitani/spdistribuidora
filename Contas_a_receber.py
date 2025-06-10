@@ -76,10 +76,15 @@ def filtro_cliente():
     st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
     
     # Cria o botão para Download do dataframe em Excel        
-    if st.button('Baixar Planilha Geral em Excel' , type='primary'):
+    #if st.button('Baixar Planilha Geral em Excel' , type='primary'):
+    #    data = datetime.datetime.today()
+    #    arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+    #    tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
+    #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
+    if st.download_button('Baixar Planilha Geral em Excel' , tabela_filtrada2 , file_name='Tabela.xlsx' , 'on_click=rerun'):
         data = datetime.datetime.today()
-        arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
-        tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
+        #arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+        #tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
         st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
 filtro_cliente() 
 
