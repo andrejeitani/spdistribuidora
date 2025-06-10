@@ -54,8 +54,7 @@ santander['Banco'] = 'Santander'
 # Junta as tabelas dos 2 bancos e traz em formato final (formatada)
 tabela_final = pd.concat([sicoob,santander])         
 tabela_final = tabela_final.sort_values(by='Cliente' , ascending=True)
-tabela_final['Valor'] = tabela_final['Valor'].replace('.',',')
-tabela_final['Valor'] = tabela_final['Valor']#.round(2)
+tabela_final['Valor'] = tabela_final['Valor']
 tabela_final['Valor'] = tabela_final['Valor'].replace('.',',')
 
 # Cria os campos e os filtros para pesquisar Clientes e/ou nota fiscais e imprimi a tabela filtrada
