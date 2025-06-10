@@ -85,7 +85,7 @@ def filtro_cliente():
         return df.to_csv().encode("utf-8")
     csv = converter_para_csv(tabela_filtrada2)
 arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
-st.download_button('Baixar Planilha Geral em CSV' , csv , file_name='Tabela.csv' , on_click='rerun' , file_name=f"{arquivo_geral}.csv" , mime="text/csv"):
+st.download_button('Baixar Planilha Geral em CSV' , csv , on_click='rerun' , file_name=f"{arquivo_geral}.csv" , mime="text/csv"):
 #st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
 filtro_cliente() 
 
