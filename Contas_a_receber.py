@@ -81,7 +81,7 @@ def filtro_cliente():
     #    arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
     #    tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
     #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
-    def converter_para_csv(csv)
+    def converter_para_csv(csv):
         return df.to_csv().encode("utf-8")
     csv = converter_para_csv(tabela_filtrada2)
 arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
