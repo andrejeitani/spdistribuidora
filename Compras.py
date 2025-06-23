@@ -88,6 +88,7 @@ try:
     df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830007'] # CABO DE REDE CAT6
+    df = df[df['Codigo'] != '4830008'] # CABO DE REDE CAT6
     df = df[df['Codigo'] != '4830030'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830050'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
