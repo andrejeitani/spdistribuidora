@@ -69,7 +69,8 @@ try:
         tabela_filtrada2 = tabela_filtrada[tabela_filtrada['Seu Numero'].str.contains(filtro_nf, case=False)]
         st.title('Total de Boletos em Aberto')
         tabela_filtrada2['Vencimento'] = pd.to_datetime(tabela_filtrada2['Vencimento']).dt.date
-        st.dataframe(tabela_filtrada2 , use_container_width=True , hide_index=True)
+        tabela_filtrada3 = tabela_filtrada2.astype(str).apply(lambda x: x.str.replace('.',',' , regex = False))
+        st.dataframe(tabela_filtrada3 , use_container_width=True , hide_index=True)
         total_em_aberto = tabela_filtrada2['Valor'].sum()
         total_em_aberto = round(total_em_aberto , 2)
         devedores = len(tabela_filtrada2['Cliente'].unique())
@@ -79,7 +80,7 @@ try:
         #if st.button('Baixar Planilha Geral em Excel' , type='primary'):
         #    data = datetime.datetime.today()
         #    arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
-        #    tabela_filtrada2.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
+        #    tabela_filtrada3.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
         #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
     filtro_cliente() 
 
@@ -89,6 +90,7 @@ try:
     total_agregado_por_cliente = total_agregado_por_cliente.groupby(by='Cliente').sum()
     total_agregado_por_cliente['%'] = (total_agregado_por_cliente['Valor'] / total_agregado_por_cliente['Valor'].sum() * 100)
     total_agregado_por_cliente = total_agregado_por_cliente.sort_values(by='Cliente' , ascending=True)
+    total_agregado_por_cliente = total_agregado_por_cliente.astype(str).apply(lambda x: x.str.replace('.',',' , regex = False))
     st.dataframe(total_agregado_por_cliente, use_container_width=True)
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
@@ -106,7 +108,6 @@ try:
     total_agregado_por_banco = tabela_final.drop(columns=['Nosso Numero', 'Seu Numero', 'Vencimento','Cliente'])
     total_agregado_por_banco = total_agregado_por_banco.groupby('Banco').sum()
     total_agregado_por_banco['%'] = (total_agregado_por_banco['Valor'] / total_agregado_por_banco['Valor'].sum() ) * 100
-    total_agregado_por_banco['%'] = total_agregado_por_banco['%']
     total_agregado_por_banco_sem_perc = total_agregado_por_banco['Valor']
     st.dataframe(total_agregado_por_banco_sem_perc , use_container_width=True )
 
