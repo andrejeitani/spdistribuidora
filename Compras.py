@@ -38,6 +38,7 @@ try:
     # Excluir as colunas em branco e retira a marcas em desuso.
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] # FORA DE LINHA
+    df = df[df['Marca'] != 'INATIVO/FL'] # FORA DE LINHA
     df = df[df['Marca'] != 'INTELBRAS PRJ'] # PROJETOS
     df = df[df['Marca'] != 'INTELBRAS SDP'] # DISPLAY PROFISSIONAL
     df = df[df['Marca'] != 'INTELBRAS SDRON'] # DRONES
