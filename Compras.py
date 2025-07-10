@@ -56,8 +56,6 @@ try:
     df = df[df['Codigo'] != '4565299'] # VHL 1120 B
     df = df[df['Codigo'] != '4565329'] # VHC 1120 D
     df = df[df['Codigo'] != '4565330'] # VHC 1120 B
-    df = df[df['Codigo'] != '4565303'] # VHL 1220 D
-    df = df[df['Codigo'] != '4565304'] # VHL 1220 B
     df = df[df['Codigo'] != '4565321'] # VHL 1220 B G2
     df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
     df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
