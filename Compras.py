@@ -105,6 +105,8 @@ try:
     df = df[df['Codigo'] != '4670008'] # IFR 7000 +
     df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
+    df = df[df['Codigo'] != '4560025'] # VHD 3230 B
+    df = df[df['Codigo'] != '4560027'] # VHD 3230 D
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
