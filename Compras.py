@@ -103,6 +103,7 @@ try:
     df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4670007'] # IFR 7000
     df = df[df['Codigo'] != '4670008'] # IFR 7000 +
+    df = df[df['Codigo'] != '4671085'] # FS 150 KIT ELITE
     df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
