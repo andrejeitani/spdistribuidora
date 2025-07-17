@@ -108,6 +108,8 @@ try:
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
     df = df[df['Codigo'] != '4560027'] # VHD 3230 D
+    df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
+  
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
