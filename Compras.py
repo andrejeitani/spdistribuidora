@@ -50,6 +50,7 @@ try:
     df = df[df['Codigo'] != '4560026'] # VHD 1220 D G7
     df = df[df['Codigo'] != '4560027'] # VHD 3220 D G7
     df = df[df['Codigo'] != '4560028'] # VHD 1220 D BLACK G2
+    df = df[df['Codigo'] != '4560039'] # VHD 1230 B BLACK G7
     df = df[df['Codigo'] != '4560040'] # VHD 1230 B G7
     df = df[df['Codigo'] != '4560045'] # VHD 1220 B FULL COLOR G7  
     df = df[df['Codigo'] != '4560046'] # VHD 1220 D FULL COLOR G7
