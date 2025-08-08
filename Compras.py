@@ -144,7 +144,7 @@ try:
     df = df[df['Sugestao 40 Dias'] > 0]
 
     # Cria a Coluna comprar, ja com o ajuste da multiplicidade dos pack's
-    df['Comprar'] = np.floor((df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'])
+    df['Comprar'] = np.floor(df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla']
 
     # Define a coluna Total, sendo a quantidade ajustada do COMPRAR multiplicando o PV
     df['Total'] = (df['PV'] * df['Comprar']).round(2)
