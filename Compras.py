@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import numpy as np
 
 #Define o Layout da Pagina para WideScreen
 st.set_page_config(layout='wide', 
@@ -56,12 +57,17 @@ try:
     df = df[df['Codigo'] != '4560046'] # VHD 1220 D FULL COLOR G7
     df = df[df['Codigo'] != '4565298'] # VHL 1120 D
     df = df[df['Codigo'] != '4565299'] # VHL 1120 B
+    df = df[df['Codigo'] != '4565329'] # VHC 1120 D
+    df = df[df['Codigo'] != '4565330'] # VHC 1120 B
     df = df[df['Codigo'] != '4565321'] # VHL 1220 B G2
     df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
     df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
     df = df[df['Codigo'] != '4543516'] # AMT 8000
     df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
     df = df[df['Codigo'] != '4581156'] # MHDX 1104-C C/ SSD
+    df = df[df['Codigo'] != '4780051'] # ONU 110 B
+    df = df[df['Codigo'] != '4320007'] # IMPACTA 220
+    df = df[df['Codigo'] != '4351000'] # CONECTA MAIS
     df = df[df['Codigo'] != '4680256'] # SS 5531 MF W 
     df = df[df['Codigo'] != '4680261'] # SS 5532 MF W
     df = df[df['Codigo'] != '4680257'] # SS 5541 MF W
@@ -78,6 +84,8 @@ try:
     df = df[df['Codigo'] != '4679001'] # FX 2000 
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
     df = df[df['Codigo'] != '4760089'] # S1010F-P
+    df = df[df['Codigo'] != '4750103'] # APC 5A-20
+    df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
@@ -92,7 +100,7 @@ try:
     df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
-    df = df[df['Codigo'] != '4080086'] # TC 50 PREMIUM
+    df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
     df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
     df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
     df = df[df['Codigo'] != '4631200'] # BLA 1200
@@ -100,16 +108,10 @@ try:
     df = df[df['Codigo'] != '4670007'] # IFR 7000
     df = df[df['Codigo'] != '4670008'] # IFR 7000 +
     df = df[df['Codigo'] != '4671085'] # FS 150 KIT ELITE
+    df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
     df = df[df['Codigo'] != '4560027'] # VHD 3230 D
-    df = df[df['Codigo'] != '4560029'] # VHD 3240 D VG G7
-    df = df[df['Codigo'] != '4565357'] # VHD 1530 B
-    df = df[df['Codigo'] != '4565358'] # VHD 1530 D
-    df = df[df['Codigo'] != '4600204'] # VBOX 3000 D
-    df = df[df['Codigo'] != '4830001'] # DROP 1KM
-    df = df[df['Codigo'] != '4830068'] # DROP 1KM
-    df = df[df['Codigo'] != '4850032'] # EWS 252
     df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
   
   
@@ -142,7 +144,7 @@ try:
     df = df[df['Sugestao 40 Dias'] > 0]
 
     # Cria a Coluna comprar, ja com o ajuste da multiplicidade dos pack's
-    df['Comprar'] = ((df['Sugestao 40 Dias'] / df['Qtd. Multipla']).round(0) * df['Qtd. Multipla'])
+    df['Comprar'] = np.floor((df['Sugestao 40 Dias'] / df['Qtd. Multipla']).round(2) * df['Qtd. Multipla'])
 
     # Define a coluna Total, sendo a quantidade ajustada do COMPRAR multiplicando o PV
     df['Total'] = (df['PV'] * df['Comprar']).round(2)
