@@ -11,7 +11,7 @@ try:
     arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
     df = pd.read_excel(arquivo, engine='openpyxl')
     #pack = st.file_uploader('Faça o Upload da tabela da Intelbras')
-    pack = pd.read_excel('pack.xlsx')
+    pack = pd.read_excel('pack.xlsx' , engine='openpyxl')
     df = df.drop(index=[0,1])
     df = df.rename(columns={
         'Período da Consulta 90 dias':'Codigo',
