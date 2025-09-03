@@ -126,37 +126,37 @@ try:
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 5820 D 4K - IR 20M, LENTE 2,8mm, RESOL 2160P, HDCVI, IP66, CASE PLAST, INST INT/EXT, ABERT110',
-        value='SUBSTITUTO - VHD 5830 B 4K - CÂMERA BULLET INFRAVERMELHO'
+        value='SUBSTITUTO - DE VHD 5820 D4K PARA VHD 5830 B 4K'
         ) # DESCRIÇÃO  
     
     df = df.replace(to_replace='4581038' , value='4581252')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C C/HD 1TB - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
-        value='SUBSTITUTO - MHDX 1204-C c/HD 1TB'
+        value='SUBSTITUTO - DE MHDX 1204-C c/HD 1TB PARA MHDX 1204-C c/HD 1TB'
         ) # DESCRIÇÃO  
        
     df = df.replace(to_replace='4581039' , value='4581250')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
-        value='SUBSTITUTO - MHDX 1204-C- GRAVADOR DIGITAL DE VÍDEO COMPACTO'
+        value='SUBSTITUTO - DE MHDX 1104-C PARA MHDX 1204-C'
         ) # DESCRIÇÃO       
     
     df = df.replace(to_replace='4681020' , value='4680303')   # CODIGO
     df = df.replace(
         to_replace='LEITOR DE CARTAO RFID PROX LE 130 MF',
-        value='SUBSTITUTO - LEITOR RFID LE 1110 MF'
+        value='SUBSTITUTO - DE LE130 MF PARA LE 1110 MF'
         ) # DESCRIÇÃO  
      
     df = df.replace(to_replace='4681021' , value='4680302')   # CODIGO
     df = df.replace(
         to_replace='LEITOR DE CARTAO RFID PROX LE 130',
-        value='Substituido - LEITOR RFID LE 1110'
+        value='SUBSTITUTO - DE LE 130 PARA LE 1110'
         ) # DESCRIÇÃO   
     
     df = df.replace(to_replace='4710018' , value='4710016')   # CODIGO
     df = df.replace(
         to_replace='ADAPTADOR USB WIRELESS DUAL BAND ACTION A1200',
-        value='SUBSTITUTO - ADAPTADOR USB WIRELESS IWA 3001'
+        value='SUBSTITUTO - DE A1200 PARA IWA 3001'
         ) # DESCRIÇÃO    
   
     # Define o tipo de variavel em cada coluna
