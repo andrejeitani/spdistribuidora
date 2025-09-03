@@ -10,8 +10,9 @@ try:
     #Realiza o upload do arquivo e realiza os devidos tratamentos
     arquivo = st.file_uploader('Faça o Upload do Arquivo Ponto de Compra')
     df = pd.read_excel(arquivo, engine='openpyxl')
+    st.
     #pack = st.file_uploader('Faça o Upload da tabela da Intelbras')
-    pack = pd.read_excel('Pack.xlsx' , engine='openpyxl')
+    pack = pd.read_excel('Pack.xlsx' , engine='openpyxl') # ATUALIZAR SEMPRE A PLANILHA DA INTELBRAS
     df = df.drop(index=[0,1])
     df = df.rename(columns={
         'Período da Consulta 90 dias':'Codigo',
@@ -169,6 +170,7 @@ try:
         global filtered_df
         filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
         st.title('Planilha de Compras')
+        st.text('Tabela de Referencia : Setembro-2025') # ATUALIZAR SEMPRE A PLANILHA DA INTELBRAS
         st.dataframe(filtered_df , use_container_width=True , hide_index=True)
 
         a = len(filtered_df['Produto'])
