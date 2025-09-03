@@ -36,7 +36,7 @@ try:
         'Unnamed: 19':'Pack',
     })
 
-    # Excluir as colunas em branco e retira a marcas em desuso.
+# Excluir as colunas em branco e retira a marcas em desuso.
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] # FORA DE LINHA
     df = df[df['Marca'] != 'INATIVO/FL'] # FORA DE LINHA
@@ -121,7 +121,10 @@ try:
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
     df = df[df['Codigo'] != '4560027'] # VHD 3230 D
     df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
-  
+    
+    # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
+    #df = df.replace(to_replace='0074' , value='TESTE CODIGO')   
+    #df = df.replace(to_replace='CABO PARALELO 2X16AWG 2x1,00mm P/ SOM BRANCO 100M (SC 2X16 BR) - DNI' , value='TESTE DESCRIÇÃO')   
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
