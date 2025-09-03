@@ -74,6 +74,7 @@ try:
     df = df[df['Codigo'] != '4680260'] # SS 5542 MF W
     df = df[df['Codigo'] != '4680052'] # SS 1530 MF W
     df = df[df['Codigo'] != '4680058'] # SS 1540 MF W
+    df = df[df['Codigo'] != '4682073'] # SS 3430 MF
     df = df[df['Codigo'] != '4390176'] # AMT 2018 EG
     df = df[df['Codigo'] != '4390179'] # AMT 2018 E
     df = df[df['Codigo'] != '4400338'] # LICENÇA RAMAL UNNITI
