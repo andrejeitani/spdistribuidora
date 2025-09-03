@@ -156,7 +156,7 @@ try:
     df = df.replace(to_replace='4710018' , value='4710016')   # CODIGO
     df = df.replace(
         to_replace='ADAPTADOR USB WIRELESS DUAL BAND ACTION A1200',
-        value='Substituido - ADAPTADOR USB WIRELESS IWA 3001'
+        value='SUBSTITUTO - ADAPTADOR USB WIRELESS IWA 3001'
         ) # DESCRIÇÃO    
   
     # Define o tipo de variavel em cada coluna
