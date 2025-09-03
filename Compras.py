@@ -126,25 +126,25 @@ try:
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 5820 D 4K - IR 20M, LENTE 2,8mm, RESOL 2160P, HDCVI, IP66, CASE PLAST, INST INT/EXT, ABERT110',
-        value='Substituido - VHD 5830 B 4K - CÂMERA BULLET INFRAVERMELHO'
+        value='SUBSTITUTO - VHD 5830 B 4K - CÂMERA BULLET INFRAVERMELHO'
         ) # DESCRIÇÃO  
     
     df = df.replace(to_replace='4581038' , value='4581252')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C C/HD 1TB - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
-        value='Substituido - MHDX 1204-C c/HD 1TB'
+        value='SUBSTITUTO - MHDX 1204-C c/HD 1TB'
         ) # DESCRIÇÃO  
        
     df = df.replace(to_replace='4581039' , value='4581250')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
-        value='Substituido - MHDX 1204-C- GRAVADOR DIGITAL DE VÍDEO COMPACTO'
+        value='SUBSTITUTO - MHDX 1204-C- GRAVADOR DIGITAL DE VÍDEO COMPACTO'
         ) # DESCRIÇÃO       
     
     df = df.replace(to_replace='4681020' , value='4680303')   # CODIGO
     df = df.replace(
         to_replace='LEITOR DE CARTAO RFID PROX LE 130 MF',
-        value='Substituido - LEITOR RFID LE 1110 MF'
+        value='SUBSTITUTO - LEITOR RFID LE 1110 MF'
         ) # DESCRIÇÃO  
      
     df = df.replace(to_replace='4681021' , value='4680302')   # CODIGO
