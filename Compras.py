@@ -88,6 +88,8 @@ try:
     df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
+    df = df[df['Codigo'] != '4681020'] # LE 130
+    df = df[df['Codigo'] != '4681021'] # LE 130 MF
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P # SUBSTITUIDO PELO iNVD 3016 P
     df = df[df['Codigo'] != '4842905'] # MODULO FOTOVOLTAICO EMS 170
