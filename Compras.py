@@ -88,9 +88,9 @@ try:
     df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
-    df = df[df['Codigo'] != '4681020'] # LE 130
-    df = df[df['Codigo'] != '4681021'] # LE 130 MF
-    df = df[df['Codigo'] != '4710018'] # 1200 A ADAPTADOR WIFI
+    #df = df[df['Codigo'] != '4681020'] # LE 130
+    #df = df[df['Codigo'] != '4681021'] # LE 130 MF
+    #df = df[df['Codigo'] != '4710018'] # 1200 A ADAPTADOR WIFI
     df = df[df['Codigo'] != '4760040'] # SF 900 HI POE
     df = df[df['Codigo'] != '4780039'] # VEX 3004
     df = df[df['Codigo'] != '4780072'] # VEX 3120
@@ -123,8 +123,41 @@ try:
     df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
     
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
-    #df = df.replace(to_replace='0074' , value='TESTE CODIGO')   
-    #df = df.replace(to_replace='CABO PARALELO 2X16AWG 2x1,00mm P/ SOM BRANCO 100M (SC 2X16 BR) - DNI' , value='TESTE DESCRIÇÃO')   
+    df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 5820 D 4K - IR 20M, LENTE 2,8mm, RESOL 2160P, HDCVI, IP66, CASE PLAST, INST INT/EXT, ABERT110',
+        value='Substituido - VHD 5830 B 4K - CÂMERA BULLET INFRAVERMELHO'
+        ) # DESCRIÇÃO  
+    
+    df = df.replace(to_replace='4581038' , value='4581252')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1104-C C/HD 1TB - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
+        value='Substituido - MHDX 1204-C c/HD 1TB'
+        ) # DESCRIÇÃO  
+       
+    df = df.replace(to_replace='4581039' , value='4581250')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1104-C - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
+        value='Substituido - MHDX 1204-C- GRAVADOR DIGITAL DE VÍDEO COMPACTO'
+        ) # DESCRIÇÃO       
+    
+    df = df.replace(to_replace='4681020' , value='4680303')   # CODIGO
+    df = df.replace(
+        to_replace='LEITOR DE CARTAO RFID PROX LE 130 MF',
+        value='Substituido - LEITOR RFID LE 1110 MF'
+        ) # DESCRIÇÃO  
+     
+    df = df.replace(to_replace='4681021' , value='4680302')   # CODIGO
+    df = df.replace(
+        to_replace='LEITOR DE CARTAO RFID PROX LE 130',
+        value='Substituido - LEITOR RFID LE 1110'
+        ) # DESCRIÇÃO   
+    
+    df = df.replace(to_replace='4710018' , value='4710016')   # CODIGO
+    df = df.replace(
+        to_replace='ADAPTADOR USB WIRELESS DUAL BAND ACTION A1200',
+        value='Substituido - ADAPTADOR USB WIRELESS IWA 3001'
+        ) # DESCRIÇÃO    
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
