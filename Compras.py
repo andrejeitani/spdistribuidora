@@ -196,11 +196,15 @@ try:
     # Função de filtro 
     def filtro():
     # Campo de texto para inserir o critério de filtro
-        filtro = st.text_input('Digite uma marca para filtrar:')
+        col_marca , col_produto = st.columns(2)
+        with col_marca:
+            filtro_marca = st.text_input('Digite uma marca para filtrar:')
+        with col_produto:
+            filtro_produto = st.text_input('Digite um produto para filtrar:')
 
         # Aplicar o filtro e mostrar o resultado
         global filtered_df
-        filtered_df = df[df['Marca'].str.contains(filtro, case=False)]
+        filtered_df = df[df['Marca'].str.contains(filtro_marca, case=False) & df['Produto'].str.contains(filtro_produto , case=False)]
         st.title('Planilha de Compras')
         st.text('Tabela de Referencia : Setembro-2025') # ATUALIZAR SEMPRE A TABELA DA INTELBRAS *****************************
         st.dataframe(filtered_df , use_container_width=True , hide_index=True)
