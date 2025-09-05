@@ -57,17 +57,12 @@ try:
     df = df[df['Codigo'] != '4560046'] # VHD 1220 D FULL COLOR G7
     df = df[df['Codigo'] != '4565298'] # VHL 1120 D
     df = df[df['Codigo'] != '4565299'] # VHL 1120 B
-    df = df[df['Codigo'] != '4565329'] # VHC 1120 D
-    df = df[df['Codigo'] != '4565330'] # VHC 1120 B
     df = df[df['Codigo'] != '4565321'] # VHL 1220 B G2
     df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
     df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
     df = df[df['Codigo'] != '4543516'] # AMT 8000
     df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
     df = df[df['Codigo'] != '4581156'] # MHDX 1104-C C/ SSD
-    df = df[df['Codigo'] != '4780051'] # ONU 110 B
-    df = df[df['Codigo'] != '4320007'] # IMPACTA 220
-    df = df[df['Codigo'] != '4351000'] # CONECTA MAIS
     df = df[df['Codigo'] != '4680256'] # SS 5531 MF W 
     df = df[df['Codigo'] != '4680261'] # SS 5532 MF W
     df = df[df['Codigo'] != '4680257'] # SS 5541 MF W
@@ -86,8 +81,6 @@ try:
     df = df[df['Codigo'] != '4679001'] # FX 2000 
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
     df = df[df['Codigo'] != '4760089'] # S1010F-P
-    df = df[df['Codigo'] != '4750103'] # APC 5A-20
-    df = df[df['Codigo'] != '4750146'] # AP 3000 AX
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
     df = df[df['Codigo'] != '4760040'] # SF 900 HI POE
@@ -98,7 +91,6 @@ try:
     df = df[df['Codigo'] != '4682070'] # CT 3000 2PB
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P # SUBSTITUIDO PELO iNVD 3016 P
-    df = df[df['Codigo'] != '4842905'] # MODULO FOTOVOLTAICO EMS 170
     df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830007'] # CABO DE REDE CAT6
@@ -108,7 +100,6 @@ try:
     df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
-    df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
     df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
     df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
     df = df[df['Codigo'] != '4631200'] # BLA 1200
@@ -116,7 +107,6 @@ try:
     df = df[df['Codigo'] != '4670007'] # IFR 7000
     df = df[df['Codigo'] != '4670008'] # IFR 7000 +
     df = df[df['Codigo'] != '4671085'] # FS 150 KIT ELITE
-    df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
     df = df[df['Codigo'] != '4560027'] # VHD 3230 D
@@ -163,6 +153,12 @@ try:
     df = df.replace(
         to_replace='CONTROLADOR DE ACESSO CT 3000 4PB - CAP 100 MIL USUARIOS, 3MIL BIOMET, ATE 4 PORTAS',
         value='SUBSTITUIDO - DE CT 3000 4PB PARA CT 5000 4PB'
+        ) # DESCRIÇÃO 
+  
+    df = df.replace(to_replace='4580964' , value='4581206')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR EM REDE NVD 3308 P - 8 CANAIS IP, RESOL 4K, H265/H265+, POE, PADR LGPD, SUP 1 HD SATA',
+        value='SUBSTITUIDO - DE NVD 3308 P PARA iNVD 3008 P'
         ) # DESCRIÇÃO 
   
   
