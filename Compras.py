@@ -160,6 +160,13 @@ try:
         to_replace='ADAPTADOR USB WIRELESS DUAL BAND ACTION A1200',
         value='SUBSTITUIDO - DE A1200 PARA IWA 3001'
         ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4682071' , value='4680332')   # CODIGO
+    df = df.replace(
+        to_replace='CONTROLADOR DE ACESSO CT 3000 4PB - CAP 100 MIL USUARIOS, 3MIL BIOMET, ATE 4 PORTAS',
+        value='SUBSTITUIDO - DE CT 3000 4PB PARA CT 5000 4PB'
+        ) # DESCRIÇÃO 
+  
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
