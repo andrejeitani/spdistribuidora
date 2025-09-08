@@ -184,6 +184,12 @@ try:
         to_replace='GRAVADOR MHDX 1316 - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P,ANAL VIDEO,MODO NVR,SUP 1 HD SATA10TB/SSD',
         value='SUBSTITUIDO - DE MHDX 1316 PARA MHDX 3116-C'
         ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560029' , value='4560152')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3240 D VF G7 - IR 40M, LENTE 2,7 A 12mm, RESOL 1080P/ 800TVL, MULTI HD4X1,IP67/IK10, CASE METAL, INST INT/EXT',
+        value='SUBSTITUIDO - DE VHD 3240 D VF G7 PARA VHD 3240 D VF G8'
+        ) # DESCRIÇÃO 
   
   
     # Define o tipo de variavel em cada coluna
