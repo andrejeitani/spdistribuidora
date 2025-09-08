@@ -67,6 +67,8 @@ try:
     df = df[df['Codigo'] != '4570002'] # VIP 1220 B FULL COLOR 
     df = df[df['Codigo'] != '4570012'] # VIP 3220 B FULL COLOR 
     df = df[df['Codigo'] != '4570013'] # VIP 3220 D FULL COLOR 
+    df = df[df['Codigo'] != '4570030'] # VIP 1220 D FULL COLOR+
+    df = df[df['Codigo'] != '4570031'] # VIP 1220 B FULL COLOR+
     df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
     df = df[df['Codigo'] != '4543516'] # AMT 8000
     df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
