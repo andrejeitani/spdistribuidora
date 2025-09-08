@@ -160,6 +160,24 @@ try:
         to_replace='GRAVADOR EM REDE NVD 3308 P - 8 CANAIS IP, RESOL 4K, H265/H265+, POE, PADR LGPD, SUP 1 HD SATA',
         value='SUBSTITUIDO - DE NVD 3308 P PARA iNVD 3008 P'
         ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4581051' , value='4580645')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1304 - 4 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P, ANAL VIDEO,MODO NVR,SUP 1 HD SATA10TB/SSD',
+        value='SUBSTITUIDO - DE MHDX 1304 PARA MHDX 3104-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4581092' , value='4580771')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1308 - 8 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P, ANAL VIDEO,MODO NVR,SUP 1 HD SATA 10TB/SS',
+        value='SUBSTITUIDO - DE MHDX 1308 PARA MHDX 3108-C'
+        ) # DESCRIÇÃO 
+  
+    df = df.replace(to_replace='4581097' , value='4580130')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1316 - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P,ANAL VIDEO,MODO NVR,SUP 1 HD SATA10TB/SSD',
+        value='SUBSTITUIDO - DE MHDX 1316 PARA MHDX 3116-C'
+        ) # DESCRIÇÃO 
   
   
     # Define o tipo de variavel em cada coluna
