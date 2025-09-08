@@ -69,6 +69,12 @@ try:
     df = df[df['Codigo'] != '4680260'] # SS 5542 MF W
     df = df[df['Codigo'] != '4680052'] # SS 1530 MF W
     df = df[df['Codigo'] != '4680058'] # SS 1540 MF W
+    df = df[df['Codigo'] != '4580772'] # MHDX 1116 - HD 4TB
+    df = df[df['Codigo'] != '4580773'] # MHDX 1116 - HD 1TB
+    df = df[df['Codigo'] != '4581048'] # MHDX 1108 - HD 1TB
+    df = df[df['Codigo'] != '4581082'] # MHDX 1304 - HD 1TB
+    df = df[df['Codigo'] != '4581093'] # MHDX 1308 - HD 1TB
+    df = df[df['Codigo'] != '4581100'] # MHDX 1116 - HD 2TB  
     df = df[df['Codigo'] != '4682073'] # SS 3430 MF
     df = df[df['Codigo'] != '4663150'] # CAP 3000 VAZIA
     df = df[df['Codigo'] != '4390176'] # AMT 2018 EG
