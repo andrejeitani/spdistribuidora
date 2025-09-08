@@ -61,6 +61,10 @@ try:
     df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
     df = df[df['Codigo'] != '4565357'] # VHD 1530 B 
     df = df[df['Codigo'] != '4565358'] # VHD 1520 D 
+    df = df[df['Codigo'] != '4564068'] # VIP 3230 B SL G3
+    df = df[df['Codigo'] != '4564069'] # VIP 3230 D SL G3 
+    df = df[df['Codigo'] != '4570001'] # VIP 1220 D FULL COLOR 
+    df = df[df['Codigo'] != '4570002'] # VIP 1220 B FULL COLOR 
     df = df[df['Codigo'] != '4543509'] # AMT 1016 NET
     df = df[df['Codigo'] != '4543516'] # AMT 8000
     df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
@@ -191,6 +195,12 @@ try:
     df = df.replace(
         to_replace='CAMERA VHD 3240 D VF G7 - IR 40M, LENTE 2,7 A 12mm, RESOL 1080P/ 800TVL, MULTI HD4X1,IP67/IK10, CASE METAL, INST INT/EXT',
         value='SUBSTITUIDO - DE VHD 3240 D VF G7 PARA VHD 3240 D VF G8'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560085' , value='4560175')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1220 D MIC G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD 4X1, CASE PLAST, INST INT, MICROFONE 40M, ABERT108',
+        value='SUBSTITUIDO - DE VHD 1220 D MIC G8 PARA VHD 1220 D MIC G9'
         ) # DESCRIÇÃO 
   
   
