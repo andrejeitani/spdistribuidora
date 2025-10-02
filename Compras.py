@@ -79,6 +79,9 @@ try:
     df = df[df['Codigo'] != '4680260'] # SS 5542 MF W
     df = df[df['Codigo'] != '4680052'] # SS 1530 MF W
     df = df[df['Codigo'] != '4680058'] # SS 1540 MF W
+    df = df[df['Codigo'] != '4660167'] # CATRACA C/RECONHECIMENTO FACIAL CAP 3000
+    df = df[df['Codigo'] != '4663150'] # Catraca Pedestal CAP 3000
+    df = df[df['Codigo'] != '4663160'] # Catraca Pedestal CAP 3000 UC 
     df = df[df['Codigo'] != '4580772'] # MHDX 1116 - HD 4TB
     df = df[df['Codigo'] != '4580773'] # MHDX 1116 - HD 1TB
     df = df[df['Codigo'] != '4581048'] # MHDX 1108 - HD 1TB
@@ -96,6 +99,13 @@ try:
     df = df[df['Codigo'] != '4679000'] # FX 2000 
     df = df[df['Codigo'] != '4679001'] # FX 2000 
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
+    df = df[df['Codigo'] != '4670036'] # MFD7001 PT
+    df = df[df['Codigo'] != '4670037'] # MFD7000 PT
+    df = df[df['Codigo'] != '4670051'] # MFD 2020 CHAMPANHE 
+    df = df[df['Codigo'] != '4670058'] # MFD 2020 PRETA
+    df = df[df['Codigo'] != '4670100'] # FD 1000 
+    df = df[df['Codigo'] != '4670200'] # FD2000
+    df = df[df['Codigo'] != '4670300'] # FD3000
     df = df[df['Codigo'] != '4760089'] # S1010F-P
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
@@ -128,6 +138,19 @@ try:
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
     df = df[df['Codigo'] != '4560027'] # VHD 3230 D
     df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
+    df = df[df['Codigo'] != '4010008'] # Headset THS 40 USB UC
+    df = df[df['Codigo'] != '4400330'] # UNNITI 2000/3000
+    df = df[df['Codigo'] != '4400331'] # UNNITI 2000/3000
+    df = df[df['Codigo'] != '4690014'] # IZY Sirene Smart ISI 1001
+    df = df[df['Codigo'] != '4690015'] # IZY Sistema de Segurança Smart ISS 1001 
+    df = df[df['Codigo'] != '4750060'] # WOM 5A
+    df = df[df['Codigo'] != '4760116'] # S1126F-PA
+    df = df[df['Codigo'] != '4760118'] # S1105F-P
+    df = df[df['Codigo'] != '4830132'] # CABO DROP
+    df = df[df['Codigo'] != '4990147'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4990148'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4990515'] # IMPACTAS 94/140/220/300
+    df = df[df['Codigo'] != '4995861'] # IMPACTAS 94/140/220/300
     
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
