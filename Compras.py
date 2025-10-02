@@ -207,7 +207,66 @@ try:
         to_replace='CAMERA VHD 1220 D MIC G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD 4X1, CASE PLAST, INST INT, MICROFONE 40M, ABERT108',
         value='SUBSTITUIDO - DE VHD 1220 D MIC G8 PARA VHD 1220 D MIC G9'
         ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4290721' , value='4290059')   # CODIGO
+    df = df.replace(
+        to_replace='WEBCAM CAM HD 720P',
+        value='SUBSTITUIDO - DE HD 720P PARA HDWCI 720p'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4291080' , value='4290060')   # CODIGO
+    df = df.replace(
+        to_replace='VIDEO CONFERENCIA USB CAM-1080P',
+        value='SUBSTITUIDO - DE CAM-1080P PARA Webcam 1080p 60FPS'
+        ) # DESCRIÇÃO 
   
+    df = df.replace(to_replace='4291220' , value='4290008')   # CODIGO
+    df = df.replace(
+        to_replace='MOUSE MSI100 SEM FIO PRETO',
+        value='SUBSTITUIDO - DE MOUSE MSI100 PARA MSI100 BLISTER'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560042' , value='4560054')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3220 D A G6- IR 20M, LENTE 2,8mm, RESOL1080P, MULTI HD4X1,IP67, CASE METAL, INST INT/EXT, ENTR AUDIO, ABER106',
+        value='SUBSTITUIDO - DE VHD 3220 D A PARA VHD 3220 DFC+'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4690011' , value='4540080')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR DE MOVIMENTO SMART ISM 1001',
+        value='SUBSTITUIDO - DE ISM 1001 PARA MSM 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4690012' , value='4540081')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR DE ABERTURA SMART ISA 1001',
+        value='SUBSTITUIDO - DE ISA 1001 PARA MSA 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4690016' , value='4610027')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR DE TEMPERATURA E UMIDADE SMART IST 1001',
+        value='SUBSTITUIDO - DE IST 1001 PARA MTU 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4690017' , value='4500036')   # CODIGO
+    df = df.replace(
+        to_replace='MINI BOTAO SEM FIO ISW 1001',
+        value='SUBSTITUIDO - DE IST 1001 PARA MSW 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4750061' , value='4750058')   # CODIGO
+    df = df.replace(
+        to_replace='ROTEADOR WOM 5A MIMO FAST WIRELESS (CPE) 5GHZ 16DBI',
+        value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM AC'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4822037' , value='4300739')   # CODIGO
+    df = df.replace(
+        to_replace='PLACA SNMP PARA GERENCIAMENTO REMOTO PGR 801L',
+        value='SUBSTITUIDO - DE PGR 801L PARA PGR 801S'
+        ) # DESCRIÇÃO 
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
