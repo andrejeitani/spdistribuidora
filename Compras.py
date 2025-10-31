@@ -290,6 +290,12 @@ try:
         to_replace='PLACA SNMP PARA GERENCIAMENTO REMOTO PGR 801L',
         value='SUBSTITUIDO - DE PGR 801L PARA PGR 801S'
         ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580760' , value='4900022')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1232 - 32 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, ANAL VIDEO, MODO HIB,PADR LGPD, SUP 2 HDs SATA',
+        value='SUBSTITUIDO - DE MHDX 1232 PARA MHDX 1332'
+        ) # DESCRIÇÃO 
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
