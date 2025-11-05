@@ -49,14 +49,8 @@ try:
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'LINEAR']
     df = df[df['Codigo'] != '4560026'] # VHD 1220 D G7
-    df = df[df['Codigo'] != '4560027'] # VHD 3220 D G7
-    df = df[df['Codigo'] != '4560028'] # VHD 1220 D BLACK G2
     df = df[df['Codigo'] != '4560039'] # VHD 1230 B BLACK G7
-    df = df[df['Codigo'] != '4560040'] # VHD 1230 B G7
     df = df[df['Codigo'] != '4560045'] # VHD 1220 B FULL COLOR G7  
-    df = df[df['Codigo'] != '4560046'] # VHD 1220 D FULL COLOR G7
-    df = df[df['Codigo'] != '4565298'] # VHL 1120 D
-    df = df[df['Codigo'] != '4565299'] # VHL 1120 B
     df = df[df['Codigo'] != '4565321'] # VHL 1220 B G2
     df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
     df = df[df['Codigo'] != '4565357'] # VHD 1530 B 
@@ -73,9 +67,7 @@ try:
     df = df[df['Codigo'] != '4543516'] # AMT 8000
     df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
     df = df[df['Codigo'] != '4581156'] # MHDX 1104-C C/ SSD
-    df = df[df['Codigo'] != '4680256'] # SS 5531 MF W 
     df = df[df['Codigo'] != '4680261'] # SS 5532 MF W
-    df = df[df['Codigo'] != '4680257'] # SS 5541 MF W
     df = df[df['Codigo'] != '4680260'] # SS 5542 MF W
     df = df[df['Codigo'] != '4680052'] # SS 1530 MF W
     df = df[df['Codigo'] != '4680058'] # SS 1540 MF W
@@ -96,16 +88,14 @@ try:
     df = df[df['Codigo'] != '4679011'] # FX 2000 PRETA
     df = df[df['Codigo'] != '4679015'] # FX 2000 INOX
     df = df[df['Codigo'] != '4679010'] # FX 2000 CINZA
-    df = df[df['Codigo'] != '4679000'] # FX 2000 
-    df = df[df['Codigo'] != '4679001'] # FX 2000 
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
     df = df[df['Codigo'] != '4670036'] # MFD7001 PT
     df = df[df['Codigo'] != '4670037'] # MFD7000 PT
     df = df[df['Codigo'] != '4670051'] # MFD 2020 CHAMPANHE 
     df = df[df['Codigo'] != '4670058'] # MFD 2020 PRETA
     df = df[df['Codigo'] != '4670100'] # FD 1000 
-    df = df[df['Codigo'] != '4670200'] # FD2000
-    df = df[df['Codigo'] != '4670300'] # FD3000
+    df = df[df['Codigo'] != '4670200'] # FD 2000
+    df = df[df['Codigo'] != '4670300'] # FD 3000
     df = df[df['Codigo'] != '4760089'] # S1010F-P
     df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
     df = df[df['Codigo'] != '4681027'] # LE 170
@@ -126,19 +116,15 @@ try:
     df = df[df['Codigo'] != '4830050'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
-    df = df[df['Codigo'] != '4080085'] # TC 50 PREMIUM
     df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
     df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
     df = df[df['Codigo'] != '4631200'] # BLA 1200
     df = df[df['Codigo'] != '4632200'] # BLA 1200
-    df = df[df['Codigo'] != '4670007'] # IFR 7000
     df = df[df['Codigo'] != '4670008'] # IFR 7000 +
     df = df[df['Codigo'] != '4671085'] # FS 150 KIT ELITE
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
     df = df[df['Codigo'] != '4560025'] # VHD 3230 B
-    df = df[df['Codigo'] != '4560027'] # VHD 3230 D
     df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
-    df = df[df['Codigo'] != '4010008'] # Headset THS 40 USB UC
     df = df[df['Codigo'] != '4400330'] # UNNITI 2000/3000
     df = df[df['Codigo'] != '4400331'] # UNNITI 2000/3000
     df = df[df['Codigo'] != '4690014'] # IZY Sirene Smart ISI 1001
