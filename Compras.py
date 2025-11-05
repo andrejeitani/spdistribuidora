@@ -155,6 +155,7 @@ try:
     df = df[df['Codigo'] != '4080015'] # PLENO
     df = df[df['Codigo'] != '4080057'] # PLENO C/ CHAVE
     df = df[df['Codigo'] != '4080058'] # PLENO C/ CHAVE
+    df = df[df['Codigo'] != '4080015'] # PLENO 100 MS
     df = df[df['Codigo'] != '4080085'] # TC 50 BRANCO
     df = df[df['Codigo'] != '4080086'] # TC 50 PRETO
     df = df[df['Codigo'] != '4080091'] # TC 50 PREMIUM
