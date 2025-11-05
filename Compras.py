@@ -315,6 +315,114 @@ try:
         to_replace='GRAVADOR MHDX 1232 - 32 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, ANAL VIDEO, MODO HIB,PADR LGPD, SUP 2 HDs SATA',
         value='SUBSTITUIDO - DE MHDX 1232 PARA MHDX 1332'
         ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='1950464' , value='4300696')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 7430 B A FT -IR 30M, LENTE 2,8mm, RESOL4MP,STARLIGHT,IP67, CASE METAL/PLAST, INST INT/EXT, MICROF,ANAL VIDEO',
+        value='SUBSTITUIDO - DE VIP 7430 PARA I 5430'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4123001' , value='4123102')   # CODIGO
+    df = df.replace(
+        to_replace='TELEFONE SEM FIO TS 3111 RAMAL BRANCO',
+        value='SUBSTITUIDO - DE TS 3111 BRANCO PARA TS 3111 PRETO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4123002' , value='4123102')   # CODIGO
+    df = df.replace(
+        to_replace='TELEFONE SEM FIO TS 3112 BRANCO',
+        value='SUBSTITUIDO - DE TS 3112 BRANCO PARA TS 3111 PRETO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4123010' , value='4123110')   # CODIGO
+    df = df.replace(
+        to_replace='TELEFONE SEM FIO TS 3110 BRANCO',
+        value='SUBSTITUIDO - DE TS 3112 BRANCO PARA TS 3111 PRETO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4123101' , value='4123110')   # CODIGO
+    df = df.replace(
+        to_replace='TELEFONE SEM FIO TS 3110 VERMELHO',
+        value='SUBSTITUIDO - DE TS 3112 VERMELHO PARA TS 3111 PRETO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4123153' , value='4123110')   # CODIGO
+    df = df.replace(
+        to_replace='TELEFONE SEM FIO TS 3110 BRANCO E PRETO',
+        value='SUBSTITUIDO - DE TS 3112 VERMELHO PARA TS 3111 PRETO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4140032' , value='4140033')   # CODIGO
+    df = df.replace(
+        to_replace='SMART BOX ANDROID TV IZY PLAY STICK',
+        value='SUBSTITUIDO - DE IZY HD PARA IZY FULL HD'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4504401' , value='4504400')   # CODIGO
+    df = df.replace(
+        to_replace='TRANSMISSOR XTR 1000 BRANCO/ROSA',
+        value='SUBSTITUIDO - DE XTR BRANCO/ROSA PARA PRETO/BRANCO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4504500' , value='4684018')   # CODIGO
+    df = df.replace(
+        to_replace='CHAVEIRO DE PROXIMIDADE XID1000 RDIF MIFARE 13,56MHZ',
+        value='SUBSTITUIDO - DE XID1000 PARA TH 1000 DT'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560033' , value='4560164')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1130 B G7 - IR 30M, LENTE 2,8mm, RESOL 720P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT 109',
+        value='SUBSTITUIDO - DE G7 PARA G9'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560035' , value='4560163')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1120 D G7 - IR 20M, LENTE 2,8mm, RESOL HD 720P/ ANAL600TVL, MULTI HD4X1, CASE PLAST, INST INT ABERT 97',
+        value='SUBSTITUIDO - DE G7 PARA G9'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560090' , value='4560164')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1230 B G8 - IR 30M, LENTE 3,6mm, RESOL 1080P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE G8 PARA G9'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4565355' , value='4560164')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3530 B - IR 30M, LENTE 3,6mm, RESOL 5MP, HDCVI, IP67, CASE METAL, INST INT/EXT, ABERT92',
+        value='SUBSTITUIDO - DE VHD 3530 B PARA VHD 3530 B FC+'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4565356' , value='4560108')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3520 D - IR 20M, LENTE 2,8mm, RESOL 5MP, HDCVI, IP67, CASE MET, INST INT/EXT, ABERT110',
+        value='SUBSTITUIDO - DE VHD 3530 D PARA VHD 3530 D FC+'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4581117' , value='4581104')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR EM REDE INVD 5232-16P - 32 CANAIS IP, RESOL 16MP, 16 POE, ANALIT DE VIDEO, SUP 4 HDs SATA 18TB',
+        value='SUBSTITUIDO - DE 5232-16P D PARA 5232'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4770006' , value='4770025')   # CODIGO
+    df = df.replace(
+        to_replace='FRENTE FALSA P/ RACK FF1U',
+        value='SUBSTITUIDO - DE FRENTE FALSA D PARA CONJUNTO FRENTE FALSA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4830092' , value='4830249')   # CODIGO
+    df = df.replace(
+        to_replace='PATCH CORD IMPACT LAN UTP CAT5E 4P PRETO 3,0M',
+        value='SUBSTITUIDO - APENAS TROCA DE CODIGO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4950304' , value='4950305')   # CODIGO
+    df = df.replace(
+        to_replace='SPEED DOME VIP 7210 SD TM FT - IR 50M, RESOL 2MP, IP67, TERMICO, DET TEMP/INCENDIO, ENT/SAI ALARME, ALIM 12V',
+        value='SUBSTITUIDO - DE VIP 7210 PARA VIP 7207'
+        ) # DESCRIÇÃO 
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
