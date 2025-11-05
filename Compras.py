@@ -143,6 +143,7 @@ try:
     df = df[df['Codigo'] != '4400331'] # UNNITI 2000/3000
     df = df[df['Codigo'] != '4690014'] # IZY Sirene Smart ISI 1001
     df = df[df['Codigo'] != '4690015'] # IZY Sistema de Segurança Smart ISS 1001 
+    df = df[df['Codigo'] != '4011025'] # IZY Sistema de Segurança Smart ISS 102 
     df = df[df['Codigo'] != '4750060'] # WOM 5A
     df = df[df['Codigo'] != '4760116'] # S1126F-PA
     df = df[df['Codigo'] != '4760118'] # S1105F-P
