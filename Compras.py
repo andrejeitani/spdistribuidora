@@ -151,6 +151,23 @@ try:
     df = df[df['Codigo'] != '4990148'] # IMPACTAS 16/40/68
     df = df[df['Codigo'] != '4990515'] # IMPACTAS 94/140/220/300
     df = df[df['Codigo'] != '4995861'] # IMPACTAS 94/140/220/300
+    df = df[df['Codigo'] != '4080015'] # PLENO
+    df = df[df['Codigo'] != '4080057'] # PLENO C/ CHAVE
+    df = df[df['Codigo'] != '4080058'] # PLENO C/ CHAVE
+    df = df[df['Codigo'] != '4080085'] # TC 50 BRANCO
+    df = df[df['Codigo'] != '4080086'] # TC 50 PRETO
+    df = df[df['Codigo'] != '4080091'] # TC 50 PREMIUM
+    df = df[df['Codigo'] != '4100015'] # QDI 15 R9
+    df = df[df['Codigo'] != '4119041'] # TEL. RURAL CFW 9041
+    df = df[df['Codigo'] != '4122513'] # TS 2513
+    df = df[df['Codigo'] != '4123103'] # TS 3113
+    df = df[df['Codigo'] != '4125122'] # TS 5122
+    df = df[df['Codigo'] != '4125123'] # TS 5123
+    df = df[df['Codigo'] != '4125150'] # TS 5150
+    df = df[df['Codigo'] != '4590009'] # IMX1
+    df = df[df['Codigo'] != '4590011'] # IMX1 C/ CARTÃO
+    df = df[df['Codigo'] != '4760016'] # IFR 7000
+    df = df[df['Codigo'] != '4670210'] # FR 210 
     
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
