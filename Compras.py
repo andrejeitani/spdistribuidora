@@ -155,6 +155,16 @@ try:
     df = df[df['Codigo'] != '4590011'] # IMX1 C/ CARTÃO
     df = df[df['Codigo'] != '4760016'] # IFR 7000
     df = df[df['Codigo'] != '4670210'] # FR 210 
+    df = df[df['Codigo'] != '4100014'] # QDP 15
+    df = df[df['Codigo'] != '4100025'] # QDO 20
+    df = df[df['Codigo'] != '4568013'] # VBOX 5100
+    df = df[df['Codigo'] != '4690014'] # ISI 1001
+    df = df[df['Codigo'] != '4690015'] # ISS 1001
+    df = df[df['Codigo'] != '4690016'] # IST 1001
+    df = df[df['Codigo'] != '4690017'] # ISW 1001
+    df = df[df['Codigo'] != '4990147'] # PLACA RAMAL IMPACTA
+    df = df[df['Codigo'] != '4990148'] # PLACA RAMAL IMPACTA
+    df = df[df['Codigo'] != '4990515'] # PLACA RAMAL IMPACTA 
     
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
