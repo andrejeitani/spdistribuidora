@@ -129,9 +129,6 @@ try:
     df = df[df['Codigo'] != '4690014'] # IZY Sirene Smart ISI 1001
     df = df[df['Codigo'] != '4690015'] # IZY Sistema de Segurança Smart ISS 1001 
     df = df[df['Codigo'] != '4011025'] # IZY Sistema de Segurança Smart ISS 102 
-    df = df[df['Codigo'] != '4750060'] # WOM 5A
-    df = df[df['Codigo'] != '4760116'] # S1126F-PA
-    df = df[df['Codigo'] != '4760118'] # S1105F-P
     df = df[df['Codigo'] != '4830132'] # CABO DROP
     df = df[df['Codigo'] != '4990147'] # IMPACTAS 16/40/68
     df = df[df['Codigo'] != '4990148'] # IMPACTAS 16/40/68
@@ -419,28 +416,10 @@ try:
         value='SUBSTITUIDO - DE VIP 7210 PARA VIP 7207'
         ) # DESCRIÇÃO 
 
-    df = df.replace(to_replace='4690011' , value='4540080')   # CODIGO
-    df = df.replace(
-        to_replace='SENSOR DE MOVIMENTO SMART ISM 1001',
-        value='SUBSTITUIDO - DE ISM 1001 PARA MSM 1001'
-        ) # DESCRIÇÃO 
-
-    df = df.replace(to_replace='4690012' , value='4540081')   # CODIGO
-    df = df.replace(
-        to_replace='SENSOR DE ABERTURA SMART ISA 1001',
-        value='SUBSTITUIDO - DE ISA 1001 PARA MSA 1001'
-        ) # DESCRIÇÃO 
-
     df = df.replace(to_replace='4750060' , value='4750058')   # CODIGO
     df = df.replace(
         to_replace='ROTEADOR WOM 5A FAST WIRELESS (CPE) 5GHZ 16DBI',
         value='SUBSTITUIDO - DE WOM 5A FAST PARA WOM AC GIGA'
-        ) # DESCRIÇÃO 
-
-    df = df.replace(to_replace='4750061' , value='4750058')   # CODIGO
-    df = df.replace(
-        to_replace='ROTEADOR WOM 5A MIMO FAST WIRELESS (CPE) 5GHZ 16DBI',
-        value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM AC GIGA'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4760116' , value='4760129')   # CODIGO
