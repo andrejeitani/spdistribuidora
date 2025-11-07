@@ -418,7 +418,49 @@ try:
         to_replace='SPEED DOME VIP 7210 SD TM FT - IR 50M, RESOL 2MP, IP67, TERMICO, DET TEMP/INCENDIO, ENT/SAI ALARME, ALIM 12V',
         value='SUBSTITUIDO - DE VIP 7210 PARA VIP 7207'
         ) # DESCRIÇÃO 
-  
+
+    df = df.replace(to_replace='4690011' , value='4540080')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR DE MOVIMENTO SMART ISM 1001',
+        value='SUBSTITUIDO - DE ISM 1001 PARA MSM 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4690012' , value='4540081')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR DE ABERTURA SMART ISA 1001',
+        value='SUBSTITUIDO - DE ISA 1001 PARA MSA 1001'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4750060' , value='4750058')   # CODIGO
+    df = df.replace(
+        to_replace='ROTEADOR WOM 5A FAST WIRELESS (CPE) 5GHZ 16DBI',
+        value='SUBSTITUIDO - DE WOM 5A FAST PARA WOM AC GIGA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4750061' , value='4750058')   # CODIGO
+    df = df.replace(
+        to_replace='ROTEADOR WOM 5A MIMO FAST WIRELESS (CPE) 5GHZ 16DBI',
+        value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM AC GIGA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760116' , value='4760129')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH NAO GERENCIAVEL POE 26P FAST ETHERNET (4P UPLINK, SENDO 2P SFP) S1126F-PA 4760116',
+        value='SUBSTITUIDO - DE S1126F PARA S1126F-HPA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760118' , value='4760130')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH NAO GERENCIAVEL POE 5P FAST ETHERNET 100Mbps (SENDO 4P FUNCAO POE E 1 UNIK) S1105F-P  4760118',
+        value='SUBSTITUIDO - DE S1105F PARA S1105G-P'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4950048' , value='4950780')   # CODIGO
+    df = df.replace(
+        to_replace='SPEED DOME VIP 5432 SD IA FT - IR 150M, ZOOM OPT 32X/DIG 16X, L 4,8 A 154mm, RES 4MP,IP67/IK10, ALIM 24V/2,5A, AUTO TRAC',
+        value='SUBSTITUIDO - APENAS TROCA DE CODIGO'
+        ) # DESCRIÇÃO 
+
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
     df['Comprado'] = df['Comprado'].astype(float)
