@@ -81,7 +81,6 @@ try:
     df = df[df['Codigo'] != '4581093'] # MHDX 1308 - HD 1TB
     df = df[df['Codigo'] != '4581100'] # MHDX 1116 - HD 2TB  
     df = df[df['Codigo'] != '4682073'] # SS 3430 MF
-    df = df[df['Codigo'] != '4663150'] # CAP 3000 VAZIA
     df = df[df['Codigo'] != '4390176'] # AMT 2018 EG
     df = df[df['Codigo'] != '4390179'] # AMT 2018 E
     df = df[df['Codigo'] != '4400338'] # LICENÇA RAMAL UNNITI
