@@ -106,6 +106,7 @@ try:
     df = df[df['Codigo'] != '4810043'] # VB 1104 WP  
     df = df[df['Codigo'] != '4682070'] # CT 3000 2PB
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
+    df = df[df['Codigo'] != '4580785'] # NVD 1432 # AINDA SEM SUBSTITUTO
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P # SUBSTITUIDO PELO iNVD 3016 P
     df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
