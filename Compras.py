@@ -471,8 +471,8 @@ try:
 
     # Cria a Coluna comprar, ja com o ajuste da multiplicidade dos pack's
     #df['Comprar'] = np.floor(df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'] # Arredonda para baixo
-    #df['Comprar'] = np.ceil(df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'] # Arredonda para cima
-    df['Comprar'] = (df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'] # Arredonda conforme a casa decimal
+    df['Comprar'] = np.ceil(df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'] # Arredonda para cima
+    #df['Comprar'] = (df['Sugestao 40 Dias'] / df['Qtd. Multipla']) * df['Qtd. Multipla'] # Arredonda conforme a casa decimal
 
     # Define a coluna Total, sendo a quantidade ajustada do COMPRAR multiplicando o PV
     df['Total'] = (df['PV'] * df['Comprar']).round(2)
