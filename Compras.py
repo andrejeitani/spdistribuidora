@@ -441,7 +441,7 @@ try:
         value='SUBSTITUIDO - APENAS TROCA DE CODIGO'
         ) # DESCRIÇÃO 
 
-    df = df.replace(to_replace='4581040' , value='4581255')   # CODIGO
+    df = df.replace(to_replace='4581040' , value='4581253')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1108-C - 8 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
         value='SUBSTITUIDO - DE 1108C PARA 1208C'
