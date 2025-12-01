@@ -496,7 +496,7 @@ try:
         global filtered_df
         filtered_df = df[df['Marca'].str.contains(filtro_marca, case=False) & df['Produto'].str.contains(filtro_produto , case=False)]
         st.title('Planilha de Compras')
-        st.text('Tabela de Referencia : Novembro-2025') # ATUALIZAR SEMPRE A TABELA DA INTELBRAS *****************************
+        st.text('Tabela de Referencia : Dezembro-2025') # ATUALIZAR SEMPRE A TABELA DA INTELBRAS *****************************
         st.dataframe(filtered_df , use_container_width=True , hide_index=True)
 
         a = len(filtered_df['Produto'])
