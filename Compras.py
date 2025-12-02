@@ -481,7 +481,73 @@ try:
         to_replace='GRAVADOR MHDX 1108-C - 8 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
         value='SUBSTITUIDO - DE 1108C PARA 1208C'
         ) # DESCRIÇÃO   
+  
+    df = df.replace(to_replace='4541051' , value='4540088')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR INFRA VERMELHO PASSIVO IVP 7001 MW PET',
+        value='SUBSTITUIDO - DE IVP 7001 PARA IVP 5000 MW LD'
+        ) # DESCRIÇÃO  
+    
+    df = df.replace(to_replace='4613533' , value='4610049')   # CODIGO
+    df = df.replace(
+        to_replace='DETECTOR DE TEMPERATURA DTE 521 - ENDERECAVEL, TERMOVELOCIMETRICO, 20/30V',
+        value='SUBSTITUIDO - DE DTE 521 PARA DTE 523
+        ) # DESCRIÇÃO  
+    
+    df = df.replace(to_replace='4613532' , value='4610050')   # CODIGO
+    df = df.replace(
+        to_replace='DETECTOR DE FUMACA DFE 521 - ENDERECAVEL, OPTICO INFRAVERMELHO, 20 a 30Vdc, AMB INTERNO, CASE ABS PROT UV',
+        value='SUBSTITUIDO - DE DFE 521 PARA DFE 523
+        ) # DESCRIÇÃO  
 
+    df = df.replace(to_replace='4565352' , value='4560048')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3240 B FULL COLOR G6, IR 40M, LENTE 3,6mm, RSOL 1080P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT91',
+        value='SUBSTITUIDO - DE VHD 3240 FC PARA VHD 3240 FC +
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4560036' , value='4560053')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3130 B G7 - IR 30M, LENTE 3,6mm, RESOL 720P/ 600TVL, MULTI HD 4X1, IP67, CASE METAL, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 3130 B G7 PARA VHD 3220 B FC +
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4560024' , value='4560054')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3130 D G7 - IR 30M, LENTE 3,6mm, RESOL 720P/ 600TVL, MULTI HD 4X1, IP67, CASE METAL, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 3130 D G7 PARA VHD 3220 D FC +
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560080' , value='4560054')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3230 D G8 - IR 30M, LENTE 2,8mm, RESOL 1080P, MULTI HD 4X1, IP67, CASE METAL, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 3230 D G8 PARA VHD 3220 D FC +
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4570046' , value='4900014')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1230 D G5- IR 30M, LENTE 2,8mm, RESOL 1080P, POE, IP67, CASE AL/PLAST, INST INT/EXT, MICROFONE, DET MOVIMENTO',
+        value='SUBSTITUIDO - DE VIP 1230 D G5 PARA VIP 1230 D FC +
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560081' , value='4560053')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3230 B G8 - IR 30M, LENTE 3,6mm, RESOL 1080P/ 600TVL, MULTI HD 4X1, IP67, CASE METAL, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 3230 B G8 PARA VHD 3220 B FC +
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560086' , value='4900046')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHL 1220 D G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, HDCVI, CASE PLAST, INST INT, ABERT108',
+        value='SUBSTITUIDO - DE VHL 1120 D G8 PARA VHL 1120 B G9
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560075' , value='4900045')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHL 1220 B G8 - IR 20M, LENTE 2,8mm, RESOL1080P, HDCVI,IP66, CASE PLAST, INST INT/EXT, ABERT 108, LINHA FULLHD',
+        value='SUBSTITUIDO - DE VHL 1220 B G8 PARA VHL 1220 B G9
+        ) # DESCRIÇÃO   
+  
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
     df['Comprado'] = df['Comprado'].astype(float)
