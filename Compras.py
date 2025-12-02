@@ -366,7 +366,7 @@ try:
     df = df.replace(to_replace='4560033' , value='4560164')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 1130 B G7 - IR 30M, LENTE 2,8mm, RESOL 720P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT 109',
-        value='SUBSTITUIDO - DE G7 PARA G9'
+        value='SUBSTITUIDO - DE VHD 1130 B G7 PARA VHD 1230 B G9'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4560035' , value='4560163')   # CODIGO
