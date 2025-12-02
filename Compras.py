@@ -372,7 +372,7 @@ try:
     df = df.replace(to_replace='4560035' , value='4560163')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 1120 D G7 - IR 20M, LENTE 2,8mm, RESOL HD 720P/ ANAL600TVL, MULTI HD4X1, CASE PLAST, INST INT ABERT 97',
-        value='SUBSTITUIDO - DE G7 PARA G9'
+        value='SUBSTITUIDO - DE VHD 1120 D G7 PARA VHD 1220 D G9'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4560090' , value='4560164')   # CODIGO
@@ -390,7 +390,7 @@ try:
     df = df.replace(to_replace='4565356' , value='4560108')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 3520 D - IR 20M, LENTE 2,8mm, RESOL 5MP, HDCVI, IP67, CASE MET, INST INT/EXT, ABERT110',
-        value='SUBSTITUIDO - DE VHD 3530 D PARA VHD 3530 D FC+'
+        value='SUBSTITUIDO - DE VHD 3520 D PARA VHD 3520 D FC+'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4581117' , value='4581104')   # CODIGO
