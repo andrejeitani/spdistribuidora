@@ -163,6 +163,49 @@ try:
     df = df[df['Codigo'] != '4990147'] # PLACA RAMAL IMPACTA
     df = df[df['Codigo'] != '4990148'] # PLACA RAMAL IMPACTA
     df = df[df['Codigo'] != '4990515'] # PLACA RAMAL IMPACTA 
+    df = df[df['Codigo'] != '4750090'] # WOM 5A MIMO FAST
+    df = df[df['Codigo'] != '4100005'] # PLACA RAMAL DECT 5RM
+    df = df[df['Codigo'] != '4110000'] # CIP 850
+    df = df[df['Codigo'] != '4400304'] # PLACA RAMAL DESBALANCEADA
+    df = df[df['Codigo'] != '4990253'] # PLACA FONTE IMPACTA 16/68
+    df = df[df['Codigo'] != '4990260'] # PLACA FXS CIP 850
+    df = df[df['Codigo'] != '4990261'] # PLACA FXO CIP 850
+    df = df[df['Codigo'] != '4993018'] # PLACA TRONCO IMPACTA
+    df = df[df['Codigo'] != '4321708'] # UNNITI 2000
+    df = df[df['Codigo'] != '4321709'] # UNNITI 3000
+    df = df[df['Codigo'] != '4201201'] # TIP 120I
+    df = df[df['Codigo'] != '4320208'] # UNNITI 2000 IP
+    df = df[df['Codigo'] != '4400094'] # PLACA GRAVAÇÃO IMPACTA 68I
+    df = df[df['Codigo'] != '4841059'] # ECM 6048
+    df = df[df['Codigo'] != '4400404'] # UNNITI 1000
+    df = df[df['Codigo'] != '4320216'] # UNNITI 2000
+    df = df[df['Codigo'] != '4822000'] # XNB 720 110V
+    df = df[df['Codigo'] != '4822001'] # XNB 720 220V
+    df = df[df['Codigo'] != '4822002'] # XNB 1440 110V
+    df = df[df['Codigo'] != '4822003'] # XNB 1440 220V
+    df = df[df['Codigo'] != '4822004'] # XNB 600 110V
+    df = df[df['Codigo'] != '4822005'] # XNB 600 220V
+    df = df[df['Codigo'] != '4822006'] # XNB 1200 110V
+    df = df[df['Codigo'] != '4822007'] # XNB 1200 220V
+    df = df[df['Codigo'] != '4822008'] # XNB 1800 110V
+    df = df[df['Codigo'] != '4822009'] # XNB 1800 220V
+    df = df[df['Codigo'] != '4822010'] # XNB 720 BI
+    df = df[df['Codigo'] != '4822011'] # XNB 1440 BI
+    df = df[df['Codigo'] != '4822016'] # XNB 1440 BI +
+    df = df[df['Codigo'] != '4822017'] # XNB 1800 BI +
+    df = df[df['Codigo'] != '4527003'] # FR 330
+    df = df[df['Codigo'] != '4670028'] # MFR 1001
+    df = df[df['Codigo'] != '4670036'] # MFD 7001
+    df = df[df['Codigo'] != '4670037'] # MFD 7000
+    df = df[df['Codigo'] != '4670100'] # FD 1000
+    df = df[df['Codigo'] != '4670200'] # FD 2000
+    df = df[df['Codigo'] != '4670210'] # FR 210
+    df = df[df['Codigo'] != '4670300'] # FD 3000
+    df = df[df['Codigo'] != '4670331'] # FR 331
+    df = df[df['Codigo'] != '4670500'] # FR 500 D
+    df = df[df['Codigo'] != '4670620'] # FR 620
+    df = df[df['Codigo'] != '4670630'] # FR 630
+    df = df[df['Codigo'] != '4674005'] # FR 400
     
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
