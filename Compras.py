@@ -547,6 +547,14 @@ try:
         to_replace='CAMERA VHL 1220 B G8 - IR 20M, LENTE 2,8mm, RESOL1080P, HDCVI,IP66, CASE PLAST, INST INT/EXT, ABERT 108, LINHA FULLHD',
         value='SUBSTITUIDO - DE VHL 1220 B G8 PARA VHL 1220 B G9
         ) # DESCRIÇÃO   
+
+    ##############################################################################################
+    # Itens em promoção
+    promocao = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
+    df['Produto'] = np.where(
+      df['Codigo'].isin(promocao) , 'Item em Promoção' , df['Produto']
+    )
+    ##############################################################################################
   
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
