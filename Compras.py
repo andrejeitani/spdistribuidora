@@ -491,7 +491,7 @@ try:
     df = df.replace(to_replace='4613533' , value='4610049')   # CODIGO
     df = df.replace(
         to_replace='DETECTOR DE TEMPERATURA DTE 521 - ENDERECAVEL, TERMOVELOCIMETRICO, 20/30V',
-        value='SUBSTITUIDO - DE DTE 521 PARA DTE 523
+        value='SUBSTITUIDO - DE DTE 521 PARA DTE 523'
         ) # DESCRIÇÃO  
     
     df = df.replace(to_replace='4613532' , value='4610050')   # CODIGO
@@ -550,10 +550,10 @@ try:
 
     ##############################################################################################
     # Itens em promoção
-    #promocao = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
-    #df['Produto'] = np.where(
-    #  df['Codigo'].isin(promocao) , 'Item em Promoção' , df['Produto']
-    #)
+    promocao = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
+    df['Produto'] = np.where(
+      df['Codigo'].isin(promocao) , 'Item em Promoção' , df['Produto']
+    )
     ##############################################################################################
   
     # Define o tipo de variavel em cada coluna
