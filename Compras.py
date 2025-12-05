@@ -552,7 +552,7 @@ try:
     # Itens em promoção
     promocao = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
     df['Produto'] = np.where(
-      df['Codigo'].isin(promocao) , 'Item em Promoção' , df['Produto']
+      df['Codigo'].isin(promocao) , df['Produto'] = 'Item em Promoção' , df['Produto']
     )
     ##############################################################################################
   
