@@ -42,10 +42,11 @@ try:
                         'Vl. Indexado Custo Standard','Código da Situação Tributária do PIS - Entrada'
                         })
     df = df.drop(index=0)
-    df['Qtde em Estoque'] = (df['Qtde em Estoque'] / 2).round(0)
+    df['Qtde em Estoque'] = (df['Qtde em Estoque'] * 0.4).round(0)
     df = df.dropna()
     df = df[df['Marca'].str.contains('INTELBRAS', case=False)]
     df = df[df['Qtde em Estoque'] != 0]
     st.dataframe(df , hide_index=True ,use_container_width=True)
 except:
     st.text('SP Distribuidora - Envie o Arquivo  Rotheva para receber 50% do Estoque intelbras')
+
