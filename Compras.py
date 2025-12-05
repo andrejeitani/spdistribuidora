@@ -36,7 +36,7 @@ try:
         'Unnamed: 19':'Pack',
     })
 
-# Excluir as colunas em branco e retira a marcas em desuso.
+    # Excluir as colunas em branco e retira a marcas em desuso.
     df = df.drop(columns=['Excluir 1','Excluir 2','Excluir 3','Excluir 4','Excluir 5'])
     df = df[df['Marca'] != 'INTELBRAS FL'] # FORA DE LINHA
     df = df[df['Marca'] != 'INATIVO/FL'] # FORA DE LINHA
@@ -198,38 +198,38 @@ try:
     df = df[df['Codigo'] != '4670620'] # FR 620
     df = df[df['Codigo'] != '4670630'] # FR 630
     df = df[df['Codigo'] != '4674005'] # FR 400
-    
+
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VHD 5820 D 4K - IR 20M, LENTE 2,8mm, RESOL 2160P, HDCVI, IP66, CASE PLAST, INST INT/EXT, ABERT110',
         value='SUBSTITUIDO - DE VHD 5820 D4K PARA VHD 5830 B 4K'
         ) # DESCRIÇÃO  
-    
+
     df = df.replace(to_replace='4581038' , value='4581252')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C C/HD 1TB - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
         value='SUBSTITUIDO - DE MHDX 1104-C c/HD 1TB PARA MHDX 1204-C c/HD 1TB'
         ) # DESCRIÇÃO  
-       
+        
     df = df.replace(to_replace='4581039' , value='4581250')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1104-C - 4 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
         value='SUBSTITUIDO - DE MHDX 1104-C PARA MHDX 1204-C'
         ) # DESCRIÇÃO       
-    
+
     df = df.replace(to_replace='4681020' , value='4680303')   # CODIGO
     df = df.replace(
         to_replace='LEITOR DE CARTAO RFID PROX LE 130 MF',
         value='SUBSTITUIDO - DE LE 130 MF PARA LE 1110 MF'
         ) # DESCRIÇÃO  
-     
+        
     df = df.replace(to_replace='4681021' , value='4680302')   # CODIGO
     df = df.replace(
         to_replace='LEITOR DE CARTAO RFID PROX LE 130',
         value='SUBSTITUIDO - DE LE 130 PARA LE 1110'
         ) # DESCRIÇÃO   
-    
+
     df = df.replace(to_replace='4710018' , value='4710016')   # CODIGO
     df = df.replace(
         to_replace='ADAPTADOR USB WIRELESS DUAL BAND ACTION A1200',
@@ -241,7 +241,7 @@ try:
         to_replace='CONTROLADOR DE ACESSO CT 3000 4PB - CAP 100 MIL USUARIOS, 3MIL BIOMET, ATE 4 PORTAS',
         value='SUBSTITUIDO - DE CT 3000 4PB PARA CT 5000 4PB'
         ) # DESCRIÇÃO 
-  
+
     df = df.replace(to_replace='4580964' , value='4581206')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR EM REDE NVD 3308 P - 8 CANAIS IP, RESOL 4K, H265/H265+, POE, PADR LGPD, SUP 1 HD SATA',
@@ -259,7 +259,7 @@ try:
         to_replace='GRAVADOR MHDX 1308 - 8 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P, ANAL VIDEO,MODO NVR,SUP 1 HD SATA 10TB/SS',
         value='SUBSTITUIDO - DE MHDX 1308 PARA MHDX 3108-C'
         ) # DESCRIÇÃO 
-  
+
     df = df.replace(to_replace='4581097' , value='4580130')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1316 - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE/1080P,ANAL VIDEO,MODO NVR,SUP 1 HD SATA10TB/SSD',
@@ -289,7 +289,7 @@ try:
         to_replace='VIDEO CONFERENCIA USB CAM-1080P',
         value='SUBSTITUIDO - DE CAM-1080P PARA Webcam 1080p 60FPS'
         ) # DESCRIÇÃO 
-  
+
     df = df.replace(to_replace='4291220' , value='4290008')   # CODIGO
     df = df.replace(
         to_replace='MOUSE MSI100 SEM FIO PRETO',
@@ -481,19 +481,19 @@ try:
         to_replace='GRAVADOR MHDX 1108-C - 8 CANAIS (HDCVI/AHD/HDTVI/IP), RES 1080P LITE, GAB COMPACTO,ANAL VIDEO,MODO NVR, SUP 1HD SATA/SSD',
         value='SUBSTITUIDO - DE 1108C PARA 1208C'
         ) # DESCRIÇÃO   
-  
+
     df = df.replace(to_replace='4541051' , value='4540088')   # CODIGO
     df = df.replace(
         to_replace='SENSOR INFRA VERMELHO PASSIVO IVP 7001 MW PET',
         value='SUBSTITUIDO - DE IVP 7001 PARA IVP 5000 MW LD'
         ) # DESCRIÇÃO  
-    
+
     df = df.replace(to_replace='4613533' , value='4610049')   # CODIGO
     df = df.replace(
         to_replace='DETECTOR DE TEMPERATURA DTE 521 - ENDERECAVEL, TERMOVELOCIMETRICO, 20/30V',
         value='SUBSTITUIDO - DE DTE 521 PARA DTE 523'
         ) # DESCRIÇÃO  
-    
+
     df = df.replace(to_replace='4613532' , value='4610050')   # CODIGO
     df = df.replace(
         to_replace='DETECTOR DE FUMACA DFE 521 - ENDERECAVEL, OPTICO INFRAVERMELHO, 20 a 30Vdc, AMB INTERNO, CASE ABS PROT UV',
@@ -550,11 +550,20 @@ try:
 
     ##############################################################################################
     # Itens em promoção
-    #promocao = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
-    #descricao = 'Item em Campanha'
-    #df['Produto'] = np.where(df['Codigo'].isin(promocao) , df['Produto'] = descricao , df['Produto'])
+    promocao1 = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
+    descricao1 = '***COMPRAR SEPARADO - BU SEGURANÇA - 28-02-26***'
+    df['Produto'] = np.where(df['Codigo'].isin(promocao1) , descricao1 , df['Produto'])
+
+    promocao2 = ['4141007','4143005','4142105','4140002','4140003','4140004','4140005','4141420','4142015','4142026','4142030','4142120','4290009','4290008','4290024','4290059','4290060','4293100','4293200','4294100','4294200','4670037','4670036','4581156','4581155','4581251']
+    descricao2 = '***COMPRAR SEPARADO - CAMPANHA COMERCIAL DEZ - 15-12-25***'
+    df['Produto'] = np.where(df['Codigo'].isin(promocao2) , descricao2 , df['Produto'])
+
+    promocao3 = ['4500046','4500047','4640047','4640024','4640011','4540045','4570034','4540050','4540051','4543582','4540082','4540083','4540015','4541064','4570028','4570038','4143005','4140033','4140032','4670039','4670004','4115100','4140020','4140034','4160025','4320215','4340003','4340011','4340013','4340204','4710021','4710029','4710031','4710032','4710033','4760101','4760104','4760113','4760132','4770055','4770059','4770065','4770069','4770070','4770073','4770074','4780193','4780194','4780400','4830036','4830039','4830056','4830092','4830105','4830128','4830129','4830130','4830132','4830160','4830163','4830175','4830191','4830195','4830196','4830202','4830229','4830213','4830232','4830246','4950167','4950169','4950171','4950172','4950173','4950174','4950177','4160046','4950179','4950180','4950181','4950182','4950184','4950185','4950187','4950188','4950192','4950194','4950195','4950196','4950197','4950198','4950200','4950202','4950204','4950205','4950206','4950208','4950209','4950210','4950212','4950213','4950215','4950218','4950219','4950220','4950223','4950230','4950231','4950232','4950233','4950266','4950274','4950276','4950275','4950278','4950349','4990002','4990152','4990260','4991013','4950170','4842817','4842887','4842816','1870870','4842793','4842865','4842861','4842862','4842519','4820142','4820135','4820130','4820131','4820131','4820132','4820133','4820134','4820164','4820177','4820180','4820182','4820183','4820195','4820198','4820173','4820179','4820165','4822014​','4822018​','4822020​','4822026','4822034','4822300','4822301','4820097','4820161']
+    descricao3 = '***COMPRAR SEPARADO - SELL IN/OUT - 15-12-25***'
+    df['Produto'] = np.where(df['Codigo'].isin(promocao3) , descricao3 , df['Produto'])
+
     ##############################################################################################
-  
+
     # Define o tipo de variavel em cada coluna
     df['Sugestao 40 Dias'] = df['Sugestao 40 Dias'].astype(float)
     df['Comprado'] = df['Comprado'].astype(float)
@@ -614,7 +623,7 @@ try:
             f'Total de intelbras a comprar: R$ {b:,}'
                 )
     filtro() 
-    
+
     st.divider()
 
     # Define os dataframes por agregação
@@ -633,7 +642,7 @@ try:
     curva = curva.sort_values('%' , ascending=False)
     curva = curva.drop(columns=['Comprado','Programado','Sugestao 40 Dias','PV','Qtd. Multipla','Comprar'])
     curva = curva.reset_index()
-    
+
     # Imprimi os dataframes por agregação
     st.subheader('Agrupado por Origem/Fabrica')
     st.dataframe(origem , use_container_width=True , hide_index=True)
