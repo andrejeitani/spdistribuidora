@@ -548,6 +548,61 @@ try:
         value='SUBSTITUIDO - DE VHL 1220 B G8 PARA VHL 1220 B G9'
         ) # DESCRIÇÃO   
 
+    df = df.replace(to_replace='4780033' , value='4760107')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH SG2404 POE L2+ GIGA 24 PORTAS POE GERENCIAVEL + 4 PORTAS GBIC SFP',
+        value='SUBSTITUIDO - DE SG 2404 POE L2 PARA S2328 G-PA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760041' , value='4760104')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH SG 1002MR L2+ GIGA 8 PORTAS GERENCIAVEL 2 PORTAS MINI-GBIC SFP',
+        value='SUBSTITUIDO - DE SG 1002 MR L2 PARA S2310G-A'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760039' , value='4760128')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH SF 1821 POE FAST 16 PORTAS POE 2 PORTAS GIGABIT E 1 PORTA SFP UPLINK',
+        value='SUBSTITUIDO - DE SF 1821 PARA S1118F-PA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760046' , value='4760110')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH GERENCIAVEL 48 PORTAS GIGA + 4PGBIC SG 5204MR L2+',
+        value='SUBSTITUIDO - DE S5204 MR L2 PARA S2352G-A'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4760075' , value='4760129')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH SF 2421 FAST 24 PORTAS POE 2 PORTAS GIGA 1 PORTA MINI-GBIC SFP',
+        value='SUBSTITUIDO - DE SF 2421 PARA S1126F-HPA'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4760089' , value='4760125')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH S1010F-P FAST 8 PORTAS POE 2 PORTAS UPLINK',
+        value='SUBSTITUIDO - DE S1010F-P PARA S1110F'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4760080' , value='4760125')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH S3028G-B GIGA 24 PORTAS GERENCIAVEL L3 4 PORTAS MINI-GBIC SFP',
+        value='SUBSTITUIDO - DE S3028G-B PARA S3328G-B'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4760081' , value='4760119')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH S1005G GIGA 5 PORTAS',
+        value='SUBSTITUIDO - DE S1005G PARA S1105G'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4760020' , value='4760117')   # CODIGO
+    df = df.replace(
+        to_replace='SWITCH SF 800 Q+ FAST 8 PORTAS QOS 12-24V',
+        value='SUBSTITUIDO - DE SF 800 PARA S1108F'
+        ) # DESCRIÇÃO   
+  
+
     ##############################################################################################
     # Itens em promoção
     promocao1 = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
