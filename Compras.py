@@ -125,6 +125,8 @@ try:
     df = df[df['Codigo'] != '4830132'] # CABO DROP
     df = df[df['Codigo'] != '4990147'] # IMPACTAS 16/40/68
     df = df[df['Codigo'] != '4990148'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4400302'] # CONECTA E MODULARE +
     df = df[df['Codigo'] != '4990515'] # IMPACTAS 94/140/220/300
     df = df[df['Codigo'] != '4995861'] # IMPACTAS 94/140/220/300
     df = df[df['Codigo'] != '4080015'] # PLENO
@@ -201,6 +203,9 @@ try:
     df = df[df['Codigo'] != '4820017'] # EF 1201+ 
     df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
     df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR
+    df = df[df['Codigo'] != '4540011'] # IVP 4000 SMART
+    df = df[df['Codigo'] != '4820017'] # EF 1201+
+    df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR 
   
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
@@ -604,8 +609,163 @@ try:
         to_replace='SWITCH SF 800 Q+ FAST 8 PORTAS QOS 12-24V',
         value='SUBSTITUIDO - DE SF 800 PARA S1108F'
         ) # DESCRIÇÃO   
-  
 
+    df = df.replace(to_replace='4682071' , value='4680332')   # CODIGO
+    df = df.replace(
+        to_replace='CONTROLADOR DE ACESSO CT 3000 4PB - CAP 100 MIL USUARIOS, 3MIL BIOMET, ATE 4 PORTAS',
+        value='SUBSTITUIDO - DE CT 3000 PARA CT 5000'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4822014' , value='4820158')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK SNB 1500VA SENOIDAL BIVOLT BATERIA EXTERNA OPCIONAL 2 X 45A',
+        value='SUBSTITUIDO - DE SNB 1500 PARA ATTIV SENO 1800'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850001' , value='4300400')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR CONTROLADOR DE CARGAS WIFI EWS 201 E',
+        value='SUBSTITUIDO - DE EWS 201 E PARA ECW 1000'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850006' , value='4300403')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR CONTROLADOR DE CARGAS WIFI 2/2 EWS 222',
+        value='SUBSTITUIDO - DE EWS 222 E PARA ECW 1002'
+        ) # DESCRIÇÃO  
+  
+    df = df.replace(to_replace='4850005' , value='4300402')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR CONTROLADOR DE CARGAS WIFI 1/1 EWS 211',
+        value='SUBSTITUIDO - DE EWS 211 E PARA ECW 1001'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850013' , value='4300404')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 1 EWS 1001 BR',
+        value='SUBSTITUIDO - DE EWS 1001 BR E PARA EIW 1001 BR'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850014' , value='4300405')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 1 EWS 1001 PT',
+        value='SUBSTITUIDO - DE EWS 1001 PT E PARA EIW 1001 PT'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850015' , value='4300412')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 2 EWS 1002 BR',
+        value='SUBSTITUIDO - DE EWS 1002 BR E PARA EIW 1002 BR'
+        ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4850016' , value='4300406')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 2 EWS 1002 PT',
+        value='SUBSTITUIDO - DE EWS 1002 PT E PARA EIW 1002 PT'
+        ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4850017' , value='4300407')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 3 EWS 1003 BR',
+        value='SUBSTITUIDO - DE EWS 1003 BR E PARA EIW 1003 BR'
+        ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4850018' , value='4300408')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART WI-FI TOUCH 3 EWS 1003 PT',
+        value='SUBSTITUIDO - DE EWS 1003 PT E PARA EIW 1003 PT'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4522000' , value='4520064')   # CODIGO
+    df = df.replace(
+        to_replace='CAMPAINHA CIB 101 PRETA S/ FIO C/ BATERIA',
+        value='SUBSTITUIDO - DE CIB 101 PT E PARA CIB 101 S PT'
+        ) # DESCRIÇÃO     
+
+    df = df.replace(to_replace='4522001' , value='4520063')   # CODIGO
+    df = df.replace(
+        to_replace='CAMPAINHA CIB 101 BRANCA S/ FIO C/ BATERIA',
+        value='SUBSTITUIDO - DE CIB 101 BR E PARA CIB 101 S BR'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4850028' , value='4300397')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR ELETRICOSMART WIFI TOUCH PRETO EWS 1004',
+        value='SUBSTITUIDO - DE EWS 1004 PT PARA EIW 1004 PT'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4850029' , value='4300396')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR ELETRICOSMART WIFI TOUCH BRANCO EWS 1004',
+        value='SUBSTITUIDO - DE EWS 1004 BR PARA EIW 1004 BR'
+        ) # DESCRIÇÃO     
+
+    df = df.replace(to_replace='4850027' , value='4300399')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR ELETRICO SMART WIF TOUCH PRETO EWS 1006',
+        value='SUBSTITUIDO - DE EWS 1006 PT PARA EIW 1006 PT'
+        ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4850030' , value='4300398')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR ELETRICO SMART WIFI TOUCH BRANCO EWS 1006',
+        value='SUBSTITUIDO - DE EWS 1006 BR PARA EIW 1006 BR'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850062' , value='4300390')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1001 - SIMPLES INTELIGENTE WI-FI, IZY, 10A, BRANCO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1001 PARA ETW 1001 BR'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850063' , value='4300391')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1001 - SIMPLES INTELIGENTE WI-FI, IZY, 10A, PRETO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1001 PARA ETW 1001 PT'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850064' , value='4300392')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1002 - DUPLA INTELIG, SMART WI-FI, 10A, BRANCO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1002 PARA ETW 1002 BR'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4850065' , value='4300393')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1002 - DUPLA INTELIG, SMART WI-FI, 10A, PRETO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1002 PARA ETW 1021 PT'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850068' , value='4300410')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 2002 - SIMPLES C/ INTERRUP INTELIG WI-FI, 2 TECLA TOUCH, 10A, BRANCO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 2002 PARA ETW 1021 BR'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850066' , value='4300394')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 2001 - SIMPLES C/ INTERRUP INTELIG WI-FI, 1 TECLA TOUCH, 10A, BRANCO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 2002 PARA ETW 1011 BR'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4850067' , value='4300395')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 2001 - SIMPLES C/ INTERRUP INTELIG WI-FI, 1 TECLA TOUCH, 10A, PRETO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 2001 PARA ETW 1011 PT'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4850069' , value='4300395')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 2002 - SIMPLES C/ INTERRUP INTELIG WI-FI, 2 TECLA TOUCH, 10A, PRETO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 2002 PARA ETW 1021 PT'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4581052' , value='4580641')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR EM REDE NVD 1404 P - 4 CANAIS IP, RESOL 4K, H265/H265+, POE, PADR LGPD, SUP 1 HD SATA',
+        value='SUBSTITUIDO - DE NVD 1404 P PARA NVD 1404 P AM'
+        ) # DESCRIÇÃO   
+  
     ##############################################################################################
     # Itens em promoção
     promocao1 = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
