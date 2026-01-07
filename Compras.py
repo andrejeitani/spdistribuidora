@@ -198,7 +198,10 @@ try:
     df = df[df['Codigo'] != '4670620'] # FR 620
     df = df[df['Codigo'] != '4670630'] # FR 630
     df = df[df['Codigo'] != '4674005'] # FR 400
-
+    df = df[df['Codigo'] != '4820017'] # EF 1201+ 
+    df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR
+  
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
