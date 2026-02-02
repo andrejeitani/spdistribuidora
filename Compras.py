@@ -775,6 +775,19 @@ try:
         to_replace='GRAVADOR EM REDE NVD 1404 P - 4 CANAIS IP, RESOL 4K, H265/H265+, POE, PADR LGPD, SUP 1 HD SATA',
         value='SUBSTITUIDO - DE NVD 1404 P PARA NVD 1404 P AM'
         ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4950108' , value='4300898')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR EM REDE INVD 7164 FT - 64 CANAIS IP, RESOL 32MP, ANALIT DE VIDEO, SUP 8 HDs SATA 20TB, COMP LPR',
+        value='SUBSTITUIDO - DE NVD INVD 7164 PARA INVD 7264 FT'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4570045' , value='4900027')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1230 B G5 - IR 30M, LENTE 3,6mm, RESOL 1080P, POE,IP67, CASE AL/PLAST, MICROFONE, INST INT/EXT',
+        value='SUBSTITUIDO - DE VIP 1230 B G5 PARA VIP 1230 FC +'
+        ) # DESCRIÇÃO   
+
   
     ##############################################################################################
     # Itens em promoção
