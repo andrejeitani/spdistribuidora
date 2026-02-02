@@ -802,7 +802,7 @@ try:
         value='SUBSTITUIDO - DE VHD 1220 D FC G8 PARA VHD 1220 D FC G9'
         ) # DESCRIÇÃO   
     
-  df = df.replace(to_replace='4750127' , value='4301217')   # CODIGO
+    df = df.replace(to_replace='4750127' , value='4301217')   # CODIGO
     df = df.replace(
         to_replace='CONJUNTO PTP ROTEADOR WIRELESS (CPE) 5GHZ 16DBI-WOM 5A MIMO',
         value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM 5A MIMO G2'
