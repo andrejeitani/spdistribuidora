@@ -206,7 +206,17 @@ try:
     df = df[df['Codigo'] != '4540011'] # IVP 4000 SMART
     df = df[df['Codigo'] != '4820017'] # EF 1201+
     df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR 
-  
+    df = df[df['Codigo'] != '4671200'] # FE 21150 D
+    df = df[df['Codigo'] != '4671033'] # FS 150
+    df = df[df['Codigo'] != '4671052'] # FS 150 KT 270
+    df = df[df['Codigo'] != '4639003'] # EWS 440
+    df = df[df['Codigo'] != '4500022'] # TVIP 220 PRETO
+    df = df[df['Codigo'] != '4560018'] # VHD 3230 B SL
+    df = df[df['Codigo'] != '4290048'] # ECV 2000
+    df = df[df['Codigo'] != '4560083'] # VHD 1220 B FULL COLOR G8
+    df = df[df['Codigo'] != '4560084'] # VHD 1220 D FULL COLOR G8
+    df = df[df['Codigo'] != '4560084'] # VHD 1220 D FULL COLOR G8
+ 
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
