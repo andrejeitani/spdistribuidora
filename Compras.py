@@ -787,7 +787,7 @@ try:
     df = df.replace(to_replace='4580785' , value='4900044')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR EM REDE NVD 1432 - 32 CANAIS IP, RESOL 4K,H265/ H265+, PADR LGPD, SUP 2 HDs SATA',
-        value='SUBSTITUIDO - DE NVD 1432 B G5 PARA NVD 1532'
+        value='SUBSTITUIDO - DE NVD 1432 PARA NVD 1532'
         ) # DESCRIÇÃO   
 
     df = df.replace(to_replace='4670100' , value='4300367')   # CODIGO
