@@ -100,7 +100,6 @@ try:
     df = df[df['Codigo'] != '4810043'] # VB 1104 WP  
     df = df[df['Codigo'] != '4682070'] # CT 3000 2PB
     df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
-    df = df[df['Codigo'] != '4580785'] # NVD 1432 # AINDA SEM SUBSTITUTO
     df = df[df['Codigo'] != '4580934'] # NVD 3316 P # SUBSTITUIDO PELO iNVD 3016 P
     df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
@@ -191,7 +190,6 @@ try:
     df = df[df['Codigo'] != '4670028'] # MFR 1001
     df = df[df['Codigo'] != '4670036'] # MFD 7001
     df = df[df['Codigo'] != '4670037'] # MFD 7000
-    df = df[df['Codigo'] != '4670100'] # FD 1000
     df = df[df['Codigo'] != '4670200'] # FD 2000
     df = df[df['Codigo'] != '4670210'] # FR 210
     df = df[df['Codigo'] != '4670300'] # FD 3000
@@ -214,8 +212,6 @@ try:
     df = df[df['Codigo'] != '4560018'] # VHD 3230 B SL
     df = df[df['Codigo'] != '4290048'] # ECV 2000
     df = df[df['Codigo'] != '4560083'] # VHD 1220 B FULL COLOR G8
-    df = df[df['Codigo'] != '4560084'] # VHD 1220 D FULL COLOR G8
-    df = df[df['Codigo'] != '4560084'] # VHD 1220 D FULL COLOR G8
  
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
@@ -788,7 +784,30 @@ try:
         value='SUBSTITUIDO - DE VIP 1230 B G5 PARA VIP 1230 FC +'
         ) # DESCRIÇÃO   
 
-  
+    df = df.replace(to_replace='4580785' , value='4900044')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR EM REDE NVD 1432 - 32 CANAIS IP, RESOL 4K,H265/ H265+, PADR LGPD, SUP 2 HDs SATA',
+        value='SUBSTITUIDO - DE NVD 1432 B G5 PARA NVD 1532'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4670100' , value='4300367')   # CODIGO
+    df = df.replace(
+        to_replace='FECHADURA DIGITAL FD1000 SOBREPOR SENHA',
+        value='SUBSTITUIDO - DE FD 1000 PARA FD 2000 D'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560084' , value='4560176')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1220 D FULL COLOR G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD4X1,IP67, CASE PLAST, INST INT, ABERT109',
+        value='SUBSTITUIDO - DE VHD 1220 D FC G8 PARA VHD 1220 D FC G9'
+        ) # DESCRIÇÃO   
+    
+  df = df.replace(to_replace='4750127' , value='4301217')   # CODIGO
+    df = df.replace(
+        to_replace='CONJUNTO PTP ROTEADOR WIRELESS (CPE) 5GHZ 16DBI-WOM 5A MIMO',
+        value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM 5A MIMO G2'
+        ) # DESCRIÇÃO   
+ 
     ##############################################################################################
     # Itens em promoção
     promocao1 = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
