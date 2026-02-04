@@ -807,6 +807,14 @@ try:
         to_replace='CONJUNTO PTP ROTEADOR WIRELESS (CPE) 5GHZ 16DBI-WOM 5A MIMO',
         value='SUBSTITUIDO - DE WOM 5A MIMO PARA WOM 5A MIMO G2'
         ) # DESCRIÇÃO   
+  
+    df = df.replace(to_replace='4680331' , value='4900018')   # CODIGO
+    df = df.replace(
+        to_replace='CONTROLADOR DE ACESSO FACIAL SS 5531 MF EX - 50 MIL USUARIO, CARTAO RFID MF 13,56MHZ, USO INT/EXT',
+        value='TROCA DE CODIGO - SS 5531 MF EX'
+        ) # DESCRIÇÃO  
+
+  
  
     ##############################################################################################
     # Itens em promoção
