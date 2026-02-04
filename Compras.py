@@ -813,18 +813,6 @@ try:
         to_replace='CONTROLADOR DE ACESSO FACIAL SS 5531 MF EX - 50 MIL USUARIO, CARTAO RFID MF 13,56MHZ, USO INT/EXT',
         value='TROCA DE CODIGO - SS 5531 MF EX'
         ) # DESCRIÇÃO  
-
-    df = df.replace(to_replace='4560051' , value='4900046')   # CODIGO
-    df = df.replace(
-        to_replace='CAMERA VHL 1120 D G2 - IR 20M, LENTE 2,8mm, RESOL HD 720P, HDCVI, CASE PLAST, INST INT, ABERT96',
-        value='SUBSTITUIDO - DE VHL 1120 D PARA VHL 1220 D G9'
-        ) # DESCRIÇÃO   
-
-    df = df.replace(to_replace='4560052' , value='4900045')   # CODIGO
-    df = df.replace(
-        to_replace='CAMERA VHL 1120 B G2 - IR 20M, LENTE 2,8mm, RESOL HD 720P, HDCVI, IP66, CASE PLAST, INST INT/EXT, ABERT109',
-        value='SUBSTITUIDO - DE VHL 1120 B PARA VHL 1220 B G9'
-        ) # DESCRIÇÃO   
  
     ##############################################################################################
     # Itens em promoção
