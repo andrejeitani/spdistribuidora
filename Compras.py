@@ -213,6 +213,23 @@ try:
     df = df[df['Codigo'] != '4560018'] # VHD 3230 B SL
     df = df[df['Codigo'] != '4290048'] # ECV 2000
     df = df[df['Codigo'] != '4560083'] # VHD 1220 B FULL COLOR G8
+    df = df[df['Codigo'] != '4690010'] # ICA 1001
+    df = df[df['Codigo'] != '4670027'] # MFR 4000
+    df = df[df['Codigo'] != '4670057'] # MFR 6300
+    df = df[df['Codigo'] != '4670059'] # MFR 6300
+    df = df[df['Codigo'] != '4674005'] # FR400
+    df = df[df['Codigo'] != '4670028'] # MFR 1001
+    df = df[df['Codigo'] != '4529300'] # CMI
+    df = df[df['Codigo'] != '4675020'] # BT 2001
+    df = df[df['Codigo'] != '4522002'] # CM 101 PRETA
+    df = df[df['Codigo'] != '4522003'] # CM 101 BRANCA
+    df = df[df['Codigo'] != '4522004'] # CIB 101
+    df = df[df['Codigo'] != '4522005'] # CIB 101
+    df = df[df['Codigo'] != '4290054'] # PFLS 410
+    df = df[df['Codigo'] != '4580716'] # MHDX 1116-C 2TB
+    df = df[df['Codigo'] != '4580772'] # MHDX 1116-C 4TB
+    df = df[df['Codigo'] != '4580773'] # MHDX 1116-C 1TB
+    df = df[df['Codigo'] != '4580776'] # MHDX 1116-C
  
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
