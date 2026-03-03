@@ -831,7 +831,37 @@ try:
         to_replace='CONTROLADOR DE ACESSO FACIAL SS 5531 MF EX - 50 MIL USUARIO, CARTAO RFID MF 13,56MHZ, USO INT/EXT',
         value='TROCA DE CODIGO - SS 5531 MF EX'
         ) # DESCRIÇÃO  
- 
+
+    df = df.replace(to_replace='4672005' , value='4670006')   # CODIGO
+    df = df.replace(
+        to_replace='FECHADURA SOLENOIDE FS-1011 EMBUTIR',
+        value='SUBSTITUIDO - DE FS-1011 PARA FS1011'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4822026' , value='4820151')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK DNB 1.5KVA-120V-TW ONLINE RACK/TORRE',
+        value='SUBSTITUIDO - DE DNB 1.5 PARA DNB 1.5 G2'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560076' , value='4560170')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1220 D BLACK G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD 4X1, CASE PLAST, INT INT, ABERT109',
+        value='SUBSTITUIDO - DE VHD 1220 D BLACK PARA VHD 1220 D FC+ BLACK'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560088' , value='4560171')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1230 B BLACK G8 - IR 30M, LENTE 3,6mm, RESOL 1080P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 1230 B BLACK PARA VHD 1220 B FC+ BLACK'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4750201' , value='4750240')   # CODIGO
+    df = df.replace(
+        to_replace='ROTEADOR WI-FI W5-1200GS',
+        value='SUBSTITUIDO - DE W5-1200GS PARA WG-1200GS CKD'
+        ) # DESCRIÇÃO   
+  
     ##############################################################################################
     # Itens em promoção
     #promocao1 = ['4540055','4541073','4543544','4543590','4541041','4541032','4540089','4540088','4541076','4541014','4550018','4541019']
