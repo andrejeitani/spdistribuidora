@@ -230,6 +230,19 @@ try:
     df = df[df['Codigo'] != '4580772'] # MHDX 1116-C 4TB
     df = df[df['Codigo'] != '4580773'] # MHDX 1116-C 1TB
     df = df[df['Codigo'] != '4580776'] # MHDX 1116-C
+    df = df[df['Codigo'] != '4682028'] # SA 210 E
+    df = df[df['Codigo'] != '4682065'] # SS 3420 MF BIO
+    df = df[df['Codigo'] != '4710012'] # ADAPTADOR OPTICO
+    df = df[df['Codigo'] != '4710011'] # ADAPTADOR OPTICO
+    df = df[df['Codigo'] != '4830066'] # EUAB 15NB
+    df = df[df['Codigo'] != '4750207'] # SR 1041 E
+    df = df[df['Codigo'] != '4500020'] # TVIP 2221 BRANCO
+    df = df[df['Codigo'] != '4500021'] # TVIP 2221 PRETO
+    df = df[df['Codigo'] != '4820100'] # CITY 11 KWA
+    df = df[df['Codigo'] != '4580795'] # IMHDX 3116
+    df = df[df['Codigo'] != '4160007'] # BATERIA RPD 8
+    df = df[df['Codigo'] != '4780047'] # CAIXA OPTICA
+    df = df[df['Codigo'] != '4780049'] # CAIXA OPTICA
  
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
