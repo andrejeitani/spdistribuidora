@@ -875,6 +875,36 @@ try:
         value='SUBSTITUIDO - DE W5-1200GS PARA WG-1200GS CKD'
         ) # DESCRIÇÃO   
   
+    df = df.replace(to_replace='4564036' , value='4570051')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1430 B G2 - IR 30M, LENTE 3,6mm, RESOL 4MP, POE, IP67, CASE METAL/ PLAST, INST INT/EXT, ROI, DET MOVIM',
+        value='SUBSTITUIDO - DE VIP 1430 B G2 PARA VIP 1430 B G3'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4560076' , value='4560170')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1220 D BLACK G8 - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD 4X1, CASE PLAST, INT INT, ABERT109',
+        value='SUBSTITUIDO - DE VHD 1220 D BLACK G8 PARA VHD 1220 D BLACK FC'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4560088' , value='4560171')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 1230 B BLACK G8 - IR 30M, LENTE 3,6mm, RESOL 1080P, MULTI HD 4X1, IP67, CASE PLAST, INST INT/EXT, ABERT98',
+        value='SUBSTITUIDO - DE VHD 1220 B BLACK G8 PARA VHD 1220 B BLACK FC'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4564037' , value='4570052')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1430 D G2 - IR 30M, LENTE 2,8mm, RESOL 4MP, POE, IP67, CASE METAL/ PLAST, INST INT/EXT, ROI, DET MOVIM',
+        value='SUBSTITUIDO - DE VIP 1430 D G2 PARA VIP 1430 D G3'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4564037' , value='4540056')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR INFRA VERMELHO PASSIVO SEM FIO IVP 8000 PET',
+        value='SUBSTITUIDO - DE IVP 8000 PET PARA IVP 8000 PET G2'
+        ) # DESCRIÇÃO    
+  
     ##############################################################################################
     # Itens em promoção
     #promocao1 = ['4543512','4550014','4540050','4541071','4540040','4560094','4560096','4560051','4900045','4501001','4500047','4500046','4500017','4564068','4570004','4900027','4570028','4610102','4610100','4610050','4630012','4581250','4581092','4581206','4581097','4660404','4660352','4521020','4679061','4521010','4520046','4660189','4680312','4680300','4680320','4565514','4560156','4590016','4565505','4670200','4670051','4820093','4820224','4820031','4820181','4822206','4820112','4321712','4331000','4450017','4110000','4061001','4061400','4290200','4290300','4770337','4770537','4780217','4780218','4750259','4750042','4750009','4760040','4760107']
