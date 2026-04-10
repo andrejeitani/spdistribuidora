@@ -392,7 +392,7 @@ try:
     df = df.replace(to_replace='1950464' , value='4300696')   # CODIGO
     df = df.replace(
         to_replace='CAMERA VIP 7430 B A FT -IR 30M, LENTE 2,8mm, RESOL4MP,STARLIGHT,IP67, CASE METAL/PLAST, INST INT/EXT, MICROF,ANAL VIDEO',
-        value='SUBSTITUIDO - DE VIP 7430 PARA I 5430'
+        value='SUBSTITUIDO - DE VIP 7430 PARA VIP 5430'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4123001' , value='4123102')   # CODIGO
@@ -899,7 +899,7 @@ try:
         value='SUBSTITUIDO - DE VIP 1430 D G2 PARA VIP 1430 D G3'
         ) # DESCRIÇÃO  
 
-    df = df.replace(to_replace='4564037' , value='4540056')   # CODIGO
+    df = df.replace(to_replace='4541034' , value='4540056')   # CODIGO
     df = df.replace(
         to_replace='SENSOR INFRA VERMELHO PASSIVO SEM FIO IVP 8000 PET',
         value='SUBSTITUIDO - DE IVP 8000 PET PARA IVP 8000 PET G2'
