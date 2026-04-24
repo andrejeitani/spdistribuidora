@@ -15,6 +15,7 @@ try:
     arquivo_santander = st.file_uploader('Faça o Upload do Arquivo do Santander em Excel')
     santander = pd.read_excel(arquivo_santander)
 
+# Renomeia as Colunas
 sicoob = sicoob.rename(columns={
     'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
     'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Nosso Numero','Unnamed: 8':'Excluir8','Unnamed: 9':'Excluir9',
