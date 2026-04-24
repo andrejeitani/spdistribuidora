@@ -28,7 +28,7 @@ try:
     sicoob = sicoob.drop(columns=[
         'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir7','Excluir9','Excluir10','Excluir11',
         'Excluir13','Excluir14','Excluir15','Excluir16','Excluir17','Excluir18','Excluir19','Excluir21','Excluir22',
-        'Excluir23','Excluir24','Excluir25','Excluir27',
+        'Excluir23','Excluir24','Excluir25','Excluir27'
     ])
     # Apaga as células vázias (NA) e o Cabeçalho da planilha (Index == 'sacado') e inclui o nome do banco
     sicoob = sicoob.dropna()
