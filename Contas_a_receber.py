@@ -15,21 +15,20 @@ try:
     arquivo_santander = st.file_uploader('Faça o Upload do Arquivo do Santander em Excel')
     santander = pd.read_excel(arquivo_santander)
 
-    # Renomeia as Colunas
-    sicoob = sicoob.rename(columns={
-        'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
-        'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Excluir7','Unnamed: 8':'Nosso Numero','Unnamed: 9':'Excluir9',
-        'Unnamed: 10':'Excluir10','Unnamed: 11':'Excluir11','Unnamed: 12':'Seu Numero','Unnamed: 13':'Excluir13','Unnamed: 14':'Excluir14',
-        'Unnamed: 15':'Excluir15','Unnamed: 16':'Excluir16','Unnamed: 17':'Excluir17','Unnamed: 18':'Excluir18','Unnamed: 19':'Excluir19',
-        'Unnamed: 20':'Vencimento','Unnamed: 21':'Excluir21','Unnamed: 22':'Excluir22','Unnamed: 23':'Excluir23','Unnamed: 24':'Excluir24',
-        'Unnamed: 25':'Excluir25','Unnamed: 26':'Valor', 'Unnamed: 27':'Excluir27'        
-    })
-    # Excluir as Colunas Desnecessárias
-    sicoob = sicoob.drop(columns=[
-        'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir7','Excluir9','Excluir10','Excluir11',
-        'Excluir13','Excluir14','Excluir15','Excluir16','Excluir17','Excluir18','Excluir19','Excluir21','Excluir22',
-        'Excluir23','Excluir24','Excluir25'
-    ])
+sicoob = sicoob.rename(columns={
+    'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
+    'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Nosso Numero','Unnamed: 8':'Excluir8','Unnamed: 9':'Excluir9',
+    'Unnamed: 10':'Excluir10','Unnamed: 11':'Seu Numero','Unnamed: 12':'Excluir12','Unnamed: 13':'Excluir13','Unnamed: 14':'Excluir14',
+    'Unnamed: 15':'Excluir15','Unnamed: 16':'Excluir16','Unnamed: 17':'Excluir17','Unnamed: 18':'Excluir18','Unnamed: 19':'Vencimento',
+    'Unnamed: 20':'Excluir20','Unnamed: 21':'Excluir21','Unnamed: 22':'Excluir22','Unnamed: 23':'Excluir23','Unnamed: 24':'Excluir24',
+    'Unnamed: 25':'Valor','Unnamed: 26':'Excluir26' 
+})
+# Excluir as Colunas Desnecessárias
+sicoob = sicoob.drop(columns=[
+    'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir8','Excluir9','Excluir10','Excluir12',
+    'Excluir13','Excluir14','Excluir15','Excluir16','Excluir17','Excluir18','Excluir20','Excluir21','Excluir22',
+    'Excluir23','Excluir24','Excluir26'
+])
     # Apaga as células vázias (NA) e o Cabeçalho da planilha (Index == 'sacado') e inclui o nome do banco
     sicoob = sicoob.dropna()
     Excluir_index = sicoob[sicoob['Cliente'] == 'Sacado'].index
