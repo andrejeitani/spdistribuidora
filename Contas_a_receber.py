@@ -15,20 +15,20 @@ try:
     arquivo_santander = st.file_uploader('Faça o Upload do Arquivo do Santander em Excel')
     santander = pd.read_excel(arquivo_santander)
 
-# Renomeia as Colunas
-sicoob = sicoob.rename(columns={
-    'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
-    'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Nosso Numero','Unnamed: 8':'Excluir8','Unnamed: 9':'Excluir9',
-    'Unnamed: 10':'Excluir10','Unnamed: 11':'Seu Numero','Unnamed: 12':'Excluir12','Unnamed: 13':'Excluir13','Unnamed: 14':'Excluir14',
-    'Unnamed: 15':'Excluir15','Unnamed: 16':'Excluir16','Unnamed: 17':'Excluir17','Unnamed: 18':'Excluir18','Unnamed: 19':'Vencimento',
-    'Unnamed: 20':'Excluir20','Unnamed: 21':'Excluir21','Unnamed: 22':'Excluir22','Unnamed: 23':'Excluir23','Unnamed: 24':'Excluir24',
-    'Unnamed: 25':'Valor','Unnamed: 26':'Excluir26' 
+    # Renomeia as Colunas
+    sicoob = sicoob.rename(columns={
+        'Unnamed: 0':'Excluir1','Unnamed: 1':'Cliente','Unnamed: 2':'Excluir2','Unnamed: 3':'Excluir3', 'Unnamed: 4':'Excluir4',
+        'Unnamed: 5':'Excluir5','Unnamed: 6':'Excluir6','Unnamed: 7':'Nosso Numero','Unnamed: 8':'Excluir8','Unnamed: 9':'Excluir9',
+        'Unnamed: 10':'Excluir10','Unnamed: 11':'Seu Numero','Unnamed: 12':'Excluir12','Unnamed: 13':'Excluir13','Unnamed: 14':'Excluir14',
+        'Unnamed: 15':'Excluir15','Unnamed: 16':'Excluir16','Unnamed: 17':'Excluir17','Unnamed: 18':'Excluir18','Unnamed: 19':'Vencimento',
+        'Unnamed: 20':'Excluir20','Unnamed: 21':'Excluir21','Unnamed: 22':'Excluir22','Unnamed: 23':'Excluir23','Unnamed: 24':'Excluir24',
+        'Unnamed: 25':'Valor','Unnamed: 26':'Excluir26' 
     })
-# Excluir as Colunas Desnecessárias
-sicoob = sicoob.drop(columns=[
-    'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir8','Excluir9','Excluir10','Excluir12',
-    'Excluir13','Excluir14','Excluir15','Excluir16','Excluir17','Excluir18','Excluir20','Excluir21','Excluir22',
-    'Excluir23','Excluir24','Excluir26'
+    # Excluir as Colunas Desnecessárias
+    sicoob = sicoob.drop(columns=[
+        'Excluir1','Excluir2', 'Excluir3','Excluir4','Excluir5','Excluir6','Excluir8','Excluir9','Excluir10','Excluir12',
+        'Excluir13','Excluir14','Excluir15','Excluir16','Excluir17','Excluir18','Excluir20','Excluir21','Excluir22',
+        'Excluir23','Excluir24','Excluir26'
     ])
     # Apaga as células vázias (NA) e o Cabeçalho da planilha (Index == 'sacado') e inclui o nome do banco
     sicoob = sicoob.dropna()
@@ -77,11 +77,11 @@ sicoob = sicoob.drop(columns=[
         st.info(f'Existe um total de {devedores} clientes em atraso, devendo o total de R${total_em_aberto:,} na data de hoje!')
         
         # Cria o botão para Download do dataframe em Excel        
-        #if st.button('Baixar Planilha Geral em Excel' , type='primary'):
-        #    data = datetime.datetime.today()
-        #    arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
-        #    tabela_filtrada3.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
-        #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
+        if st.button('Baixar Planilha Geral em Excel' , type='primary'):
+            data = datetime.datetime.today()
+            arquivo_geral = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+            tabela_filtrada3.to_excel(f'c://Boletos Em Aberto do Dia - {arquivo_geral}.xlsx', sheet_name='Boletos em Aberto', index=False)
+            st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Em Aberto do Dia - {arquivo_geral}.xlsx')
     filtro_cliente() 
 
     # Agrupa a tabela por clientes e traz a quantidade de clientes inadimplentes
@@ -94,14 +94,14 @@ sicoob = sicoob.drop(columns=[
     st.dataframe(total_agregado_por_cliente, use_container_width=True)
     devedores = len(tabela_final['Cliente'].unique())
     st.info(f'Existe um total de {devedores} Clientes em atraso')
-    
+
     # Cria o botão para Download do dataframe em Excel 
-    #if st.button('Baixar Planilha Agrupado em Excel' , type='primary'):
-    #    data = datetime.datetime.today()
-    #    agrupado_cliente = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
-    #    total_agregado_por_cliente = total_agregado_por_cliente.reset_index()
-    #    total_agregado_por_cliente.to_excel(f'c://Boletos Agrupados do Dia - {agrupado_cliente}.xlsx', sheet_name='Boletos em Aberto', index=False)
-    #    st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Agrupado do Dia - {agrupado_cliente}.xlsx')
+    if st.button('Baixar Planilha Agrupado em Excel' , type='primary'):
+        data = datetime.datetime.today()
+        agrupado_cliente = data.strftime("%Y%m%d_%H%M%S")  # Formato AAAAMMDD_HHMMSS
+        total_agregado_por_cliente = total_agregado_por_cliente.reset_index()
+        total_agregado_por_cliente.to_excel(f'c://Boletos Agrupados do Dia - {agrupado_cliente}.xlsx', sheet_name='Boletos em Aberto', index=False)
+        st.success(f'Arquivo em Excel baixado com sucesso em C:/Boletos Agrupado do Dia - {agrupado_cliente}.xlsx')
 
     # Agrupa a tabela por Banco e traz o total em aberto
     st.title('Total Em Aberto Por Banco')
