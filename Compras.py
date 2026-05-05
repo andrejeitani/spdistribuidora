@@ -904,6 +904,78 @@ try:
         to_replace='SENSOR INFRA VERMELHO PASSIVO SEM FIO IVP 8000 PET',
         value='SUBSTITUIDO - DE IVP 8000 PET PARA IVP 8000 PET G2'
         ) # DESCRIÇÃO    
+
+    df = df.replace(to_replace='4390167' , value='4541072')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR INFRA VERMELHO PASSIVO SEM FIO IVP 2000 SF PROCES. DIG. E BAIXO CONS DE ENERGIA LED AZUL',
+        value='SUBSTITUIDO - DE IVP 2000 SF PARA IVP 1000 PET'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4679010' , value='4679011')   # CODIGO
+    df = df.replace(
+        to_replace='FECHADURA ELETRICA FX 2000 CILINDRO FIXO E REVERSIVEL CINZA',
+        value='SUBSTITUIDO - DE FX 2000 PARA FX 2000 CINZA'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4679020' , value='4679021')   # CODIGO
+    df = df.replace(
+        to_replace='FECHADURA ELETRICA FX 2000 CILINDRO AJUSTAVEL E REVERSIVEL CINZA',
+        value='SUBSTITUIDO - DE FX 2000 AJ PARA FX 2000 CINZA AJ'
+        ) # DESCRIÇÃO   
+
+    df = df.replace(to_replace='4676010' , value='4820160')   # CODIGO
+    df = df.replace(
+        to_replace='FONTE DE ALIMENTACAO ININTERRUPTA FA1220S',
+        value='SUBSTITUIDO - DE FA 1220S PARA FA 1220S G2'
+        ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4560048' , value='4560159')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3240 B FULL COLOR+- IR 40M, LENTE 3,6mm, RESOL1080P, MULTI HD4X1,IP67, CASE PLAST, INST INT/EXT, MICROF,ABE90',
+        value='SUBSTITUIDO - DE VHD 3240 B FC+ PARA VHD 3240 B FC+ G8'
+        ) # DESCRIÇÃO 
+    
+    df = df.replace(to_replace='4541041' , value='4540058')   # CODIGO
+    df = df.replace(
+        to_replace='SENSOR INFRA VERMELHO PASSIVO SEM FIO IVP 8000 PET EX (DE MOVIMENTO)',
+        value='SUBSTITUIDO - DE IVP 8000 PET EX PARA IVP 8000 PET EX G2'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850048' , value='4300723')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 2 PRETO EZS 1002',
+        value='SUBSTITUIDO - DE EZS 1002 PARA EIZ 1002 PT'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850050' , value='4300728')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 2 BRANCO EZS 1002',
+        value='SUBSTITUIDO - DE EZS 1002 PARA EIZ 1002 BR'
+        ) # DESCRIÇÃO 
+    
+    df = df.replace(to_replace='4850047' , value='4300729')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 1 BRANCO EZS 1001',
+        value='SUBSTITUIDO - DE EZS 1001 PARA EIZ 1001 BR'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4850053' , value='4300730')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 1 PRETO EZS 1001',
+        value='SUBSTITUIDO - DE EZS 1001 PARA EIZ 1001 PT'
+        ) # DESCRIÇÃO
+    
+    df = df.replace(to_replace='4850049' , value='4300731')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 3 PRETO EZS 1003',
+        value='SUBSTITUIDO - DE EZS 1003 PARA EIZ 1003 PT'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4850051' , value='4300732')   # CODIGO
+    df = df.replace(
+        to_replace='INTERRUPTOR SMART ZIGBEE TOUCH 3 BRANCO EZS 1003',
+        value='SUBSTITUIDO - DE EZS 1003 PARA EIZ 1003 BR'
+        ) # DESCRIÇÃO  
   
     ##############################################################################################
     # Itens em promoção
