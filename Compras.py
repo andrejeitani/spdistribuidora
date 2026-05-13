@@ -986,7 +986,7 @@ try:
         value='SUBSTITUIDO - DE EZS 1003 PARA EIZ 1003 BR'
         ) # DESCRIÇÃO  
 
-    df = df.replace(to_replace='4639003' , value='4300401')   # CODIGO
+    df = df.replace(to_replace='4639000' , value='4300401')   # CODIGO
     df = df.replace(
         to_replace='LAMPADA LED WI-FI SMART EWS 410',
         value='SUBSTITUIDO - DE EWS 410 PARA ELW 1001'
