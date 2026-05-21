@@ -252,6 +252,8 @@ try:
     df = df[df['Codigo'] != '4581252'] # MHDX 1204-C DUAL AUDIO c/HD 1TB
     df = df[df['Codigo'] != '4581255'] # MHDX 1208-C DUAL AUDIO c/HD 1TB
     df = df[df['Codigo'] != '4160035'] # RADIO RPD 8 UHF
+    df = df[df['Codigo'] != '4580254'] # CABO AVIATION
+    df = df[df['Codigo'] != '4581079'] # MVD 3404
  
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
