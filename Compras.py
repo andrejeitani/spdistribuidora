@@ -254,7 +254,21 @@ try:
     df = df[df['Codigo'] != '4160035'] # RADIO RPD 8 UHF
     df = df[df['Codigo'] != '4580254'] # CABO AVIATION
     df = df[df['Codigo'] != '4581079'] # MVD 3404
- 
+    df = df[df['Codigo'] != '4525007'] # IVW 3000
+    df = df[df['Codigo'] != '4525008'] # IVW 3000 +
+    df = df[df['Codigo'] != '4850008'] # EWS 1101 BR
+    df = df[df['Codigo'] != '4850009'] # EWS 1101 PT
+    df = df[df['Codigo'] != '4842814'] # ASI 500
+    df = df[df['Codigo'] != '4842810'] # ASI 220
+    df = df[df['Codigo'] != '4842811'] # ASI 500
+    df = df[df['Codigo'] != '4750064'] # AP 1350-S
+    df = df[df['Codigo'] != '4750059'] # WOM AC MAX
+    df = df[df['Codigo'] != '4760069'] # SF 500 HI POE
+    df = df[df['Codigo'] != '4821001'] # XB 12 AL
+    df = df[df['Codigo'] != '4860010'] # XB 12 SEG
+    df = df[df['Codigo'] != '4300020'] # VIP 3430 D SC IA FT
+    df = df[df['Codigo'] != '4300032'] # VIP 3430 B SC IA FT
+
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
     df = df.replace(
