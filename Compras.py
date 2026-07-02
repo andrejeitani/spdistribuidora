@@ -268,6 +268,20 @@ try:
     df = df[df['Codigo'] != '4860010'] # XB 12 SEG
     df = df[df['Codigo'] != '4300020'] # VIP 3430 D SC IA FT
     df = df[df['Codigo'] != '4300032'] # VIP 3430 B SC IA FT
+    df = df[df['Codigo'] != '4860000'] # CR 2016
+    df = df[df['Codigo'] != '4841058'] # ECM 4024
+    df = df[df['Codigo'] != '4580467'] # IMHDX 3132
+    df = df[df['Codigo'] != '4580621'] # IMHDX 3132 C/ HD 4TB
+    df = df[df['Codigo'] != '4564058'] # VIP 1230 G4 BLACK
+    df = df[df['Codigo'] != '4564059'] # VIP 1230 G4 BLACK
+    df = df[df['Codigo'] != '4680258'] # SS 3542 MF W
+    df = df[df['Codigo'] != '4760101'] # S 3328 G
+    df = df[df['Codigo'] != '4760102'] # S 3352 G  
+    df = df[df['Codigo'] != '4600074'] # HD 1 TB  
+    df = df[df['Codigo'] != '4560047'] # VHD 5240
+    df = df[df['Codigo'] != '4560077'] # VHD 3220
+    df = df[df['Codigo'] != '4300243'] # EMSC 450
+    df = df[df['Codigo'] != '4610021'] # DFA 623
 
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
