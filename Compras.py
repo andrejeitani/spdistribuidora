@@ -1033,6 +1033,38 @@ try:
         to_replace='SWITCH NAO GERENCIAVEL SG 800 Q+ - 8 PORTAS GIGA 1000Mpbs',
         value='SUBSTITUIDO - DE SG 800 Q+ PARA S1108 G'
         ) # DESCRIÇÃO  
+
+    df = df.replace(to_replace='4564036' , value='4570051')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1430 B G2 - IR 30M, LENTE 3,6mm, RESOL 4MP, POE, IP67, CASE METAL/ PLAST, INST INT/EXT, ROI, DET MOVIM',
+        value='SUBSTITUIDO - DE VIP 1430 B G2 PARA VIP 1430 B G3'
+        ) # DESCRIÇÃO  
+   
+    df = df.replace(to_replace='4564037' , value='4570052')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 1430 D G2 - IR 30M, LENTE 2,8mm, RESOL 4MP, POE, IP67, CASE METAL/ PLAST, INST INT/EXT, ROI, DET MOVIM',
+        value='SUBSTITUIDO - DE VIP 1430 D G2 PARA VIP 1430 D G3'
+        ) # DESCRIÇÃO  
+      
+    df = df.replace(to_replace='4564214' , value='4570019')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 3240 B Z G3-IR 40M, LENTE VF MOT 2,8 A 12mm, RESOL1080P,POE,IP67/IK10, CASE METAL/PLAST,INST INT/EXT, ENT CAR',
+        value='SUBSTITUIDO - DE VIP 3240 Z G3 PARA VIP 3240 Z IA'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4630012' , value='4630024')   # CODIGO
+    df = df.replace(
+        to_replace='BLOCO DE ILUMINACAO AUTONOMO BLA 1202',
+        value='SUBSTITUIDO - DE BLA 1202 PARA BLA 1204C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4560058' , value='4560174')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VHD 3200 MINI SD - IR 20M, LENTE 2,8mm, RESOL 1080P, MULTI HD4X1, CASE PLAST, INST INT/EXT, MICROFONE, PAN 355',
+        value='SUBSTITUIDO - DE VHD 3200 MINI PARA VHD 3206 MINI'
+        ) # DESCRIÇÃO 
+
+  
   
     ##############################################################################################
     # Itens em promoção
