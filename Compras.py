@@ -282,6 +282,23 @@ try:
     df = df[df['Codigo'] != '4560077'] # VHD 3220
     df = df[df['Codigo'] != '4300243'] # EMSC 450
     df = df[df['Codigo'] != '4610021'] # DFA 623
+    df = df[df['Codigo'] != '4670061'] # MFR 2040
+    df = df[df['Codigo'] != '4114002'] # ICW 4002
+    df = df[df['Codigo'] != '4750008'] # AP 310
+    df = df[df['Codigo'] != '4320215'] # IMPACTA
+    df = df[df['Codigo'] != '4400048'] # IMPACTA
+    df = df[df['Codigo'] != '4990002'] # IMPACTA
+    df = df[df['Codigo'] != '4990003'] # IMPACTA
+    df = df[df['Codigo'] != '4990152'] # IMPACTA
+    df = df[df['Codigo'] != '4990195'] # IMPACTA
+    df = df[df['Codigo'] != '4990690'] # IMPACTA
+    df = df[df['Codigo'] != '4991013'] # IMPACTA
+    df = df[df['Codigo'] != '4990709'] # IMPACTA
+    df = df[df['Codigo'] != '4820089'] # ESPI 360  
+    df = df[df['Codigo'] != '4400405'] # PLACA UNNITI 1000
+    df = df[df['Codigo'] != '4850031'] # EWS 251
+    df = df[df['Codigo'] != '4780155'] # OLT G16
+    df = df[df['Codigo'] != '4581251'] # MHDX 1204
 
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
