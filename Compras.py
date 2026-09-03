@@ -1104,7 +1104,300 @@ try:
         to_replace='CAMERA VIP 5440 D IA -IR 40M, LENTE 2,8mm, RESOL 4MP,IP67, CASE METAL/PLAST, INT PERIMETRAL, MICROF, ENT CARTAO, INT/EXT',
         value='SUBSTITUIDO - DE VIP 5440 D IA PARA MODULO VIP 5440 D FC IA'
         ) # DESCRIÇÃO 
+    df = df.replace(to_replace='4670012' , value='4301246')   # CODIGO
+    df = df.replace(
+        to_replace='FECHADURA ELETROIMA FE 10300 V2 PRATA',
+        value='SUBSTITUIDO - DE FE 10300 PARA FE 20280'
+        ) # DESCRIÇÃO 
 
+    df = df.replace(to_replace='4550003' , value='4550021')   # CODIGO
+    df = df.replace(
+        to_replace=CENTRAL CERCA ELETRICA ELC 5003 HIGH POWER - CAPAC 7000M LINEAR, 30 DISP S/FIO, TENS SAID 16000/18000/21000 VOLTS (COND)',
+        value='SUBSTITUIDO - DE ELC 5003 PARA ELC 6012 IN'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4300396' , value='4301481')   # CODIGO
+    df = df.replace(
+        to_replace=INTERRUPTOR EIW 1004 BR - TOUCH SMART WIFI, 4 TECLAS, BRANCO, COMP APP VOZ ALEXA/GOOGLE E MIBO SMART',
+        value='SUBSTITUIDO - DE EIW 1004 BR PARA MODELO NOVO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850063' , value='4301473')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1001 - SIMPLES INTELIGENTE WI-FI, IZY, 10A, PRETO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1001 BR PARA MODELO NOVO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4850062' , value='4301472')   # CODIGO
+    df = df.replace(
+        to_replace='TOMADA ETS 1001 - SIMPLES INTELIGENTE WI-FI, IZY, 10A, BRANCO, MED CONSUMO, COMP APP VOZ ALEXA/GOOGLE',
+        value='SUBSTITUIDO - DE ETS 1001 BR PARA MODELO NOVO'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580776' , value='4900452')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1116-C - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE,GAB COMPACTO,ANAL VIDEO,MODO NVR,SUP 1HD SATA',
+        value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580130' , value='4900560')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 3116-C - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 5M LITE, COMPACTO, ANAL VIDEO, MODO NVR, SUP 1 HD',
+        value='SUBSTITUIDO - DE MHDX 3116-C PARA MHDX 3216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580130' , value='4900560')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 3116-C - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 5M LITE, COMPACTO, ANAL VIDEO, MODO NVR, SUP 1 HD',
+        value='SUBSTITUIDO - DE MHDX 3116-C PARA MHDX 3216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580772' , value='4900498')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1116-C C/ HD 4TB - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
+        value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580772' , value='4900498')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1116-C C/ HD 4TB - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
+        value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4580716' , value='4900499')   # CODIGO
+    df = df.replace(
+        to_replace='GRAVADOR MHDX 1116-C C/ HD 2TB - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
+        value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4390170' , value='4540051')   # CODIGO
+    df = df.replace(
+        to_replace='TRANSMISSOR XAC 2000 TX PRETO (F-73) 433,92MHZ, SAW E TECLAS',
+        value='SUBSTITUIDO - DE XAC 2000 PARA XAC 2003'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4390176' , value='4543578')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 2018 EG - 18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, COM.ETHERNET/GPRS,TECL LCD INCLUSO',
+        value='SUBSTITUIDO - DE AMT 2018 EG PARA AMT 2018 E SMART'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4390179' , value='4543578')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 2018 E - 18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, TECL LCD INCLUSO',
+        value='SUBSTITUIDO - DE AMT 2018 E PARA AMT 2018 E SMART'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4390179' , value='4543578')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 2018 E - 18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, TECL LCD INCLUSO',
+        value='SUBSTITUIDO - DE AMT 2018 E PARA AMT 2018 E SMART'
+        ) # DESCRIÇÃO 
+
+    df = df.replace(to_replace='4540007' , value='4540045')   # CODIGO
+    df = df.replace(
+        to_replace='TRANSMISSOR XAC 4000 SMART CONTROL AZUL',
+        value='SUBSTITUIDO - DE XAC 4000 PARA XAC 4003'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4540008' , value='4540045')   # CODIGO
+    df = df.replace(
+        to_replace='TRANSMISSOR XAC 4000 SMART CONTROL ROSA',
+        value='SUBSTITUIDO - DE XAC 4000 PARA XAC 4003'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4550002' , value='4550018')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL CERCA ELETRICA ELC 5002 HIGH POWER - CAPAC 5000M LINEAR, 30 DISP S/FIO, TENS SAID 16000/18000/20000 VOLTS (COND)',
+        value='SUBSTITUIDO - DE ELC 5002 PARA ELC 6012 IN'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4540043' , value='4000234')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO GPRS XG 4000 SMART',
+        value='SUBSTITUIDO - DE XG 4000 PARA XEG 4G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543509' , value='4540055')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 1016 NET - 16 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, COMUM ETHERNET',
+        value='SUBSTITUIDO - DE AMT 1016 NET PARA AMT 1000 SMART'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4550005' , value='4550018')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL CERCA ELETRICA ELC 5001 - CAPAC 1600M LINEAR, 30 DISP S/FIO, TENSAO SAID 8000/10000/12000 VOLTS (IDEAL P/ RESID)',
+        value='SUBSTITUIDO - DE ELC 5001 PARA ELC 6012'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543506' , value='4543578')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 2118 EG-18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, COM.ETHERNET/GPRS/GSM,TECL LED INCLUSO',
+        value='SUBSTITUIDO - DE AMT 2118 EG PARA AMT 2018 E SMART'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543506' , value='4543578')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 2118 EG-18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, COM.ETHERNET/GPRS/GSM,TECL LED INCLUSO',
+        value='SUBSTITUIDO - DE AMT 2118 EG PARA AMT 2018 E SMART'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543516' , value='4543589')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL ALARME AMT 8000 - 64 ZONAS S/FIO, 16 PART INDP, COM.ETHERNET/WI-FI/GPRS, REC INTEG',
+        value='SUBSTITUIDO - DE AMT 8000 PARA AMT 8000 PRO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543511' , value='4543584')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO GPRS XAG 8000',
+        value='SUBSTITUIDO - DE XAG 8000 PARA XG 4G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543555' , value='4542300')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO GPRS XAG 8000',
+        value='SUBSTITUIDO - TROCA DE CODIGO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543565' , value='4543584')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO CENTRAL ALARME INTRUSAO GSM XAG 8000 3G',
+        value='SUBSTITUIDO - DE XAG 8000 EG PARA XG 3G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822000' , value='4300669')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 720VA-120V',
+        value='SUBSTITUIDO - DE XNB 720 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822001' , value='4300682')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 720VA-220V',
+        value='SUBSTITUIDO - DE XNB 720 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822002' , value='4300672')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1440VA-120V',
+        value='SUBSTITUIDO - DE XNB 1440 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822003' , value='4300681')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1440VA-220V',
+        value='SUBSTITUIDO - DE XNB 1440 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822006' , value='4300675')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1200VA-120V',
+        value='SUBSTITUIDO - DE XNB 1200 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822007' , value='4300673')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1200VA-220V',
+        value='SUBSTITUIDO - DE XNB 1200 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822008' , value='4300678')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1800VA-120V',
+        value='SUBSTITUIDO - DE XNB 1800 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822009' , value='4300671')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1800VA-220V',
+        value='SUBSTITUIDO - DE XNB 1800 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822004' , value='4300747')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 600VA-120V',
+        value='SUBSTITUIDO - DE XNB 600 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822005' , value='4300677')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 600VA-220V',
+        value='SUBSTITUIDO - DE XNB 600 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822010' , value='4300676')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 720VA BIVOLT',
+        value='SUBSTITUIDO - DE XNB 720 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4822011' , value='4300679')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK XNB 1440VA BIVOLT',
+        value='SUBSTITUIDO - DE XNB 1440 XNB MODELO NOVO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4550006' , value='4550018')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL CERCA ELETRICA ELC 3012 - CAPAC 3000M LINEAR, 30 DISP S/FIO, FIO INOX 0,6mm, TENSAO SAID AJUST ATE 12000 VOLTS',
+        value='SUBSTITUIDO - DE ELC 3012 PARA ELC 6012'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4550013' , value='4550018')   # CODIGO
+    df = df.replace(
+        to_replace='CENTRAL CERCA ELETRICA ELC 3020 - CAPAC 7000M LINEAR, 30 DISP S/FIO, FIO INOX 0,9mm, TENSAO SAID AJUST ATE 20000 VOLTS',
+        value='SUBSTITUIDO - DE ELC 3020 PARA ELC 6012'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4540014' , value='4550018')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO CTAL INTRUSAO XEG 4010 3G',
+        value='SUBSTITUIDO - DE ELC 3020 PARA XEG 4010 4G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4780062' , value='4780204')   # CODIGO
+    df = df.replace(
+        to_replace='MODEM OPTICO PON 1P LAN 1P ONU R1 4780062',
+        value='SUBSTITUIDO - PASHOUT SEM SUBSTITUTO'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543583' , value='4543584')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO PARA CENTRAL ALARME INTRUSAO XG 3G',
+        value='SUBSTITUIDO - DE XG 3G PARA XG 4G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4543582' , value='4543584')   # CODIGO
+    df = df.replace(
+        to_replace='MODULO PARA CENTRAL ALARME INTRUSAO XG 2G',
+        value='SUBSTITUIDO - DE XG 2G PARA XG 4G'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4570004' , value='4570027')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 3240 B IA G2 - IR 40M, LENTE 3,6mm, RESOL1080P, STARLIGHT,IP67/IK10, CASE METAL, MICROF,DET HUM/VEIC, ENT CAR',
+        value='SUBSTITUIDO - DE VIP 3240 IA PARA VIP 5440 IA'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4570006' , value='4570032')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIP 3240 D IA G2 - IR 40M, L 2,8mm, RESOL1080P, STARLIGHT, IP67/IK10, CASE METAL, MICROF, DET HUM/VEIC, ENT CART',
+        value='SUBSTITUIDO - DE VIP 3240 D IA PARA VIP 5440 D IA'
+        ) # DESCRIÇÃO
+
+    df = df.replace(to_replace='4570037' , value='4570038')   # CODIGO
+    df = df.replace(
+        to_replace='CAMERA VIPW 1430 B- IR 30M, LENTE 3,6mm,RESOL 4MP,WI-FI, IP67, CASE METAL,INST INT/EXT, DET MOV, MICROF,ENT CART, ALARME',
+        value='SUBSTITUIDO - DE VIPW 1430 B PARA VIPW 1430 D'
+        ) # DESCRIÇÃO
+
+
+
+
+
+
+  
     ##############################################################################################
     # Itens em promoção
     #promocao1 = ['4543512','4550014','4540050','4541071','4540040','4560094','4560096','4560051','4900045','4501001','4500047','4500046','4500017','4564068','4570004','4900027','4570028','4610102','4610100','4610050','4630012','4581250','4581092','4581206','4581097','4660404','4660352','4521020','4679061','4521010','4520046','4660189','4680312','4680300','4680320','4565514','4560156','4590016','4565505','4670200','4670051','4820093','4820224','4820031','4820181','4822206','4820112','4321712','4331000','4450017','4110000','4061001','4061400','4290200','4290300','4770337','4770537','4780217','4780218','4750259','4750042','4750009','4760040','4760107']
