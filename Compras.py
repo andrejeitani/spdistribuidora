@@ -1118,7 +1118,7 @@ try:
 
     df = df.replace(to_replace='4300396' , value='4301481')   # CODIGO
     df = df.replace(
-        to_replace=INTERRUPTOR EIW 1004 BR - TOUCH SMART WIFI, 4 TECLAS, BRANCO, COMP APP VOZ ALEXA/GOOGLE E MIBO SMART',
+        to_replace='INTERRUPTOR EIW 1004 BR - TOUCH SMART WIFI, 4 TECLAS, BRANCO, COMP APP VOZ ALEXA/GOOGLE E MIBO SMART',
         value='SUBSTITUIDO - DE EIW 1004 BR PARA MODELO NOVO'
         ) # DESCRIÇÃO 
 
