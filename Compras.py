@@ -1392,11 +1392,29 @@ try:
         value='SUBSTITUIDO - DE VIPW 1430 B PARA VIPW 1430 D'
         ) # DESCRIÇÃO
 
+    df = df.replace(to_replace='4822015' , value='4820153')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK SNB 2000VA SENOIDAL BIVOLT BATERIA EXTERNA OPCIONAL 48V 4 X 45A',
+        value='SUBSTITUIDO - DE SNB 2000 PARA SNB 2400'
+        ) # DESCRIÇÃO
 
+    df = df.replace(to_replace='4822039' , value='4820154')   # CODIGO
+    df = df.replace(
+        to_replace='NOBREAK SENOIDAL SNB 3000VA-BI-TW - 4822039',
+        value='SUBSTITUIDO - DE SNB 3000 PARA SNB 3200'
+        ) # DESCRIÇÃO
 
+    df = df.replace(to_replace='4611100' , value='4000261')   # CODIGO
+    df = df.replace(
+        to_replace='ACIONADOR MANUAL DE BOMBA AMB 3201',
+        value='SUBSTITUIDO - DE AMB 3201 PARA AMB 3203'
+        ) # DESCRIÇÃO
 
-
-
+    df = df.replace(to_replace='4611101' , value='4000261')   # CODIGO
+    df = df.replace(
+        to_replace='ACIONADOR MANUAL DE BOMBA AMB 3202',
+        value='SUBSTITUIDO - DE AMB 3202 PARA AMB 3203'
+        ) # DESCRIÇÃO
   
     ##############################################################################################
     # Itens em promoção
