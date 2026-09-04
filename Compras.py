@@ -76,101 +76,14 @@ try:
     df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR
     df = df[df['Codigo'] != '4540011'] # IVP 4000 SMART
     df = df[df['Codigo'] != '4820017'] # EF 1201+
-    df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR 
     df = df[df['Codigo'] != '4671200'] # FE 21150 D
-    df = df[df['Codigo'] != '4671033'] # FS 150
-    df = df[df['Codigo'] != '4671052'] # FS 150 KT 270
-    df = df[df['Codigo'] != '4639003'] # EWS 440
     df = df[df['Codigo'] != '4500022'] # TVIP 220 PRETO
     df = df[df['Codigo'] != '4560018'] # VHD 3230 B SL
     df = df[df['Codigo'] != '4290048'] # ECV 2000
     df = df[df['Codigo'] != '4560083'] # VHD 1220 B FULL COLOR G8
-    df = df[df['Codigo'] != '4690010'] # ICA 1001
-    df = df[df['Codigo'] != '4670027'] # MFR 4000
-    df = df[df['Codigo'] != '4670057'] # MFR 6300
-    df = df[df['Codigo'] != '4670059'] # MFR 6300
-    df = df[df['Codigo'] != '4674005'] # FR400
-    df = df[df['Codigo'] != '4670028'] # MFR 1001
-    df = df[df['Codigo'] != '4529300'] # CMI
-    df = df[df['Codigo'] != '4675020'] # BT 2001
-    df = df[df['Codigo'] != '4522002'] # CM 101 PRETA
-    df = df[df['Codigo'] != '4522003'] # CM 101 BRANCA
-    df = df[df['Codigo'] != '4522004'] # CIB 101
-    df = df[df['Codigo'] != '4522005'] # CIB 101
-    df = df[df['Codigo'] != '4290054'] # PFLS 410
-    df = df[df['Codigo'] != '4580716'] # MHDX 1116-C 2TB
-    df = df[df['Codigo'] != '4580772'] # MHDX 1116-C 4TB
-    df = df[df['Codigo'] != '4580773'] # MHDX 1116-C 1TB
-    df = df[df['Codigo'] != '4580776'] # MHDX 1116-C
-    df = df[df['Codigo'] != '4682028'] # SA 210 E
-    df = df[df['Codigo'] != '4682065'] # SS 3420 MF BIO
-    df = df[df['Codigo'] != '4710012'] # ADAPTADOR OPTICO
-    df = df[df['Codigo'] != '4710011'] # ADAPTADOR OPTICO
-    df = df[df['Codigo'] != '4830066'] # EUAB 15NB
-    df = df[df['Codigo'] != '4750207'] # SR 1041 E
-    df = df[df['Codigo'] != '4500020'] # TVIP 2221 BRANCO
-    df = df[df['Codigo'] != '4500021'] # TVIP 2221 PRETO
-    df = df[df['Codigo'] != '4820100'] # CITY 11 KWA
-    df = df[df['Codigo'] != '4580795'] # IMHDX 3116
-    df = df[df['Codigo'] != '4160007'] # BATERIA RPD 8
-    df = df[df['Codigo'] != '4780047'] # CAIXA OPTICA
-    df = df[df['Codigo'] != '4780049'] # CAIXA OPTICA
-    df = df[df['Codigo'] != '4679015'] # FX 2000 Inox
-    df = df[df['Codigo'] != '4580130'] # MHDX 3116-C
-    df = df[df['Codigo'] != '4760061'] # SG 1002 POE L2 +
-    df = df[df['Codigo'] != '4760064'] # SG 1602 POE MAX
-    df = df[df['Codigo'] != '4580714'] # MHDX 3104-C c/HD 1TB
-    df = df[df['Codigo'] != '4580717'] # MHDX 3108-C C/HD 1TB
-    df = df[df['Codigo'] != '4581252'] # MHDX 1204-C DUAL AUDIO c/HD 1TB
-    df = df[df['Codigo'] != '4581255'] # MHDX 1208-C DUAL AUDIO c/HD 1TB
     df = df[df['Codigo'] != '4160035'] # RADIO RPD 8 UHF
-    df = df[df['Codigo'] != '4580254'] # CABO AVIATION
     df = df[df['Codigo'] != '4581079'] # MVD 3404
-    df = df[df['Codigo'] != '4525007'] # IVW 3000
-    df = df[df['Codigo'] != '4525008'] # IVW 3000 +
-    df = df[df['Codigo'] != '4850008'] # EWS 1101 BR
-    df = df[df['Codigo'] != '4850009'] # EWS 1101 PT
-    df = df[df['Codigo'] != '4842814'] # ASI 500
-    df = df[df['Codigo'] != '4842810'] # ASI 220
-    df = df[df['Codigo'] != '4842811'] # ASI 500
-    df = df[df['Codigo'] != '4750064'] # AP 1350-S
-    df = df[df['Codigo'] != '4750059'] # WOM AC MAX
-    df = df[df['Codigo'] != '4760069'] # SF 500 HI POE
-    df = df[df['Codigo'] != '4821001'] # XB 12 AL
     df = df[df['Codigo'] != '4860010'] # XB 12 SEG
-    df = df[df['Codigo'] != '4300020'] # VIP 3430 D SC IA FT
-    df = df[df['Codigo'] != '4300032'] # VIP 3430 B SC IA FT
-    df = df[df['Codigo'] != '4860000'] # CR 2016
-    df = df[df['Codigo'] != '4841058'] # ECM 4024
-    df = df[df['Codigo'] != '4580467'] # IMHDX 3132
-    df = df[df['Codigo'] != '4580621'] # IMHDX 3132 C/ HD 4TB
-    df = df[df['Codigo'] != '4564058'] # VIP 1230 G4 BLACK
-    df = df[df['Codigo'] != '4564059'] # VIP 1230 G4 BLACK
-    df = df[df['Codigo'] != '4680258'] # SS 3542 MF W
-    df = df[df['Codigo'] != '4760101'] # S 3328 G
-    df = df[df['Codigo'] != '4760102'] # S 3352 G  
-    df = df[df['Codigo'] != '4600074'] # HD 1 TB  
-    df = df[df['Codigo'] != '4560047'] # VHD 5240
-    df = df[df['Codigo'] != '4560077'] # VHD 3220
-    df = df[df['Codigo'] != '4300243'] # EMSC 450
-    df = df[df['Codigo'] != '4610021'] # DFA 623
-    df = df[df['Codigo'] != '4670061'] # MFR 2040
-    df = df[df['Codigo'] != '4114002'] # ICW 4002
-    df = df[df['Codigo'] != '4750008'] # AP 310
-    df = df[df['Codigo'] != '4320215'] # IMPACTA
-    df = df[df['Codigo'] != '4400048'] # IMPACTA
-    df = df[df['Codigo'] != '4990002'] # IMPACTA
-    df = df[df['Codigo'] != '4990003'] # IMPACTA
-    df = df[df['Codigo'] != '4990152'] # IMPACTA
-    df = df[df['Codigo'] != '4990195'] # IMPACTA
-    df = df[df['Codigo'] != '4990690'] # IMPACTA
-    df = df[df['Codigo'] != '4991013'] # IMPACTA
-    df = df[df['Codigo'] != '4990709'] # IMPACTA
-    df = df[df['Codigo'] != '4820089'] # ESPI 360  
-    df = df[df['Codigo'] != '4400405'] # PLACA UNNITI 1000
-    df = df[df['Codigo'] != '4850031'] # EWS 251
-    df = df[df['Codigo'] != '4780155'] # OLT G16
-    df = df[df['Codigo'] != '4581251'] # MHDX 1204
 
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
