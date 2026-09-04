@@ -48,34 +48,140 @@ try:
     df = df[df['Marca'] != 'CONTROL ID']
     df = df[df['Marca'] != 'GAREN/FL']
     df = df[df['Marca'] != 'LINEAR']
+    df = df[df['Codigo'] != '4560026'] # VHD 1220 D G7
+    df = df[df['Codigo'] != '4560039'] # VHD 1230 B BLACK G7
+    df = df[df['Codigo'] != '4560045'] # VHD 1220 B FULL COLOR G7  
+    df = df[df['Codigo'] != '4565321'] # VHL 1220 B G2
+    df = df[df['Codigo'] != '4565320'] # VHL 1220 D G2
+    df = df[df['Codigo'] != '4565357'] # VHD 1530 B 
+    df = df[df['Codigo'] != '4565358'] # VHD 1520 D 
+    df = df[df['Codigo'] != '4564068'] # VIP 3230 B SL G3
+    df = df[df['Codigo'] != '4564069'] # VIP 3230 D SL G3 
+    df = df[df['Codigo'] != '4570001'] # VIP 1220 D FULL COLOR 
+    df = df[df['Codigo'] != '4570002'] # VIP 1220 B FULL COLOR 
+    df = df[df['Codigo'] != '4570012'] # VIP 3220 B FULL COLOR 
+    df = df[df['Codigo'] != '4570013'] # VIP 3220 D FULL COLOR 
+    df = df[df['Codigo'] != '4570030'] # VIP 1220 D FULL COLOR+
+    df = df[df['Codigo'] != '4570031'] # VIP 1220 B FULL COLOR+
+    df = df[df['Codigo'] != '4581155'] # MHDX 1108-C C/ SSD
+    df = df[df['Codigo'] != '4581156'] # MHDX 1104-C C/ SSD
     df = df[df['Codigo'] != '4680261'] # SS 5532 MF W
     df = df[df['Codigo'] != '4680260'] # SS 5542 MF W
+    df = df[df['Codigo'] != '4680052'] # SS 1530 MF W
+    df = df[df['Codigo'] != '4680058'] # SS 1540 MF W
+    df = df[df['Codigo'] != '4660167'] # CATRACA C/RECONHECIMENTO FACIAL CAP 3000
+    df = df[df['Codigo'] != '4663150'] # Catraca Pedestal CAP 3000
+    df = df[df['Codigo'] != '4663160'] # Catraca Pedestal CAP 3000 UC 
+    df = df[df['Codigo'] != '4580773'] # MHDX 1116 - HD 1TB
+    df = df[df['Codigo'] != '4581048'] # MHDX 1108 - HD 1TB
+    df = df[df['Codigo'] != '4581082'] # MHDX 1304 - HD 1TB
+    df = df[df['Codigo'] != '4581093'] # MHDX 1308 - HD 1TB
+    df = df[df['Codigo'] != '4581100'] # MHDX 1116 - HD 2TB  
     df = df[df['Codigo'] != '4682073'] # SS 3430 MF
     df = df[df['Codigo'] != '4400338'] # LICENÇA RAMAL UNNITI
     df = df[df['Codigo'] != '4679011'] # FX 2000 PRETA
     df = df[df['Codigo'] != '4679015'] # FX 2000 INOX
-    df = df[df['Codigo'] != '4679010'] # FX 2000 CINZA
     df = df[df['Codigo'] != '4679021'] # FX 2000 AJUSTAVEL
+    df = df[df['Codigo'] != '4670051'] # MFD 2020 CHAMPANHE 
+    df = df[df['Codigo'] != '4670058'] # MFD 2020 PRETA
+    df = df[df['Codigo'] != '4564045'] # VIP 5500 FISH EYE
+    df = df[df['Codigo'] != '4760040'] # SF 900 HI POE
+    df = df[df['Codigo'] != '4780039'] # VEX 3004
+    df = df[df['Codigo'] != '4780072'] # VEX 3120
+    df = df[df['Codigo'] != '4780073'] # VEX 3120
+    df = df[df['Codigo'] != '4810040'] # VB 503
+    df = df[df['Codigo'] != '4810043'] # VB 1104 WP  
     df = df[df['Codigo'] != '4682070'] # CT 3000 2PB
+    df = df[df['Codigo'] != '4580787'] # NVD 1416 # SUBSTITUIDO PELO 1516
+    df = df[df['Codigo'] != '4580934'] # NVD 3316 P # SUBSTITUIDO PELO iNVD 3016 P
     df = df[df['Codigo'] != '4830135'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830134'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830007'] # CABO DE REDE CAT6
+    df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
+    df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
+    df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
+    df = df[df['Codigo'] != '4631200'] # BLA 1200
+    df = df[df['Codigo'] != '4632200'] # BLA 1200
+    df = df[df['Codigo'] != '4670008'] # IFR 7000 +
+    df = df[df['Codigo'] != '4671085'] # FS 150 KIT ELITE
+    df = df[df['Codigo'] != '4580934'] # NVD 3316 P , substituido pelo iNVD 3016P
+    df = df[df['Codigo'] != '4560025'] # VHD 3230 B
+    df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
+    df = df[df['Codigo'] != '4690014'] # IZY Sirene Smart ISI 1001
+    df = df[df['Codigo'] != '4690015'] # IZY Sistema de Segurança Smart ISS 1001 
+    df = df[df['Codigo'] != '4011025'] # IZY Sistema de Segurança Smart ISS 102 
+    df = df[df['Codigo'] != '4830132'] # CABO DROP
+    df = df[df['Codigo'] != '4990147'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4990148'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4400302'] # CONECTA E MODULARE +
+    df = df[df['Codigo'] != '4990515'] # IMPACTAS 94/140/220/300
+    df = df[df['Codigo'] != '4995861'] # IMPACTAS 94/140/220/300
+    df = df[df['Codigo'] != '4080015'] # PLENO
+    df = df[df['Codigo'] != '4080057'] # PLENO C/ CHAVE
+    df = df[df['Codigo'] != '4080058'] # PLENO C/ CHAVE
+    df = df[df['Codigo'] != '4080015'] # PLENO 100 MS
+    df = df[df['Codigo'] != '4080085'] # TC 50 BRANCO
+    df = df[df['Codigo'] != '4080086'] # TC 50 PRETO
+    df = df[df['Codigo'] != '4080091'] # TC 50 PREMIUM
+    df = df[df['Codigo'] != '4100015'] # QDI 15 R9
+    df = df[df['Codigo'] != '4119041'] # TEL. RURAL CFW 9041
+    df = df[df['Codigo'] != '4122513'] # TS 2513
+    df = df[df['Codigo'] != '4123103'] # TS 3113
+    df = df[df['Codigo'] != '4125122'] # TS 5122
+    df = df[df['Codigo'] != '4125123'] # TS 5123
+    df = df[df['Codigo'] != '4125150'] # TS 5150
+    df = df[df['Codigo'] != '4590009'] # IMX1
+    df = df[df['Codigo'] != '4590011'] # IMX1 C/ CARTÃO
+    df = df[df['Codigo'] != '4760016'] # IFR 7000
+    df = df[df['Codigo'] != '4670210'] # FR 210 
+    df = df[df['Codigo'] != '4100014'] # QDP 15
+    df = df[df['Codigo'] != '4100025'] # QDO 20
+    df = df[df['Codigo'] != '4568013'] # VBOX 5100
+    df = df[df['Codigo'] != '4690014'] # ISI 1001
+    df = df[df['Codigo'] != '4690015'] # ISS 1001
+    df = df[df['Codigo'] != '4990147'] # PLACA RAMAL IMPACTA
+    df = df[df['Codigo'] != '4990148'] # PLACA RAMAL IMPACTA
+    df = df[df['Codigo'] != '4990515'] # PLACA RAMAL IMPACTA 
+    df = df[df['Codigo'] != '4750090'] # WOM 5A MIMO FAST
+    df = df[df['Codigo'] != '4100005'] # PLACA RAMAL DECT 5RM
+    df = df[df['Codigo'] != '4110000'] # CIP 850
+    df = df[df['Codigo'] != '4400304'] # PLACA RAMAL DESBALANCEADA
+    df = df[df['Codigo'] != '4990253'] # PLACA FONTE IMPACTA 16/68
+    df = df[df['Codigo'] != '4990260'] # PLACA FXS CIP 850
+    df = df[df['Codigo'] != '4990261'] # PLACA FXO CIP 850
+    df = df[df['Codigo'] != '4993018'] # PLACA TRONCO IMPACTA
+    df = df[df['Codigo'] != '4321708'] # UNNITI 2000
+    df = df[df['Codigo'] != '4321709'] # UNNITI 3000
+    df = df[df['Codigo'] != '4201201'] # TIP 120I
+    df = df[df['Codigo'] != '4320208'] # UNNITI 2000 IP
+    df = df[df['Codigo'] != '4400094'] # PLACA GRAVAÇÃO IMPACTA 68I
+    df = df[df['Codigo'] != '4841059'] # ECM 6048
+    df = df[df['Codigo'] != '4400404'] # UNNITI 1000
+    df = df[df['Codigo'] != '4320216'] # UNNITI 2000
+    df = df[df['Codigo'] != '4822016'] # XNB 1440 BI +
+    df = df[df['Codigo'] != '4822017'] # XNB 1800 BI +
+    df = df[df['Codigo'] != '4527003'] # FR 330
+    df = df[df['Codigo'] != '4670028'] # MFR 1001
+    df = df[df['Codigo'] != '4670036'] # MFD 7001
+    df = df[df['Codigo'] != '4670037'] # MFD 7000
+    df = df[df['Codigo'] != '4670200'] # FD 2000
+    df = df[df['Codigo'] != '4670210'] # FR 210
+    df = df[df['Codigo'] != '4670300'] # FD 3000
+    df = df[df['Codigo'] != '4670331'] # FR 331
+    df = df[df['Codigo'] != '4670500'] # FR 500 D
+    df = df[df['Codigo'] != '4670620'] # FR 620
+    df = df[df['Codigo'] != '4670630'] # FR 630
+    df = df[df['Codigo'] != '4674005'] # FR 400
+    df = df[df['Codigo'] != '4820017'] # EF 1201+ 
+    df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
+    df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR
     df = df[df['Codigo'] != '4830008'] # CABO DE REDE CAT6
     df = df[df['Codigo'] != '4830005'] # CABO DE REDE CAT6
     df = df[df['Codigo'] != '4830030'] # CABO DE REDE CAT5
     df = df[df['Codigo'] != '4830050'] # CABO MULTICAMERAS
     df = df[df['Codigo'] != '4830051'] # CABO MULTICAMERAS
-    df = df[df['Codigo'] != '4830052'] # CABO MULTICAMERAS
-    df = df[df['Codigo'] != '4140034'] # RECEPTOR RDS 830
-    df = df[df['Codigo'] != '4141007'] # ANTENA DIGITAL AI 2031  
-    df = df[df['Codigo'] != '4830053'] # CABO COAXIAL CFTV 4mm 67% COBRE
-    df = df[df['Codigo'] != '4830132'] # CABO DROP
-    df = df[df['Codigo'] != '4993018'] # PLACA TRONCO IMPACTA
-    df = df[df['Codigo'] != '4820017'] # EF 1201+ 
-    df = df[df['Codigo'] != '4400080'] # IMPACTAS 16/40/68
-    df = df[df['Codigo'] != '4750206'] # ROTEADOR 5G BRANCO GX 1001C BR
     df = df[df['Codigo'] != '4540011'] # IVP 4000 SMART
-    df = df[df['Codigo'] != '4820017'] # EF 1201+
     df = df[df['Codigo'] != '4671200'] # FE 21150 D
     df = df[df['Codigo'] != '4500022'] # TVIP 220 PRETO
     df = df[df['Codigo'] != '4560018'] # VHD 3230 B SL
@@ -957,12 +1063,6 @@ try:
         value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
         ) # DESCRIÇÃO 
 
-    df = df.replace(to_replace='4580772' , value='4900498')   # CODIGO
-    df = df.replace(
-        to_replace='GRAVADOR MHDX 1116-C C/ HD 4TB - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
-        value='SUBSTITUIDO - DE MHDX 1116-C PARA MHDX 1216-C'
-        ) # DESCRIÇÃO 
-
     df = df.replace(to_replace='4580716' , value='4900499')   # CODIGO
     df = df.replace(
         to_replace='GRAVADOR MHDX 1116-C C/ HD 2TB - 16 CANAIS (HDCVI/AHD/HDTVI/ANAL/IP), RES 1080P LITE, GAB COMPACTO, ANAL VIDEO, MODO NVR',
@@ -979,12 +1079,6 @@ try:
     df = df.replace(
         to_replace='CENTRAL ALARME AMT 2018 EG - 18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, COM.ETHERNET/GPRS,TECL LCD INCLUSO',
         value='SUBSTITUIDO - DE AMT 2018 EG PARA AMT 2018 E SMART'
-        ) # DESCRIÇÃO 
-
-    df = df.replace(to_replace='4390179' , value='4543578')   # CODIGO
-    df = df.replace(
-        to_replace='CENTRAL ALARME AMT 2018 E - 18 ZONAS C/FIO, CAP 24 ZONAS S/FIO, 128 DISP S/FIO, TECL LCD INCLUSO',
-        value='SUBSTITUIDO - DE AMT 2018 E PARA AMT 2018 E SMART'
         ) # DESCRIÇÃO 
 
     df = df.replace(to_replace='4390179' , value='4543578')   # CODIGO
