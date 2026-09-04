@@ -84,6 +84,20 @@ try:
     df = df[df['Codigo'] != '4160035'] # RADIO RPD 8 UHF
     df = df[df['Codigo'] != '4581079'] # MVD 3404
     df = df[df['Codigo'] != '4860010'] # XB 12 SEG
+    df = df[df['Codigo'] != '4543559'] # HASTE 4 ISOL
+    df = df[df['Codigo'] != '4543562'] # HASTE 6 ISOL
+    df = df[df['Codigo'] != '4550004'] # XEL 5001	
+    df = df[df['Codigo'] != '4540041'] # GPRS 1000
+    df = df[df['Codigo'] != '4681028'] # CM 100
+    df = df[df['Codigo'] != '4543585'] # XG 2018 3G
+    df = df[df['Codigo'] != '4580862'] # IMHDX 5008
+    df = df[df['Codigo'] != '4750058'] # WOM AC
+    df = df[df['Codigo'] != '4780074'] # ONT 140
+    df = df[df['Codigo'] != '4780178'] # XGS-PON
+    df = df[df['Codigo'] != '4780179'] # GPON CLASSE C+
+    df = df[df['Codigo'] != '4580719'] # MHDX 3108-C
+    df = df[df['Codigo'] != '4600167'] # MICROSD 512GB
+    df = df[df['Codigo'] != '9940966'] # DJI  
 
     # Substitui o codigo e a descrição dos produtos em pashout, para os seus substitutos diretos
     df = df.replace(to_replace='4565151' , value='4565150')   # CODIGO
